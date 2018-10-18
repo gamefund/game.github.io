@@ -1,0 +1,977 @@
+@font-face{
+    font-family: "OCRASTD";
+    src: url("../fonts/OCRASTD.OTF");
+}
+body,a{
+    font-size: 12px;
+    color: #fff;
+    /*min-width: 1280px;*/
+    font-family: "OCRASTD";
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul,li{
+    list-style: none;   
+}
+
+.page-container{
+    width: 100%;
+    position: relative;
+}
+
+.page-container.page-bg-01
+{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+}
+
+.page-container.page-bg-02
+{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/02/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:  100%;
+    height:2048px;
+    display: flex;
+    align-items: center;
+}
+
+.page-container.page-bg-03
+{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/03/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:  100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container.page-bg-04
+{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/04/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:  100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container.page-bg-05
+{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/05/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size:  100%;
+    overflow-x: hidden;
+}
+
+.page-bg-06
+{
+    background-color: #0A0918;
+}
+
+.panel-heading a{
+    width: 100%;
+    height: 100%;
+}
+
+.panel-body img{
+    width:100%;
+}
+
+/********************01***********************/
+@keyframes clockwise-rotation
+{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -moz-transform: translate(-50%, -50%) rotate(0deg);
+        -o-transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);
+        -webkit-transform: translate(-50%, -50%) rotate(180deg);
+        -moz-transform: translate(-50%, -50%) rotate(180deg);
+        -o-transform: translate(-50%, -50%) rotate(180deg); 
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        -moz-transform: translate(-50%, -50%) rotate(360deg);
+        -o-transform: translate(-50%, -50%) rotate(360deg); 
+    }
+}
+@keyframes anticlockwise-rotation
+{
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -moz-transform: translate(-50%, -50%) rotate(0deg);
+        -o-transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(-180deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+        -moz-transform: translate(-50%, -50%) rotate(-180deg);
+        -o-transform: translate(-50%, -50%) rotate(-180deg); 
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+        -moz-transform: translate(-50%, -50%) rotate(-360deg);
+        -o-transform: translate(-50%, -50%) rotate(-360deg); 
+    }
+}
+
+.about-the-game{
+    width: 13.4rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/ABOUT-THE-GAME.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.crowdfunding{
+    width: 11.8rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/CROWDFUNDING.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.wip-gallery{
+    width: 11rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/WIP-GALLERY.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.crews{
+    width: 8.2rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/CREWS.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.blog{
+    width: 8.2rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/BLOG.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.community{
+    width: 9.1rem;
+    height: 4rem;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/COMMUNITY.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.about-the-game.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/ABOUT-THE-GAME_.png");
+}
+
+.crowdfunding.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/CROWDFUNDING_.png");
+}
+
+.wip-gallery.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/WIP-GALLERY_.png");
+}
+
+.crews.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/CREWS_.png");
+}
+
+.blog.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/BLOG_.png");
+}
+
+.community.active{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/COMMUNITY_.png");
+}
+
+.nav-container{
+    position: relative;
+    left: 0;
+    top: 80%;
+    margin:0 5%;
+    padding:0 5%;  
+    height: 6%;
+}
+#main-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-nav a{
+    min-width: inherit;
+    text-decoration: none;
+}
+
+.crowdfunding-item{
+    position: absolute;
+    left: 50%;
+    top:7%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.crowdfunding-item div{
+    font-size: 1.2rem;
+    line-height: 4rem;
+    height: 3rem;
+    text-align: center;
+}
+.crowdfunding-item .crowdfund-start{
+    line-height: 6rem;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 24%;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.halo-01{
+    position: absolute;
+    left: 49.5%;
+    top: 0;
+    width: 39rem;
+    height: 39rem;
+    transform: translate(-50%, -50%);
+    animation: clockwise-rotation 20s infinite linear;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/halo-01.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.halo-02{
+    position: absolute;
+    left: 49.5%;
+    top: 0;
+    width: 40rem;
+    height: 40rem;
+    transform: translate(-50%, -50%);
+    animation: anticlockwise-rotation 20s infinite linear;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/halo-02.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.page-bg-01 .news-container{
+    position: absolute;
+    right: 10%;
+    top: 42%;
+}
+.page-bg-01 .news-container .news-title{
+    font-size: 2rem;
+    text-align: right;
+    letter-spacing: 0.2rem;
+}
+.page-bg-01 .news-container .news-content{
+    width: 25rem;
+}
+.page-bg-01 .news-container .news-content .news-content-title{
+    display: block;
+    margin: 1.4rem 0;
+    text-align: right;
+    font-size: 0.95rem;
+    letter-spacing: 0.085rem;
+}
+.page-bg-01 .news-container .news-content a:hover,
+.page-bg-01 .news-container .news-content a:visited,
+.page-bg-01 .news-container .news-content a:link,
+.page-bg-01 .news-container .news-content a:active{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    letter-spacing: 0.085rem;
+}
+
+/*临时屏蔽社区窗口*/
+.commonConstruction{
+    position: relative;
+    white-space: nowrap;
+    bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgb(135, 135, 135);
+    right: 3rem;
+}
+/********************01***********************/
+
+/*******************02************************/
+.accordion-container{
+    margin-left: 11%;
+    width:28%;
+    /*position: absolute;*/
+}
+
+.accordion-container .accordion-title
+{
+    position: relative;
+    height: 2.2rem;
+    width: 100%; 
+    margin-bottom: 20px;
+
+    text-align: right;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-shadow: 0 0 0.2em #fff;
+}
+
+.accordion-container .accordion-title img{
+    position: absolute;
+    right:0;
+    height: 100%;
+}
+
+.accordion-container .panel
+{
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.accordion-container .panel a{
+    font-size: 1rem;
+}
+
+.accordion-container .panel a:hover,
+.accordion-container .panel a:focus{
+    color: #fff;
+    text-decoration: none;
+}
+
+.accordion-container .panel-body
+{
+    position: relative;
+    padding:15px 0;
+}
+
+.accordion-container .panel-body .panel-content{
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    bottom: 15px;
+    padding:10px;
+}
+.accordion-container .panel-body .panel-content h4{
+    color: #49A0D7;
+}
+
+.accordion-container .panel-body .panel-content p{
+    font-size: .8rem;
+    line-height: 16px;
+}
+
+.accordion-container .border{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/03/border.png");
+    padding: 4rem 0.9rem;
+}
+/*******************02************************/
+
+/******************03*************************/
+.left-content{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.center-content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right-content{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-container.page-bg-03 > div{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+}
+.resource-change{
+    position: absolute;
+    right: 10px;
+    top: 26%;
+    transform: translate3d(0, -50%, 0);
+}
+.resource-change > div{
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.ch-btn{
+    width: 5rem;
+    height:  2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #17C9EE;
+    font-size: 0.7rem;
+}
+.ch-bright{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/03/btn-dark.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.ch-dark{
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/03/btn-bright.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.preview-img{
+    width:100%;
+    /*height: 15%;*/
+    /*display: flex;
+    justify-content: space-around;*/
+}
+.left-content .preview-img,
+.right-content .preview-img{
+    height: 20%;
+}
+
+.preview-img1{
+    width: 45%;
+    height: 100%;
+}
+
+.preview-img2{
+    width: 45%;
+    height: 100%;
+}
+
+.wip-gallery-title{
+    position: absolute;
+    left: 3%;
+    top: 13%;
+    width: 30%;
+
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-shadow: 0 0 0.2em #fff;
+}
+.wip-gallery-title img{
+    width: 100%;
+}
+
+.sci-fi-decoration
+{
+    position: absolute;
+    left:2%;
+    top: -100%;
+    /*bottom: 0;*/
+    right: 0;
+    z-index: 10;
+    pointer-events: none;/*不会捕捉当前层级的事件，穿透当前到达下一层级*/ 
+    height: 100%;
+}
+.sci-fi-decoration img{
+    height: 300%;
+}
+/******************03*************************/
+
+/******************04************************/
+.slick-04{
+    width: 100%;
+    position: relative;
+    float: right;
+    overflow: hidden;
+}
+
+.slick-04 > div{
+    position: absolute;
+    height: 20%;
+    transition: all .3s ease-out;
+}
+
+.page-container.page-bg-04 div.the-crew{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 10%;
+    height: auto;
+
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    text-shadow: 0 0 0.2em #fff;
+}
+
+.the-crew img{
+    width: 100%;
+}
+.slick-cell
+{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+.slick-cell.hidden{
+    display: none;
+}
+
+.slick-cell.one{
+   height: 18%;
+   top: 9%;
+   right: 2%;
+   transform:  translate3d(0, -50%, 0) scale(1);
+}
+
+.slick-cell.two{
+    height: 18%;
+    top: 28%;
+    right: 2%;
+    transform:  translate3d(0, -50%, 0) scale(1);
+    z-index: 12px;
+ }
+
+ .slick-cell.three{
+    height: 18%;
+    top: 50%;
+    right: 2%;
+    transform:  translate3d(-15%, -50%, 0) scale(1.3);
+    z-index: 1;
+ }
+
+ .slick-cell.four{
+    height: 18%;
+    top: 72%;
+    right: 2%;
+    transform:  translate3d(0, -50%, 0) scale(1);
+ }
+
+.slick-cell.five{
+    height: 18%;
+    top: 91%;
+    right: 2%;
+    transform:  translate3d(0, -50%, 0) scale(1);
+}
+
+.slick-cell.pre{
+    top: -10% ;
+    z-index: 1;
+    transform:  scale(0);
+}
+
+.slick-cell.next{
+    top: 110% ;
+    z-index: 1;
+    transform:  scale(0);
+}
+.slick-cell #person1,
+.slick-cell #person2,
+.slick-cell #person3,
+.slick-cell #person4,
+.slick-cell #person5{
+    width: 100%;
+}
+.slick-cell .text{
+    width: 55%;
+}
+.slick-cell img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.slick-cell .name{
+    color:#C0C0C2;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.slick-cell .work{
+    color:#BEBEBE;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.slick-cell.three .name{
+    color:#fff;
+    font-size: 1.5rem;
+}
+.slick-cell.three .work{
+    color:#fff;
+}
+.slick-cell .founder{
+    background-color: #d6c9b8;
+    color: #000;
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: -o-fit-content;
+
+    text-align: center;
+    margin: auto;
+    line-height: 18px;
+    height: 15px;
+}
+img.active-bg{
+    position: absolute;
+    top:-10%;
+    right: -10%;
+}
+
+.page-container.page-bg-04 > div {
+    height: 100%;
+}
+
+.three .selected{
+    position: absolute;
+    right: -2.8%;
+    top: -6.3%;
+    left: 59.2%;
+    bottom: 50%;
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/04/Layer.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*z-index: 1;*/
+}
+
+.three img{
+    /*z-index: 2;*/
+}
+
+/******************04************************/
+
+/******************05************************/
+.real-end .countdown-time{
+    position: absolute;
+    left: -50%;
+    bottom: 12%;
+    transform: translate3d(-50%, -50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.real-end .countdown-time-text{
+    position: absolute;
+    bottom: 10%;
+    right: -50%;
+    transform: translate3d(50%, -50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.real-end h1{
+    color: #fff;
+    font-size: 5rem;
+    font-family: "OCRASTD";
+    line-height: 5rem;
+    margin: 0;
+}
+.real-end p{
+    color: #fff;
+    background-color: rgba(22, 100, 162, 0);
+    padding: 5px 3px 0;
+    font-size: 1.25rem;
+    margin: 0.3rem 0;
+}
+
+.real-end .time-text{
+    color: #2184d8;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.real-end .time-text div{
+    width: 6.2rem;
+    text-align: center;
+}
+
+.real-end .time-text .time-text-space{
+    width: 4.6rem;
+}
+/******************05************************/
+
+#owl-1 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: -25%;
+}
+#owl-1 .item {
+    display: block;
+}
+#owl-1 img {
+    display: block;
+}
+
+#owl-2 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#owl-2 .item {
+    display: block;
+}
+#owl-2 img {
+    display: block;
+}
+
+.page-bg-03 .right-content .changestate1,
+.page-bg-04 .changestate2,
+.crowdfunding .drop-down-box
+{
+    transition-property: top;
+    /*transition-property: bottom;*/
+    transition-duration: 0.5s;
+
+    -webkit-transition-property: top;
+    /*-webkit-transition-property: bottom;*/
+    -webkit-transition-duration: 0.5s;
+
+    -moz-transition-property: top;
+    -moz-transition-duration: 0.5s;
+
+    -o-transition-property: top;
+    -o-transition-duration: 0.5s;
+}
+
+.crowdfunding .drop-down-container{
+    position: relative;
+    bottom: 7.4rem;
+    height: 8.5rem;
+    overflow: hidden;
+}
+
+.crowdfunding .drop-down-box{
+    position: relative;
+    /*top: 100%;*/
+    top: 7.4rem;
+    /*bottom: 7.4rem;*/
+    height: 8.5rem;
+    
+    background-image: url("http://html5resource-10019461.file.myqcloud.com/galaxz/images/01/CROWDFUNDING_HOVER.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+}
+.crowdfunding .drop-down-box div{
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.crowdfunding .drop-down-box .shop:hover{
+    color: #4aaaff;
+}
+
+
+body.galaxz-body div{
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;    
+}
+.hidden-con{
+    opacity: 0;
+}
+
+.page-bg-05 div img{
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, 0%, 0);
+    opacity: 0;
+}
+
+.galaxz_earth img.animation{
+    animation: myearth 1.5s none;
+    animation-fill-mode: forwards;
+}
+@keyframes myearth {
+    0% {top : 65%; opacity: 0;}
+    10% {opacity: 0;}
+    100% {top : 18%; opacity: 1;}
+}
+
+.galaxz-text img.animation{
+    animation: mytextfadein 3s none;
+    animation-fill-mode: forwards;
+}
+@keyframes mytextfadein{
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.galaxz-outer-circle img.animation{
+    animation: myouterfadein 4s none;
+    animation-fill-mode: forwards;
+}
+@keyframes myouterfadein{
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    75% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+.galaxz-inner-circle img.animation{
+    animation: myinnerfadein 3s none;
+    animation-fill-mode: forwards;
+}
+
+@keyframes myinnerfadein{
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.page-bg-05 .real-end .countdown-time.animation{
+     animation: mytime 2s none;
+    animation-fill-mode: forwards;
+}
+@keyframes mytime{
+    0%  {left : -50%; opacity: 0;}
+    30%  {left : -50%; opacity: 0;}
+    80%  {left : 50%; opacity: 1;}
+    100%  {left : 50%; opacity: 1;}
+}
+
+.page-bg-05 .real-end .countdown-time-text.animation{
+    animation: mytimetext 2s none;
+    animation-fill-mode: forwards;
+}
+@keyframes mytimetext{
+    0%  {right : -50%; opacity: 0;}
+    30%  {right : -50%; opacity: 0;}
+    90%  {right : 50%; opacity: 1;}
+    100%  {right : 50%; opacity: 1;}
+}
+
+.page-bg-05 .real-end .countdown-time-text p.animationColor{
+    animation: mytimetextcolor 4s none;
+    animation-fill-mode: forwards;
+}
+@keyframes mytimetextcolor{
+    0% {background-color:rgba(22, 100, 162, 0);}
+    40% {background-color:rgba(22, 100, 162, 0);}
+    65% {background-color:rgba(22, 100, 162, 1);}
+    100% {background-color:rgba(22, 100, 162, 1);}
+}
+
+.drop-down-box .funding{
+    color: rgb(135, 135, 135);
+    cursor: auto;
+}
+/******************05************************/
+
+/******************06************************/
+.page-bottom-main{
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 0;
+}
+/*.page-bottom-main .item1{
+
+}
+.page-bottom-main .item1 img{
+    width: 80%;
+}
+.page-bottom-main .item2{
+    font-size: 1.6rem;
+    letter-spacing: -0.15rem;
+}*/
+.page-bottom-main .email{
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #ddd;
+    cursor: no-drop;
+    margin: 0 2rem;
+}
+.page-bottom-main .email > div{
+    font-size: 0.8rem;
+    letter-spacing: -0.1rem;
+}
+
+.page-bottom-main .subscribe{
+    position: relative;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    cursor: no-drop;
+    margin: 0 2rem;
+}
+
+/*临时屏蔽社区窗口*/
+.email .construction{
+    position: absolute;
+    white-space: nowrap;
+    bottom: 2rem;
+    font-size: 0.7rem;
+    color: rgb(135, 135, 135);
+}
+
+/*临时屏蔽社区窗口*/
+.subscribe .construction{
+    position: absolute;
+    white-space: nowrap;
+    bottom: 3.5rem;
+    font-size: 0.7rem;
+    color: rgb(135, 135, 135);
+    right: -2rem;
+}
+
+.page-bottom-main .language-version{
+    position: absolute;
+    cursor: no-drop;
+    right: 20rem;
+}
+
+.page-bottom-main .currentLanguage{
+    display: inline;
+    color: #A59FA0;
+}
+
+.page-bottom-main .triangle{
+    display: inline;
+}
+
+/*临时屏蔽社区窗口*/
+.language-version .construction{
+    position: absolute;
+    white-space: nowrap;
+    bottom: 2rem;
+    font-size: 0.7rem;
+    color: rgb(135, 135, 135);
+    right: -6rem;
+}
+/******************06************************/

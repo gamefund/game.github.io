@@ -1,0 +1,99 @@
+/**
+ * kitties header
+ */
+var headerInit = function(){
+    $("body").append(headerText);
+    if(leftToRightArray.length>1){
+        $(".kitties-logo").before(headerReturnText);
+    }
+
+    $(".kitties-sign-in").click(function(){
+        //启动我的猫界面
+    });
+
+    $(".kitties-marketplace").click(function(){
+        leftToRightArray.splice(0,leftToRightArray.length);
+        rightToLeftArray.splice(0,leftToRightArray.length);
+        marketInit();
+    });
+
+    $(".header-return").click(function(){
+        leftToRightArray.pop();
+        var func = eval(leftToRightArray[leftToRightArray.length-1].page);
+        var param1 = leftToRightArray[leftToRightArray.length-1].kitty_id;
+        var param2 = leftToRightArray[leftToRightArray.length-1].kitty_type;
+        new func(param1, param2);
+        leftToRightArray.pop();
+    });
+    if (uName != undefined) {
+        $(".kitties-sign-in").html(uName);
+    }
+    var select =  $(".kitties-language-select");
+    $(".kitties-language-select").on("change", function () {
+        switch (select.val()) {
+            case "zh":
+                localStorage.setItem(HTML_LANGUAGE, "zh");
+                break;
+            case "en":
+                localStorage.setItem(HTML_LANGUAGE, "en");
+                break;
+        }
+        window.location.href = window.location.href;
+    });
+
+    switch (localStorage.getItem(HTML_LANGUAGE)) {
+        case "zh":
+            document.getElementsByClassName("kitties-language-select")[0][0].selected = true;
+            break;
+        case "en":
+            document.getElementsByClassName("kitties-language-select")[0][1].selected = true;
+            break;
+        default:
+            document.getElementsByClassName("kitties-language-select")[0][1].selected = true;
+            break;
+    }
+}
+
+/**
+ * 滑动返回（左、右）
+ */
+// var windowHeight = $(window).height(),
+// $body = $("body");
+// $body.css("height", windowHeight);
+// $("body").on("touchstart", function(e) {
+//     // e.preventDefault();
+//     startX = e.originalEvent.changedTouches[0].pageX,
+//     startY = e.originalEvent.changedTouches[0].pageY;
+// });
+// $("body").on("touchmove", function(e) {
+//     moveEndX = e.originalEvent.changedTouches[0].pageX,
+//     moveEndY = e.originalEvent.changedTouches[0].pageY,
+//     X = moveEndX - startX,
+//     Y = moveEndY - startY;
+
+//     if ( Math.abs(X) > Math.abs(Y) && X > window.screen.width/3 ) {
+//         if(leftToRightArray.length>1){
+//             rightToLeftArray.push(leftToRightArray[leftToRightArray.length-1]);
+//             leftToRightArray.pop();
+//             var func = eval(leftToRightArray[leftToRightArray.length-1].page);
+//             var param1 = leftToRightArray[leftToRightArray.length-1].kitty_id;
+//             var param2 = leftToRightArray[leftToRightArray.length-1].kitty_type;
+//             new func(param1, param2);
+//             leftToRightArray.pop();
+//         }
+//     }
+//     else if ( Math.abs(X) > Math.abs(Y) && X < -window.screen.width/3 ) {
+//         if(rightToLeftArray.length>0){
+//             leftToRightArray.push(rightToLeftArray[rightToLeftArray.length-1]);
+//             var func = eval(rightToLeftArray[rightToLeftArray.length-1].page);
+//             var param1 = rightToLeftArray[rightToLeftArray.length-1].kitty_id;
+//             var param2 = rightToLeftArray[rightToLeftArray.length-1].kitty_type;
+//             new func(param1, param2);
+//             leftToRightArray.pop();
+//             rightToLeftArray.pop();
+//         }
+//     } else {
+//         console.log("1");
+//         // e.preventDefault();
+//     }
+// });

@@ -1,0 +1,358 @@
+/**
+ * 交易所
+ */
+var marketInit = function () {
+    $("body").css("transition","0.5s");
+    $("body").css("transform","scale(0.9)");
+    $("body").css("opacity","0.6");
+    // $("body").empty();
+    setTimeout(function(){
+        $("#all-container").empty();
+        $("body").css("transition","0.5s");
+        $("body").css("transform","scale(1)");
+        $("body").css("opacity","1");
+        headerInit();
+        var obj = {"page":"marketInit","kitty_id":null,"kitty_type":null};
+        leftToRightArray.push(obj);
+        $("#all-container").append(marketText);
+
+        slectCheck(1);   //页面跳转时，默认排序
+        // fillMarketPageData(data);
+        // fillMarketPageData(data);
+
+        //显示的猫的数量
+        // $(".searchOrFilter-number .cats-number").text(data.kitties_count);
+
+        //点击类型筛选
+        $(".marketplace-filter").click(function (event) {
+            $(".filterArea-background").show();
+            $(".marketplace-container").css("position","fixed");
+
+            $(document).click(function(event1){
+                if($(event1.target).hasClass("filterArea-background")){
+                    $(".filterArea-background").hide();
+                    $(".marketplace-container").css("position","absolute");
+                }
+                event1.stopPropagation();
+            })
+
+            $(".filter-group-content .filter-group-item").click(function(event2){
+                event2.stopPropagation();
+                if($(this).hasClass("filter-group-item-addclass")){
+                    return;
+                }
+                $(this).addClass('filter-group-item-addclass').siblings().removeClass('filter-group-item-addclass');
+                waitModel();
+                slectCheck(1);
+            })
+            event.stopPropagation();
+        })
+
+        //点击for sale
+        $(".marketplace-classify .for-sale").click(function(){
+            if($(this).hasClass("classify-title-active")){
+                return;
+            }
+            console.log("222");
+            //请求销售的猫数据 data
+
+            // fillMarketPageData(data);
+            $(this).addClass('classify-title-active').siblings().removeClass('classify-title-active');
+        waitModel();
+        slectCheck(1);        
+    }) 
+
+    //点击siring
+    $(".marketplace-classify .for-siring").click(function(){
+        if($(this).hasClass("classify-title-active")){
+            return;
+        }
+        console.log("222");
+        //请求交配的猫数据 data
+        $(this).addClass('classify-title-active').siblings().removeClass('classify-title-active'); 
+        waitModel();
+        slectCheck(1);       
+    })
+    //点击Gen 0
+    $(".marketplace-classify .for-Generation-0").click(function(){
+        if($(this).hasClass("classify-title-active")){     
+            return;
+        }
+        console.log("222");
+        //请求Gen 0的猫数据 data
+
+        // fillMarketPageData(data);
+        $(this).addClass('classify-title-active').siblings().removeClass('classify-title-active'); 
+        waitModel(); 
+        slectCheck(1);
+    })
+    //点击All kitties
+    $(".marketplace-classify .for-all").click(function(){
+        if($(this).hasClass("classify-title-active")){
+            return;
+        }
+        console.log("222");
+        //请求所有猫数据 data
+
+        // fillMarketPageData(data);
+        $(this).addClass('classify-title-active').siblings().removeClass('classify-title-active');  
+        waitModel();
+        slectCheck(1);      
+     });
+
+    $('.filter-select').bind("change",function(){
+        waitModel();
+        slectCheck(1);
+     });
+    },400);
+
+};
+    //分页组件的使用
+    var pagePart = function(data) {
+        var totalDataNum = data.kitties_count;
+        if(totalDataNum == 0) {
+            $('#page').hide();
+            return;
+        }
+        $('#page').show();
+        $('#page').pagination({
+            totalData: totalDataNum,
+            showData: data.limitNum,
+            // jump:true,
+            coping:true,
+            // homePage:'首页',
+            // endPage:'末页',
+            // prevContent:none,
+            // nextContent:none,
+            // count: 3
+
+            callback: function(api) {
+                var index = api.getCurrent();
+                waitModel();
+                slectCheck(index, 1);
+                $('body,marketplace-container').animate({scrollTop: 0}, 100);
+            }
+        });
+    }
+
+//价格单位转换
+var priceConversion = function (price) {
+    var conversedPrice = parseInt(price) * ethRate;
+    return conversedPrice.toFixed(3);
+}
+
+//添加页面数据
+var fillMarketPageData = function(data){
+    var kittyName = "";
+    if(data.kitties == null) {
+        $('.marketplace-content-library').hide();
+        return;
+    }
+    $('.marketplace-content-library').show();
+    for(var i=0; i<data.kitties.length; i++){
+        if(isNaN(data.kitties[i].kitty.name)) {
+            kittyName = data.kitties[i].kitty.name;
+        } else {
+            kittyName = LText.Kitty;
+        }
+        var text = '<div class="kitty-library-item" id="kitty-' + data.kitties[i].kitty.id + '">' +
+
+                        '<a href=""></a>' +
+                        '<div class="kitty-item-container" >' +
+                            '<div class="kitty-item" id="kittyIndex'+i+'" >' +
+                                '<image class="kitty-item-photo" src="'+ data.kitties[i].kitty.image_url +'" id="index'+i+'">' +
+                            '</div>' +
+                            '<div class="kitty-item-details">' +
+                                '<span class="kitty-item-details-item">' + kittyName + "&nbsp" + data.kitties[i].kitty.id + '</span>' +
+                                '<span class="kitty-item-details-item">' + ' · ' + LText.Generation + data.kitties[i].kitty.generation + '</span>' +
+                                '<span class="kitty-item-details-item">' + ' · ' + cooldown[data.kitties[i].status.cooldown_index] + '</span>' +
+                            '</div>' +
+                            '<div class="kitty-item-actions">' +
+                                '<div class="kitty-item-actions-action">' +
+                                    '<span class="kitty-item-actions-icon" id="kittyIndex'+i+'"></span>' +
+                                    '<span class="kitty-item-actions-number">' + data.kitties[i].purrs.count + '</span>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' ;
+
+
+        var status_text = null;
+        switch(data.kitties[i].type)
+        {
+            case "sale": status_text = LText.ForSale;
+                break;
+            case "sire": status_text = LText.WantsToSire;
+                break;
+        }
+
+        var newKitties = 
+                    '<div class="kitty-item-newBadge">' +
+                        '<div class="triangle-newBadge">' + 
+                            '<div class="triangle-text" style="color:red">' + LText.New + '</div>' +
+                        '</div>' +
+                    '</div>';
+
+        $(".marketplace-content-library .library-container .kitty-library").append(text);
+        if((new Date()).valueOf() - data.kitties[i].start_time <= Config.limitNew) {
+            $('#index'+ i +'.kitty-item-photo').after(newKitties);
+        }
+        $("#index" + i).css("background-color", data.kitties[i].kitty.color);
+        if(!data.kitties[i].status.is_ready) {
+            var restText = '<div class="kitty-item-status">' +
+                                '<div class="status-item">' +
+                                    '<span class="status-itemIcon"></span>' +
+                                    '<span class="status-itemText">'+ LText.Resting + "≡" + '</span>' +
+                                    '<span class="status-itemprice">' + MillisecondToDate_text(data.kitties[i].left_cooldown) + '</span>' +
+                                '</div>' +
+                            '</div>';
+            $(".kitty-library-item:last .kitty-item-container .kitty-item").append(restText);
+        } else if (isNaN(data.kitties[i].type)) {
+            var childText = '<div class="kitty-item-status">' +
+                                '<div class="status-item">' +
+                                    '<span class="status-itemIcon"></span>' +
+                                    '<span class="status-itemText">' + status_text + ' ≡ ' + '</span>' +
+                                    '<span class="status-itemprice">' + priceConversion(data.kitties[i].current_price) + '</span>' +
+                                '</div>' +
+                            '</div>'; 
+            $(".kitty-library-item:last .kitty-item-container .kitty-item").append(childText);
+        }
+
+        var newBadgeText = ''
+
+        //绑定进入详情页面的点击事件
+        $("#kittyIndex" + i).bind("click",{indexData:data.kitties[i]},jumpNextPage);
+        
+        //绑定点赞的点击事件
+        $("#kitty-" + data.kitties[i].kitty.id + " .kitty-item-actions-icon").bind("click",{indexData:data.kitties[i]},clickKittyPraise);
+
+    }
+};
+
+//点击不同类型kitty 跳转至不同的页面
+function jumpNextPage(e) {
+    var chooseData = e.data.indexData;
+    var isPraisedKitty;
+    // if($("#kitty-" + kitty_id + " .kitty-item-actions-icon").attr("isPraise")){
+    //     isPraisedKitty = true;
+    // }
+
+    if (chooseData.type == "sale") { //请求购买猫信息
+        kittyInit(chooseData.kitty.id, chooseData.type);
+    } else if (chooseData.type == "sire") { //请求可交配猫信息
+        kittyInit(chooseData.kitty.id, chooseData.type);
+    } else { //猫详情页面
+        kittyInit(chooseData.kitty.id, chooseData.type);
+    }
+}
+//点赞
+var clickKittyPraise = function(e){
+
+    var chooseData = e.data.indexData;
+    //userId(operate_id), kitty_id, owner_id, type = 3(点赞专用)
+    clickPraise(chooseData.kitty.id);
+}
+    
+//筛选的点击事件
+var slectCheck = function(index, type) {
+    var x = $('.classify-title-active').attr("id");
+    var y = $('.filter-select option:selected').attr("id");
+    var w = $('.filter-group-item-addclass').attr("id");
+    var index = index;
+    if(isNaN(w)) {
+        w = 0;
+    }
+    $.ajax({
+        url: Config.address + "homePageSelectKittyByType",
+        data: {
+            pageType: x,
+            choseType: y,
+            fileType: w,
+            index: index,
+            userId: 0,
+        },
+        type: "POST",
+        success: function(data) {
+            console.log(data);
+            destory();
+            $(".kitty-item-container").empty();
+            fillMarketPageData(data);
+            if(type != 1) {
+                pagePart(data);
+            }
+            $('.cats-number').html(data.kitties_count);
+            setTimeout(function() {
+                sendRequest(parseArray(data));
+            }, 10);        
+        },
+        error: function(xhr) {
+            var text = nextJson(LText.Title, titleText(LText.SystemTitle), 1, [LText.Ok], [OK]);
+            promptText(nextJson);
+            destory();
+        }
+    });
+}
+
+//解析并返回的数据中的kitty_id数组
+var parseArray = function (data) {
+    var arr = new Array();
+    for(var item in data.kitties){
+        arr.push(data.kitties[item].id);
+    }
+    return arr;
+};
+
+//查询此页面的猫，该userId点赞的情况
+var sendRequest = function (dataArray) {
+    $.ajax({
+        url: Config.address + "isPraiseKitty",
+        data: {
+            kittyIdArray: dataArray,
+            operate_id: userId,
+        },
+        type: "POST",
+        success: function(data) {
+            console.log(data);
+            if(data.state == 2){
+                console.log("return success");//对此提示进行显示
+                for(var index in data.praisedIdList) {
+                    var kitty_id = data.praisedIdList[index];
+                    $("#kitty-" + kitty_id + " .kitty-item-actions-icon").unbind("click");
+                    $("#kitty-" + kitty_id + " .kitty-item-actions-icon").css("background-image", "url(./module/detail/img/praised.png)");
+                    $("#kitty-" + kitty_id + " .kitty-item-actions-icon").attr("isPraise", true);
+                }
+            }
+        },
+        error: function(xhr) {
+            console.log("error: " + xhr.status);
+        }
+    });
+};
+
+//点赞后的数据库更新
+var clickPraise = function(kitty_id){
+    $.ajax({
+        url: Config.address + "praiseKitty",
+        data: {
+            operate_id: userId,//需要重新设置
+            kitty_id: kitty_id,
+            type: 3,
+        },
+        type: "POST",
+        success: function(data) {
+            console.log(data);
+            if(data.msg.state == 6){
+                console.log("click praise success");//对此提示进行显示
+                var currentpPraiseNum = parseInt($("#kitty-" + data.msg.dataMap.kitty_id + " .kitty-item-actions-number").html());
+                $("#kitty-" + data.msg.dataMap.kitty_id + " .kitty-item-actions-number").html(currentpPraiseNum + 1);
+                $("#kitty-" + data.msg.dataMap.kitty_id + " .kitty-item-actions-icon").unbind("click");
+                $("#kitty-" + data.msg.dataMap.kitty_id + " .kitty-item-actions-icon").css("background-image", "url(./module/detail/img/praised.png)");
+
+            }
+        },
+        error: function(xhr) {
+            console.log("error: " + xhr.status);
+        }
+    });
+
+}

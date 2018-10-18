@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxz</title>
+    <link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <script>
+        var splitUrl = function (url, str) {
+            var firstArr = url.split('?');
+            var secondArr = firstArr[firstArr.length - 1].split('&')
+
+            for (var i in secondArr) {
+                if (secondArr[i].indexOf(str) != -1) {
+                    var resultArr = secondArr[i].split('=');
+                    return resultArr[resultArr.length - 1];
+                }
+            }
+        };
+        window.onload = function () {
+            var imagePath = splitUrl(window.location.href, "imagePath");
+            console.log(imagePath);
+            var img = document.createElement("img");
+            img.src = imagePath;
+            document.body.style.cssText = "position: absolute;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;margin: 0;background-color: #000;";
+            var clientRatio =  document.body.clientWidth / document.body.clientHeight;
+            var imgRatio = img.width / img.height;
+            if (imgRatio > clientRatio) {
+                img.style.cssText = "width: 100%;";
+            } else {
+                img.style.cssText = "height: 100%;";
+            }
+            document.body.appendChild(img);
+            // console.log(imgEle.width);
+
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>Funding - Galaxz</title>
+        <link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+        <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <!-- 载入Jquery 框架 -->
+        <script type="text/javascript" src="./library/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./library/jquery.lazyload.min.js"></script>
+
+        <!--<script type="text/javascript" src="./js/main.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+        <link rel="stylesheet" type="text/css" href="./css/funds.css" />
+
+    </head>
+    <body>
+        <script>
+            $(function(){
+                $(".funds-container img.lazy").lazyload({
+                    placeholder : "http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/funds_begin.jpg",
+                    effect : "fadeIn",
+                    threshold : 200,
+                    container : $(".funds-container"),
+                });
+
+                $(".build-funds-container").on("click", function(){
+                    window.location.href = "index.html";
+                })
+            })
+        </script>
+        <div class="funds-container">
+            <img class="lazy"  data-original="http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/funds.jpg"/>
+        </div>
+        <div class="build-funds-container" style="cursor: pointer">
+            <div class="build-funds-text">
+                PLEASE LOOK FORWARD TO THE OPENING OF CROWDFUND
+            </div>
+        </div>
+    </body>
+</html>

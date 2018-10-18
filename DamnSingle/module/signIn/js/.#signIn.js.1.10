@@ -1,0 +1,237 @@
+/**
+ * 登入界面
+ */
+var signInInit = function () {
+    fadeInOutLoad(SignInPageLoad, null);
+}
+
+/**
+ * 登入页面初始加载内容
+ */
+var SignInPageLoad = function (params) {
+    var obj = {
+        "page": "signInInit",
+        "paramJson": params
+    };
+    leftToRightArray.push(obj);
+    headerInit();
+    showSignHeaderLine(); //导航栏的选中登录显示下划线
+    $("#all-container").append(signInText);
+    $(".sign-in-container").append(loginText);
+    $(" .login-button").click(function () {
+        checkLoginParams();
+    });
+
+    //登陆标签
+    $(".title-login .login-tab").click(function () {
+        if ($(this).hasClass("login-tab-selected")) {
+            return;
+        }
+        $(this).addClass('login-tab-selected');
+        $(".register-content").remove();
+        $(".sign-in-container").append(loginText);
+        $(" .login-button").click(function () {
+            checkLoginParams();
+        });
+        $(".title-register .register-tab").removeClass('register-tab-selected');
+    });
+    //注册标签
+    $(".title-register .register-tab").click(function () {
+        if ($(this).hasClass("register-tab-selected")) {
+            return;
+        }
+        $(this).addClass('register-tab-selected');
+        $(".login-content").remove();
+        $(".sign-in-container").append(registerText);
+        $(".register-button").click(function () {
+            switch (Config.RegisterMethod) {
+                case Config.BlockChainRegister:
+                    checkBlockRegisterParams();
+                    break;
+                case Config.OtherRegister:
+                    checkRegisterParams();
+                    break;
+            }
+        });
+        $(".title-login .login-tab").removeClass('login-tab-selected');
+    });
+
+}
+
+/**
+ * 显示助记符
+ * @param msg
+ */
+var showMnemonic = function (msg) {
+    var mnemonic = msg.mnemonic;
+    mnemonic = mnemonic.replace(/,/g," ");
+    $("#all-container").append(mnemonicText);
+    $(".div-login-mnemonic-text").html(mnemonic);
+    $(".div-login-mnemonic-close").on("click", jumpToPage);
+};
+
+/**
+ * 用户登录
+ */
+var userLogin = function (mnemonic, pwd) {
+    $.ajax({
+        url: Config.address + "userLogin",
+        type: "POST",
+        data: {
+            "mnemonic": mnemonic,
+            "password": pwd,
+        },
+        success: function (response) {
+            console.info(response);
+            switch (response.msg.state) {
+                case msgCode[0] :         //成功
+                    userId = response.msg.userInfo.id;
+                    localStorage.setItem("userId", userId);
+                    jumpToPage();
+                    break;
+                case msgCode[1] :         //账号错误或不存在
+                    msgTipFunc(LText.Title, signInLangu.UserNotExist, buttonCountOne, [LText.Ok], [OK]);
+                    break;
+                case msgCode[2] :         //参数不完整
+                    msgTipFunc(LText.Title, signInLangu.IncompleteTip, buttonCountOne, [LText.Ok], [OK]);
+                    break;
+                default :                   //登录失败
+                    msgTipFunc(LText.Title, signInLangu.LoginFail, buttonCountOne, [LText.Ok], [OK]);
+            }
+        },
+        error: function (error) {
+            msgTipFunc(LText.Title, LText.False, buttonCountOne, [LText.Ok], [OK]);
+        }
+    });
+};
+
+/**
+ *  验证登录参数
+ */
+var checkLoginParams = function () {
+    var address = $(".login-mnemonic-input input").val();
+    var mnemonic = $(".login-mnemonic-input input").val();
+    var pwd = $(".login-mnemonic-password-input input").val();
+    if (!isNull(address) || !isNull(pwd)) {
+        msgTipFunc(LText.Title, signInLangu.IncompleteTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    mnemonic = mnemonic.replace(/ /g, ",");
+    userLogin(mnemonic, hex_md5(pwd));
+}
+
+/**
+ * 用户注册
+ */
+var userRegister = function (address, email, nickname, password) {
+    $.ajax({
+        url: Config.address + "userRegister",
+        type: "POST",
+        data: {
+            "address": address,
+            "email": email,
+            "nickname": nickname,
+            "password": password,
+        },
+        success: function (response) {
+            console.info(response.msg);
+            switch (response.msg.state) {
+                case msgCode[0] :         //成功
+                    userId = response.msg.userId;
+                    localStorage.setItem("userId", userId);
+                    // jumpToPage();
+                    //界面添加样式显示
+                    showMnemonic(response.msg);
+                    break;
+                case msgCode[2] :         //参数不完整
+                    msgTipFunc(LText.Title, signInLangu.IncompleteTip, buttonCountOne, [LText.Ok], [OK]);
+                    break;
+                case msgCode[3] :         //账号已经存在
+                    msgTipFunc(LText.Title, signInLangu.UserExist, buttonCountOne, [LText.Ok], [OK]);
+                    break;
+                default :        //注册失败
+                    msgTipFunc(LText.Title, signInLangu.RegisterFailure, buttonCountOne, [LText.Ok], [OK]);
+            }
+        },
+        error: function (error) {
+            msgTipFunc(LText.Title, LText.False, buttonCountOne, [LText.Ok], [OK]);
+        }
+    });
+}
+
+/**
+ *  普通注册。验证注册参数
+ */
+var checkRegisterParams = function () {
+    var address = $(".register-address-input input").val();
+    var email = $(".register-email-input input").val();
+    var nickname = $(".register-nickname-input input").val();
+    if (!isNull(address) || !isNull(email) || !isNull(nickname)) {        //输入参数不完全
+        msgTipFunc(LText.Title, signInLangu.IncompleteTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    if (!email_rule.test($(".register-email-input input").val())) {      //邮箱地址不正确
+        msgTipFunc(LText.Title, signInLangu.EmailTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    userRegister(address, email, nickname);
+};
+
+/**
+ *  区块链注册。验证注册参数
+ */
+var checkBlockRegisterParams = function () {
+    var email = $(".register-email-input input").val();
+    var nickname = $(".register-nickname-input input").val();
+    var pwd = $(".register-pwd-input input").val();
+    var rePwd = $(".register-pwd-re-input input").val();
+
+    if (!isNull(email) || !isNull(nickname) || !isNull(pwd)
+        || !isNull(rePwd)) {        //输入参数不完全
+        msgTipFunc(LText.Title, signInLangu.IncompleteTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    if (!email_rule.test($(".register-email-input input").val())) {      //邮箱地址不正确
+        msgTipFunc(LText.Title, signInLangu.EmailTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    if (!checkPwd(pwd,rePwd)) {
+        msgTipFunc(LText.Title, signInLangu.PwdTip, buttonCountOne, [LText.Ok], [OK]);
+        return;
+    }
+    userRegister("", email, nickname, hex_md5(pwd));
+};
+
+/**
+ * 登录、注册后跳转
+ */
+var jumpToPage = function () {
+    leftToRightArray.pop();
+    if (isNull(leftToRightArray[leftToRightArray.length - 1])) {
+        switch (leftToRightArray[leftToRightArray.length - 1].page) {
+            case "kittyInit" :
+            case "myKittyInit":
+                var func = eval(leftToRightArray[leftToRightArray.length - 1].page);
+                var paramJson = leftToRightArray[leftToRightArray.length - 1].paramJson;
+                new func(paramJson);
+                leftToRightArray.pop();
+                break;
+            default :
+                var params = {
+                    "kittyOwnerId": null,
+                };
+                myKittyInit(params);
+        }
+    }
+}
+
+/**检测输入的密码*/
+var checkPwd = function (pwd, rePwd) {
+    if (!pwd_rule.test(pwd) || !pwd_rule.test(rePwd)) {
+        return false;
+    }
+    if (pwd !== rePwd) {
+        return false;
+    }
+    return true;
+};

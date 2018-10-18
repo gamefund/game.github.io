@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>Galaxz</title>
+        <link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+        <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <!-- 载入Jquery 框架 -->
+        <script type="text/javascript" src="./library/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./library/jquery.lazyload.min.js"></script>
+        
+        <!--<script type="text/javascript" src="./js/main.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <style>
+            .video-container{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                overflow-x: hidden;
+                /*top: 50%;*/
+                /*transform: translate3d(0, -50%, 0);*/
+            }
+            .video-container img{
+                width: 100%;
+            }
+            .build-video-container{
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background-image: url('http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/building_bg.png');
+                background-position: center;
+                z-index: 1;
+            } 
+            .build-video-text{
+                font-size: 5rem;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate3d(-50%, -50%, 0) rotate(-24deg);
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(function(){
+                $("img.lazy").lazyload({
+                    placeholder : "http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/video_begin.jpg",
+                    effect : "fadeIn",
+                    threshold : 200,
+                    container : $(".video-container"),
+                });
+
+                $(".build-video-container").on("click", function(){
+                    window.location.href = "index.html";
+                })
+            })
+        </script>
+        <div class="video-container video-page">
+            <img class="lazy"  data-original="http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/video.jpg"/>
+        </div>
+        <div class="build-video-container" style="cursor: pointer">
+            <div class="build-video-text">
+                UNDER CONSTRUCTION
+            </div>
+        </div>
+    </body>
+</html>

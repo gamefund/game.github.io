@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+	<title>Blockchain GAME FUND</title>
+	<link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+	<link rel="shortcut icon" href="images/logo1.png" />
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/head_foot.css"/>
+	<link rel="stylesheet" href="css/registered.css"/>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/language_change.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
+	<!-- header -->
+	<script type="text/javascript" src="js/head.js"></script>
+	<!-- footer -->
+	<!--<script type="text/javascript" src="js/foot.js"></script>-->
+</head>
+<body id="wrapper">
+	<!-- body -->
+	<div class="body-container scroll-container">
+		<div id="scroller">
+			<div id="login-title-img"><img src="images/logo.png"/></div>
+			<div class="title-img-bottom"></div>
+			<div class="input-content">
+				<div class="title-text" id="rtitle_text1"></div>
+				<input class="input-box" id="account-input" type="text">
+				<div id="account-input-tip" class="input-tips"></div>
+			</div>
+			<div class="input-content">
+				<div class="title-text" id="rtitle_text2"></div>
+				<input class="input-box" id="password-input" type="password">
+				<div id="password-input-tip" class="input-tips"></div>
+			</div>
+			<div class="input-content">
+				<div class="title-text" id="rtitle_text3"></div>
+				<input class="input-box" id="confirm-password-input" type="password">
+				<div id="confirm-password-input-tip" class="input-tips"></div>
+			</div>
+			<div class="input-content">
+				<div class="title-text" id="rtitle_text4"></div>
+				<input class="input-box" id="code-input" type="text">
+				<!--<input class="detail-btn" id="detail-btn" type="button" value="邀请码说明">-->
+				<div class="detail-content"><div class="detail-btn" id="detail-btn" ></div></div>
+				<div class="invite-password-text" id="invite-password-text"></div>
+				<div id="password-input-tip" class="input-tips"></div>
+			</div>
+			<div class="statement-content">
+				<div class="statement-radio"></div>
+				<div class="statement-text">
+					<span class="statement-text-span1"></span>
+					<span class="statement-text-span2"></span>
+				</div>
+			</div>
+			<div class="forget-and-register" id="register-btn"></div>
+			<div id="down-two">
+				<span></span><a class="forget-and-register" id="to-login" href="login.html"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 提示框 -->
+	<div class="activation-successful-container">
+		<div class="activation-successful-content">
+			<div class="successful-title" id="gsuccessful_title"></div>
+			<div class="successfull-text" id="gsuccessfull_text1"></div>
+			<!--<div class="successfull-text" id="gsuccessfull_text2">C²engine license的登记名额</div>-->
+			<a class="activation-successful-confirm" id="gactivation_successful_confirm" href="buy.html"></a>
+		</div>
+	</div>
+
+    <div class="code-detail-background" id="code-detail-background " style="display: none;">
+		<div id="code-detail-content" class="code-detail-content">
+			<div class="top-pull-down1 fa fa-times" id="detail-close" aria-hidden="true"></div>
+			<div class="code-content">
+				<div id="code-top-content">
+					<div class="top-half-title half-title" id="gtop_half_title"></div>
+					<div class="top-half-text" id="gtop_half_text1"></div>
+					<!--<div class="top-half-text" id="gtop_half_text2">获得购买登记资格，而获得资格的用户也可以将获得</div>
+					<div class="top-half-text" id="gtop_half_text3">的Kiss积分购买社区邀请码赠送好友。</div>-->
+				</div>
+				
+				<div id="code-bottom-content">
+					<div class="bottom-half-title half-title" id="gbottom_half_title"></div>
+					<ul class="bottom-half-text-ul">
+						<li><p id="bottom-half-text-ul-p1"></p></li>
+						<li><p id="bottom-half-text-ul-p2"></p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="statement-container">
+		<div class="statement-page-content">
+			<div class="top-pull-down ">
+				<li class="fa fa-times" id="server-close"  aria-hidden="true"></li>
+			</div>
+			<div class="middle-server-centent">
+				<div class="page-title"></div>
+				<div class="page-content">
+					<p class="server_page_p1 server-page-p"></p>
+					<p class="server_page_p2"></p>
+					<p class="server_page_p3"></p>
+					<p class="server_page_p4"></p>
+					<p class="server_page_p5 server-page-p"></p>
+					<p class="server_page_p6"></p>
+					<p class="server_page_p7"></p>
+					<p class="server_page_p8"></p>
+					<p class="server_page_p9"></p>
+					<p class="server_page_p10"></p>
+					<p class="server_page_p11"></p>
+					<p class="server_page_p12 server-page-p"></p>
+					<p class="server_page_p13"></p>
+					<p class="server_page_p14"></p>
+					<p class="server_page_p15 server-page-p"></p>
+					<p class="server_page_p16"></p>
+					<p class="server_page_p17"></p>
+					<p class="server_page_p18"></p>
+					<p class="server_page_p19 server-page-p"></p>
+					<p class="server_page_p20"></p>
+					<p class="server_page_p21"></p>
+					<p class="server_page_p22"></p>
+					<p class="server_page_p23"></p>
+					<p class="server_page_p24 server-page-p"></p>
+					<p class="server_page_p25"></p>
+					<p class="server_page_p26"></p>
+					<p class="server_page_p27"></p>
+					<p class="server_page_p28 server-page-p"></p>
+					<p class="server_page_p29"></p>
+					<p class="server_page_p30"></p>
+					<p class="server_page_p31"></p>
+					<p class="server_page_p32 server-page-p"></p>
+					<p class="server_page_p33"></p>
+					<p class="server_page_p34"></p>
+					<p class="server_page_p35"></p>
+					<p class="server_page_p36 server-page-p"></p>
+					<p class="server_page_p37"></p>
+					<p class="server_page_p38"></p>
+					<p class="server_page_p39"></p>
+					<p class="server_page_p40 server-page-p"></p>
+					<p class="server_page_p41"></p>
+					<p class="server_page_p42 server-page-p"></p>
+					<p class="server_page_p43"></p>
+					<p class="server_page_p44"></p>
+					<p class="server_page_p45"></p>
+					<p class="server_page_p46"></p>
+				</div>
+				<!--<div class="page-accept-btn">接受</div>-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

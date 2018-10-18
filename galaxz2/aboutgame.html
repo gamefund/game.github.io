@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>AboutTheGame - Galaxz</title>
+        <link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+        <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon"/>
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <!-- 载入Jquery 框架 -->
+        <script type="text/javascript" src="./library/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./library/jquery.lazyload.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <style>        
+            .shop-container{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                overflow-x: hidden;
+            }
+            .shop-container img{
+                width: 100%;
+            }
+            .build-shop-container{
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                background-image: url('http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/building_bg.png');
+                background-position: center;
+                z-index: 1;
+            } 
+            .build-shop-text{
+                font-size: 2.6rem;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate3d(-50%, -50%, 0) rotate(-24deg);
+                width: 100%;
+                text-align: center;
+            }
+            .top-news-content{
+                position: absolute;
+                top: 0;
+                height: 14%;
+                width: 100%;
+                cursor: pointer;
+            }
+            .bottom-news-content{
+                position: absolute;
+                top: 14%;
+                width: 100%;
+                height: 86%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(function(){
+                $(".about-game img.lazy").lazyload({
+                    placeholder : "http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/aboutGame_begin.jpg",
+                    effect : "fadeIn",
+                    threshold : 200,
+                    container : $(".shop-container"),
+                });
+
+                $(".build-shop-container").on("click", function(){
+                    window.location.href = "index.html";
+                })
+            });
+        </script>
+
+        <div class="shop-container about-game">
+            <img class="lazy" data-original="http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/aboutGame.jpg"/>
+            <div class="top-news-content"></div>
+            <div class="bottom-news-content"></div>
+        </div>
+        <div class="build-shop-container" style="cursor: pointer">
+            <div class="build-shop-text">
+                PLEASE LOOK FORWARD TO THE OPENING OF ABOUT THE GAME
+            </div>
+        </div>
+    </body>
+</html>

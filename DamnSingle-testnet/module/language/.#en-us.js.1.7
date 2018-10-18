@@ -1,0 +1,205 @@
+var LText = {
+    WebTitle: "Kitties",           //网站标题
+    SignIn: "Sign In",             //提示登陆
+    MarketPlace: "MarketPlace",    //交易所名称
+    ForSale: "For Sale",
+    ForSire: "For Sire",
+    Siring: "Siring",
+    Gen0: "Gen0",
+    AllKitties: "All Kitties",
+    SearchKitties: "Search Kitties",
+    Filterkitties: "Filter kitties",
+    Youngestfirst: "Youngest first",
+    Oldestfirst: "Oldest first",
+    Cheapestfirst: "Cheapest first",
+    Mostexpensivefirst: "Most expensive first",
+    Mostlike: "Most like",
+    Kitties: " kitties",
+    KittyType: "Kitty Type",
+    Normal: "Normal",
+    Fancy: "Fancy",
+    Exclusive: "Exclusive",
+    Generation: "Gen",
+    AllGeneration: "all",
+    Cooldown: "Cooldown",
+    Fast: "Fast",
+    Swift: "Swift",
+    Snappy: "Snappy",
+    Brisk: "Brisk",
+    Plodding: "Plodding",
+    Slow: "Slow",
+    Sluggish: "Sluggish",
+    Catatonic: "Catatonic",
+    New: "New",
+    WantsToSire: "Wants To Sire",
+    BuyNowPrice: "Buy now price",
+    Kitty: "Kitty",         //默认名字
+    Resting: "Resting",
+    Gestating: "Bun in oven",
+    BreedNowPrice: "Breed now price",
+    ToSire: "To Sire",
+    ToBuy: "To buy",
+    Year: "Year",
+    Mouth: "Mouth",
+    Day: "Day",                 //
+    Hours: "Hours",             //
+    Minute: "Minute",           //
+    Second: "Second",           //
+    Week: "Week",
+    Owner: "Owner",             //
+    TimeLeft: "Time Left",      //剩余时间
+    StartedAt: "Started at",    //开始
+    EndAt: "Price goes to",     //结束至
+    Bio: "Bio",                 //简介
+    ReportPage: "Report Page",  //举报界面
+    Cattributes: "Cattributes", //喵属性
+    Parents: "Parents",         //父母
+    Children: "Children",       //孩子
+    BreedKitty: "Breed Kitty",
+    SellKitty: "Sell Kitty",
+    GiftKitty: "Gift Kitty",
+    SireToThePublic: "Sire to the public",
+    SireWithMyKitties: "Sire with my Kitties",
+    EnterStartPrice: "Enter start price",
+    EnterEndPrice: "Enter end price",
+    Duration: "Duration",
+    Done: "Done",
+    InputOtherSireId: "please input other side ID",
+    InputOpponentId: "Please Input Opponent ID",
+    Days: "Days",
+    ChooseAKitty: "Choose A Kitty",
+    ChooseYourKitty: "Please choose your Kitty",
+    Title: "Title",
+    Success: "Success",
+    Ok: "OK",
+    Cancle: "Cancle",
+    SystemTitle: "System is abnormal, try again later",
+    False: "FALSE",
+    LoginFirst: "Please Login first",
+    Exist: "kitty Is Not Exist",
+    Register: "Please Register first",
+    Bought: "kitty Was Bought",
+    UnderShelf: "kitty Under The Shelf",
+    StatusChanged: "kitty Status has been Changed",
+    NoReady: "kitty No Ready",
+    BuySuccess: "Buy Success",
+    BuyFailed: "Buy Failed",
+    idError: "Id Error",
+    kittyIdListFALSE: "Check kittyId FALSE",
+    StartPriceerror: "StartPrice Error",
+    EndPriceError: "EndPrice Error",
+    DurationError: "Duration Error",
+    PhuZiqaat:   "PhuZiqaat",
+    Mistletoe:   "Mistletoe",
+    DuCat:       "DuCat",
+    SantaClaws:  "SantaClaws",
+    ShipCat:     "ShipCat",
+    Dracula:     "Dracula",
+    coffee:      "coffee",     
+    kittencrean: "kittencrean",
+    granitegrey: "granitegrey", 
+    rayalpurple: "rayalpurple",  
+    barkbrown:   "barkbrown",    
+    ragamuffin:  "ragamuffin",   
+    sphynx:      "sphynx",       
+    chocolate:   "chocolate",    
+    cottoncandy: "cottoncandy",
+    swampgreen:  "swampgreen",   
+    crazy:       "crazy",
+    luckystripe: "luckystripe",
+    stawberry:   "stawberry",    
+    cloudwhite:  "cloudwhite",   
+    limegreen:   "limegreen",
+    happygokitt: "happygokitty",
+    totesbasic:  "totesbasic",
+    gerbil:      "gerbil",   
+    soerious:    "soerious",
+    sandalwood:  "sandalwood",
+    icy:         "icy",  
+    whixtensions:"whixtensions",
+    SortBy: "Sort by",//myKitties
+    BugCat: "BugCat",
+    CoolDowns: "CoolDowns",
+};
+
+/**
+ * 简介部分
+ * 根据不同的性格产生不同的描述内容
+ * key：性格
+ * value: 对应描述信息
+ */
+var Introduce = {
+    OpenWhite: "Hello! I'm ",                                         //简介开头部分
+    PhuZiqaat: "I like to run fast.",
+    Mistletoe: "Humburgers is my only favourite food!", 
+    DuCat: "Boold! Boold! I need more Boold!",
+    SantaClaws: "I can send a gift to you when Christmas. If so, you give me many more love!!",
+    ShipCat: "One piece is my dream! I will become One Piece! And together with you!",
+    Dracula: "I always appear in Movie and media. Did you see that? I'm so attractive.",
+    coffee: "Sleep...Sleep... I' want to sleep...! Unfortunately, I' can'tttttt!!!!",
+    kittencrean: "Dont't touch me!",
+    granitegrey: "Leave me alone!",
+    rayalpurple: "Let's sing a song!",
+    barkbrown: "Dark...No...I like white!",
+    ragamuffin: "Give me more money!!! I can do anything for you!",
+    sphynx: "Come on! Let's play basketball.",
+    chocolate: "Sugar! Chocolate! Doughnut! ennnn....... Do you want ?",
+    cottoncandy: "My car is B!!!M!!!!WWW.....",
+    swampgreen: "I heat Hat! Cap! Heat Them!!",
+    crazy: "Ga Ga Ga Ga Ga Ga Ga Ga Ga Ga",
+    luckystripe: "I always luckly!",
+    stawberry: "I don't want to look you overtime!!!!! Don't!!!!!!",
+    cloudwhite: "Snow... en..... It's beautify!",
+    limegreen: "Did you know Java? I'm be good at it!",
+    happygokitty: "Ho ho ho ho ho ! I'm so happy!!!!",
+    totesbasic: "I'm your father! Say daddy!!!",
+    gerbil: "No No No! I'm tired!",
+    soerious: "Don't laugh! Don't do that!",
+    sandalwood: "Come On!",
+    icy: "Ice Cream.... ennnnn.......",
+    whixtensions: "I'm your lord! Follow me!!!",
+    BugCat: "I'm Sick! I'm Sick? I'm Sickkkk??? You Sick!",
+};
+
+/**
+ * 放出交配出售和赠送
+ */
+var Active = {
+    //开始部分内容
+    StartContent: "Welcome! Dear!",
+    //说明部分
+    PartContent: "will be put on the market as a Sire (i.e. a cat dad) " +
+        "Whoever breeds with your Sire keeps the offspring, but you get the other. Remember, every time you sire your kitty," +
+        "the siring cooldown time increases.",
+    //价格说明
+    PriceContent: "The starting price will go down until the breeding auction ends. If no one breeds with your Sire, they will return to your letter.",
+    //出售说明部分
+    PartSellContent: "will be put on the market as a Sell (i.e. a cat dad) ",
+    //赠送说明部分
+    GiftContent: " will be give away to your designated user",
+    //赠送提示信息
+    GiftMsg: "You need to system in other side ID following input box.",
+};
+
+/**
+ * 冷却等级界面说明部分
+ */
+var CoolDownttrbuties = {
+    Msg: "After a Kitty breeds with another Kitty, it will be temporally unable to breed again for a brief period of time." +
+        "The time is takes to recover will increase each time the Kitty breeds.",
+};
+
+/**
+ * 冷却时间
+ */
+var cooldown = [
+    "Fast", "Swift", "Snappy", "Brisk", "Plodding", "Slow", "Sluggish", "Catatonic"
+];
+
+/**
+ * 等级对应的时间
+ * @type {Array}
+ */
+var cooldownExplain = [
+    "1m", "2m-5m", "10m-30m", "1h-2h", "4h-8h", "16h-24h", "2d-4d", "1week"
+];

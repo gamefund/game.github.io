@@ -1,0 +1,231 @@
+﻿var kittyInit = function (pageData) {
+    $("body").empty();
+    indexArray.push("kittyInit");
+    headerInit();
+    $("body").append(kitteDataText);
+
+    //kitty_datail(pageData);
+
+    // 点击跳转至 销售或交配选择页面
+    $(".kitty-owner-chose div:eq(" + 0 + ")").click(function(){
+        sale_sireInit(kitty_sale);
+    });
+
+    $(".kitty-owner-chose div:eq(" + 1 + ")").click(function(){
+        sale_sellInit(kitty_sale);
+    });
+
+    $(".kitty-owner-chose div:eq(" + 2 + ")").click(function(){
+        sale_giftInit(kitty_sale);
+    });
+
+    $(".kitty-owner").click(function(){
+        myKittyInit();
+    });
+
+    $(".buy-button").click(function () {
+        // if (pageData.auction.type == "sire") {
+        //     sireInit(sire);
+        // } else if (pageData.auction.type == "sale") {
+        //     // buyInit();
+        // }
+        sireInit(sire);
+
+    });
+
+    test();
+};
+
+
+var test = function() {
+        $.ajax({
+            url: "http://127.0.0.1:8080/getKittyDetail",
+            data: {
+                id: 10,
+            },
+            type: "POST",
+            success: function(data) {
+                console.log(data);
+                ///alert(data.state);
+                kitty_datail(data.dataMap);
+            },
+            error: function(xhr) {
+                console.log("error: " + xhr.status);
+            }
+        });
+    }
+
+/**
+ * 信息填充
+ * @param {*} data 
+ */
+var kitty_datail = function(data) {
+    var kittyName = null;
+    try {
+        kittyName = data.name;
+    } catch (e) {
+        kittyName = "Kitty";
+    }
+    $('.kitty-message-name').html(kittyName + " #" + data.id);
+    $('.kitty-message-name-small').html(kittyName + "&nbsp" + data.id);
+    $('.kitty-message-gen').html("Gen" + "&nbsp" +data.generation);
+    $('.kitty-data-img').css("backgroundImage", "url("+ data.image_url +")");
+
+    $('.kitty-bio-message').html(data.bio);
+    $('.kittyPage-up-part').css("background-color", data.color);
+    kitty_status(data);
+    kitty_owner(data.auction);
+    left_time(data);
+    motherMessage(data);
+    fatherMessage(data);
+    // $('.zan-num').html(data.purrs.count);
+    $('.zan-num').html(data.purr_count);
+    childrenMessage(data);
+    //cattributesMessage(data);
+}
+/**
+ * kitty目前状态：出售、交配、休息
+ * 
+ * todo 是否怀孕待确认
+ * @param {*} data 
+ */
+
+var kitty_status = function(data) {
+    if(data.is_ready == true) {//data.status.is_ready == true
+        if(data.auction.type == "2") {//data.auction.type == "sire"
+            $('.kitty-status').show().css("display", "flex");
+            $('.kitty-to-sale').show().css("display", "flex");
+            $('.price-change').show();
+            $('.kitty-price-change').show().css("display", "flex");
+            $('.kitty-status-icon').css("backgroundImage", "url(./module/detail/img/kitty.png)");   //交配照片
+
+            $('.kitty-status-item').html("For sire");
+            $('.kitty-now-price-name').text("Breed now price");
+            $('.buy-button').html("Sign in to sire");
+        } else if(data.auction.type == "1") {//data.auction.type == "sale"
+            $('.kitty-status').show().css("display", "flex");
+            $('.kitty-to-sale').show().css("display", "flex");
+            $('.price-change').show();
+            $('.kitty-price-change').show().css("display", "flex");
+            $('.kitty-status-icon').css("backgroundImage", "url(./module/detail/img/kitty.png)");   //出售照片
+
+            $('.kitty-status-item').html("For sale");
+            $('.kitty-now-price-name').text("Buy now price");
+            $('.buy-button').html("Sign in to buy");
+        } else if (isNaN(data.auction.type)) {
+            $('.kitty-status').hide();
+            $('.kitty-message-cooldown').html(cooldown[data.status.cooldown_index] + "&nbsp" + "Cooldown");
+            $('.kitty-to-sale').hide();
+            $('.price-change').hide();
+            $('.kitty-price-change').hide();
+            return;
+        }
+
+        var currentPrice = 0;
+        var longCurrentPrice = parseInt(data.auction.current_price);
+        var longStartPrice = parseInt(data.auction.start_price);
+        var longEndPrice = parseInt(data.auction.end_price);
+
+        if(longCurrentPrice > longStartPrice){
+            currentPrice = longStartPrice;
+        }else if(longCurrentPrice < longEndPrice){
+            currentPrice = longEndPrice;
+        }else{
+            currentPrice = longCurrentPrice;
+        }
+        $('.kitty-status-note').html((currentPrice * 0.000000000000000001).toFixed(3));
+        $('.kitty-now-price-num').text((currentPrice * 0.000000000000000001).toFixed(3));
+        $('.kitty-sale-start-price').html((data.auction.start_price * 0.000000000000000001).toFixed(3));
+        $('.kitty-sale-end-price').html((data.auction.end_price * 0.000000000000000001).toFixed(3));
+        $('.kitty-message-cooldown').html(cooldown[data.cooldown_index] + "&nbsp" + "Cooldown");//data.status.cooldown_index
+    }
+}
+
+/**
+ * kitty主人信息
+ */
+var kitty_owner = function(data) {
+    $('.kitty-ownwe-name').html(decodeURIComponent(data.seller.nickname));
+    $('.kitty-owner-img-effect').css("backgroundImage", "url("+ data.seller.image +")");
+}
+
+/**
+ * 剩余时间
+ */
+var left_time = function (data) {
+    var nowDate = (new Date()).valueOf();
+    var left_seconds = data.auction.end_time - nowDate;
+    $('.sale-left-time').html(MillisecondToDate_text(left_seconds));
+}
+
+//毫秒转时分秒==汉字显示时间
+function MillisecondToDate_text(msd) {
+    var time = parseFloat(msd) / 1000;
+    if (null != time && "" != time) {
+        if (time > 60 && time < 60 * 60) { //分
+            time = parseInt(time / 60.0) + "minute";
+        } else if (time >= 60 * 60 && time < 60 * 60 * 24) { //时
+            time = parseInt(time / 3600.0) + "hours";
+        } else if (time >= 60 * 60 * 24 && time < 60 * 60 * 24 * 30) { //天
+            time = parseInt(time / 86400.0) + "day";
+        } else if (time >= 60 * 60 * 24 * 30 && time < 60 * 60 * 24 * 30 * 12) { //月
+            time = parseInt(time / 2592000.0) + "month";
+        } else if (time >= 60 * 60 * 24 * 30 * 12) { //年
+            time = parseInt(time / 31104000.0) + "year";
+        } else {
+            time = parseInt(time) + "second";
+        }
+    } else {
+        time = 0;
+    }
+    return time;
+}
+
+/**
+ * 父母信息
+ */
+var motherMessage = function (data) {
+    $('.kitty-parent-left').css("backgroundImage", "url(" + data.matron.image_url + ")");
+    $('.kitty-parent-left').css("background-color", data.matron.color);
+    $('.kitty-parent-left').click(function () {
+        kittyInit(kitty_detail);
+    });
+}
+var fatherMessage = function (data) {
+    $('.kitty-parent-right').css("backgroundImage", "url(" + data.sire.image_url + ")");
+    $('.kitty-parent-right').css("background-color", data.sire.color);
+    $('.kitty-parent-right').click(function () {
+        kittyInit(kitty_detail);
+    });
+}
+
+/**
+ * 孩子信息
+ */
+var childrenMessage = function (data) {
+    for (var i = 0; i < data.children.length; i++) {
+        var text = '<span id=children' + i + '></span>';
+        $('.kitty-childrens').append(text);
+        $('#children' + i).css("backgroundImage", "url(" + data.children[i].image_url + ")");
+        $('#children' + i).css("background-color", data.children[i].color);
+        $('#children' + i).click(function () {
+            kittyInit(kitty_detail);
+        });
+    }
+}
+
+/**
+ * cattribute信息
+ */
+var cattributesMessage = function (data) {
+    for (var i = 0; i < data.cattributes.length; i++) {
+        var text = '<div id=cattribute' + i + '>' +
+            '<div id=cattribute-ione' + i + '></div>' +
+            '<div id=cattribute-item' + i + '></div>' +
+            '</div>';
+        $('.kitty-tributes-message').append(text);
+        $('#cattribute' + i).addClass("cattribute");
+        $('#cattribute-item' + i).text(data.cattributes[i].description);
+        $('#cattribute-ione' + i).addClass("cattribute-ione");
+    }
+}

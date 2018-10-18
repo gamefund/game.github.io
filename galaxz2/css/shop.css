@@ -1,0 +1,40 @@
+
+.shop-container{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.shop-container img{
+    width: 100%;
+}
+
+.build-shop-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/building_bg.png');
+    background-position: center;
+    z-index: 1;
+} 
+
+.build-shop-text{
+    /*position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('http://html5resource-10019461.file.myqcloud.com/galaxz/images/crowdfund/building.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    z-index: 2;*/
+    font-size: 2.7rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) rotate(-24deg);
+    width: 100%;
+    text-align: center;
+}

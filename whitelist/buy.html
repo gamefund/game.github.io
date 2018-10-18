@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+	<title>Blockchain GAME FUND</title>
+	<link rel="bookmark" type="image/x-icon" href="images/logo1.png"/>
+	<link rel="shortcut icon" href="images/logo1.png" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/head_foot.css"/>
+	
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/countrypicker.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/language_change.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	
+	<script type="text/javascript" src="js/buy.js"></script>
+	<!-- header -->
+	<script type="text/javascript" src="js/head.js"></script>
+	<!-- footer -->
+	<script type="text/javascript" src="js/foot.js"></script>
+
+	<link rel="stylesheet" href="css/buy.css"/>
+</head>
+<body id="wraoper">
+	<!-- body -->
+	<div class="body-container scroll-container">
+		<div id="scroller">
+			<div id="buy-tip-title">
+				<div class="title1" id="buy-tip-title1">
+					<span id="buy-tip-title1_1"></span>
+					<span style="color:#fe6501;">G</span>AME.<span style="color:#fe6501;">F</span>UND
+					<span id="buy-tip-title1_2"></span>
+				</div>
+				<div class="title2" id="buy-tip-title2"></div>
+			</div>
+			<div id="buy-top-content">
+				<div class="buy-top-text" id="buy-top-text1"></div>
+			</div>
+			<div id="buy-content">
+				<div class="buy-tips" id="buy_tips">
+					<div id="buy_tips_1"></div>
+					<div id="buy_tips_2"></div>
+				</div>
+				<div class="buy-tips-text" id="buy_tips_text1"></div>
+				<div class="buy-tips-text" id="buy_tips_text2"></div>
+				<div class="gamefund-website"><a>https://game.fund</a></div>
+				<!--<div class="gamefund-website"><a href="https://game.fund">https://game.fund</a></div>-->
+				<div class="join-form-content">
+					<div class="must-fill-tip"></div>
+					<div class="fill-input-content">
+						<div class="form-item-title" >
+							<span id="email_item_title1"></span>
+							<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+						</div>
+						<input id="email-input" class="buy-item-input" type="text">
+						<div id="email-input-tip" class=""></div>
+						<div class="email-notice"></div>
+					</div>
+					<div class="fill-input-content">
+						<div class="form-item-title">
+							<span id="email_item_title2"></span>
+							<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+						</div>
+						<input id="confirm-email-input" class="buy-item-input" type="text">
+						<div id="confirm-email-input-tip" class=""></div>
+					</div>
+					<div class="fill-input-content">
+						<div class="form-item-title" id="telegram-name"></div>
+						<input id="username-input" class="buy-item-input" type="text">
+						<div id="username-input-tip" class=""></div>
+					</div>
+					<div class="fill-input-content">
+						<div class="sale-count-title">
+							<span id="sale-count-title"></span>
+							<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+						</div>
+						<input id="btc-input" class="buy-item-input" type="text" onkeyup="cky(this)">
+						<div id="btc-input-tip" class=""></div>
+						<!--<div class="check-item"><input name="pay" id="account0" type="radio" value="1"><label class="rulelabel" for="account0">USD <100</label></div>
+						<div class="check-item"><input name="pay" id="account1" type="radio" value="2"><label class="rulelabel" for="account1">USD 100-1000</label></div>
+						<div class="check-item"><input name="pay" id="account2" type="radio" value="3"><label class="rulelabel" for="account2">USD 1,000-5,000</label></div>
+						<div class="check-item"><input name="pay" id="account3" type="radio" value="4"><label class="rulelabel" for="account3">USD 5,000-10,000</label></div>
+						<div class="check-item"><input name="pay" id="account4" type="radio" value="5"><label class="rulelabel" for="account4">USD 10,000-50,000</label></div>
+						<div class="check-item"><input name="pay" id="account5" type="radio" value="6"><label class="rulelabel" for="account5">USD 50,000-100,000</label></div>
+						<div class="check-item"><input name="pay" id="account6" type="radio" value="7"><label class="rulelabel" for="account6">USD +100,000</label></div>-->
+					</div>
+					<!--<div class="fill-input-content">
+						<div class="form-item-title" id="btc_address"></div>
+						<input id="btc-input" class="buy-item-input" type="text">
+						<div id="btc-input-tip" class=""></div>
+					</div>-->
+					<div class="fill-input-content">
+						<div class="form-item-title" id="eth_address"></div>
+						<input id="eth-input" class="buy-item-input" type="text">
+						<div id="eth-input-tip" class=""></div>
+					</div>
+					<div class="fill-input-content">
+						<div class="form-item-title" id="neo_address"></div>
+						<input id="neo-input" class="buy-item-input" type="text">
+						<div id="neo-input-tip" class=""></div>
+					</div>
+					<div class="fill-input-content">
+						<div class="form-item-title" >
+							<span id="country_title1"></span>
+							<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+						</div>
+						<!--<input id="country-input" class="buy-item-input" type="text">-->
+						<select class="selectpicker countrypicker" data-live-search="true" data-flag="false"></select>
+						<div id="country-input-tip" class=""></div>
+					</div>
+				</div>
+				<!--<div class="email-item-title" id="email_item_title">邮箱</div>
+				<input id="email-input" class="buy-item-input" type="text">
+				<div id="email-input-tip" class="input-tips"></div>
+				<div class="currency-item-title" id="currency_item_title">请选择支付币种</div>
+				<form id="buy-select-pay" action="" method="get">
+					<label class="check-item"><input name="pay" id="BTC" type="radio" value="BTC" checked="checked"><label class="rulelabel" for="BTC">BTC</label></label>
+					<label class="check-item"><input name="pay" id="ETH" type="radio" value="ETH"><label class="rulelabel" for="ETH">ETH</label></label>
+					<label class="check-item"><input name="pay" id="NEO" type="radio" value="NEO"><label class="rulelabel" for="NEO">NEO</label></label>
+					<label class="check-item"><input name="pay" id="ETC" type="radio" value="ETC"><label class="rulelabel" for="ETC">ETC</label></label>
+					<label class="check-item"><input name="pay" id="CNY" type="radio" value="CNY"><label class="rulelabel" for="CNY">CNY</label></label>
+				</form>
+				<div class="wallet-item-title" id="wallet_item_title">请输入上一步选择支付币种的支付账号</div>
+				<input id="wallet-account-input" class="buy-item-input" type="text">
+				<div class="num-item-title" id="num_item_title">请输入计划购买C²engine license的数量</div>
+				<input id="purchase-quantity-input" class="buy-item-input" type="number">
+				<div id="need-pay-num"><span id="need_pay_num">需支付</span><span id="currency-type"></span><span id="need-count"></span></div>-->
+				<!-- 图片验证-->
+				<div class="submit-check-content">
+					<div class="form-item-title" >
+						<span id="code_title1"></span>
+						<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+					</div>
+					<div class="get-code">
+						<div class="code-input">
+							<input type="text"/>
+						</div>
+						<diV class="code-img">
+							<img src=""/>
+							<span class="change_code"></span>
+						</diV>
+					</div>
+				</div>
+				<div class="statement-content">
+					<div class="statement-radio"><img src="images/2.png"/></div>
+					<div class="statement-text">
+						<span class="statement-text-span1"></span>
+						<span class="statement-text-span2"></span>
+						<span style="color: rgb(241,0,0);font-size: 1.45rem;">*</span>
+					</div>
+				</div>
+				<div id="buy-confirm-btn"></div>
+				<!--<div class="buy-tips-text" id="buy_tips_text3"></div>-->
+			</div>
+		</div>
+	</div>
+	<!---->
+	<div class="whitelist-successful-container">
+		<div class="successful-content-container">
+			<div class="whitelist-successful-content">
+				<div class="whitelist-successful-title" id="whitelist_successful_title"></div>
+				<div class="whitelist-successfull-text">
+					<p class="whitelist-p1"></p>
+					<p class="whitelist-p2"></p>
+					<p class="whitelist-p3"></p>
+					<p class="whitelist-p5"><span class="whitelist-p5-sp"></span></br><a href="https://t.me/gamefundchannel">https://t.me/gamefundchannel</a></p>
+					<p class="whitelist-p6"><span class="whitelist-p6-sp"></span></br><a href="https://t.me/gamefund">https://t.me/gamefund</a></p>
+					<p class="whitelist-p4"><span class="whitelist-p4-sp"></span></br><a href="https://twitter.com/gamefundchain">https://twitter.com/gamefundchain<a></p>
+					<p class="whitelist-p8"><span class="whitelist-p8-sp" style="color: rgb(60,60,60);"></span></br><a href="https://github.com/gamefund">https://github.com/gamefund</a></p>
+					<p class="whitelist-p7"><span class="whitelist-p7-sp"></span></br><a href="mailto:info@game.fund">info@game.fund</a></p>
+				</div>
+				<div class="whitelist-successful-btn">
+					<div class="whitelist-successful-div1"><a class="whitelist-successful-confirm1" id="whitelist_successful_confirm1" href="buy.html"></a></div>
+					<div class="whitelist-successful-div2">
+						<a class="whitelist-successful-confirm2" id="whitelist_successful_confirm2" href="already_get_qualified.html"></a>
+					</div>
+					<div class="whitelist-successful-confirm3" id="whitelist_successful_confirm3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 声明条款 -->
+	<div class="statement-container">
+		<div class="statement-content-out">
+			<div class="statement-page-content">
+				<div class="page-title"></div>
+				<div class="page-content">
+					<p class="statement-p1"></p>
+					<p class="statement-p2"></p>
+					<p class="statement-p3"></p>
+					<p class="statement-p4"></p>
+					<p class="statement-p5"></p>
+				</div>
+				<div class="statement-button">
+					<div class="page-accept-btn"></div>
+					<div class="page-return-btn"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

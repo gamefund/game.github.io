@@ -1,0 +1,274 @@
+/**
+ * 交配页面
+ */
+var sale_sireInit = function (kitty_id, kitty_type) {
+    $("body").css("transition","0.5s");
+    $("body").css("transform","scale(0.9)");
+    $("body").css("opacity","0.6");
+    setTimeout(function(){
+        $("#all-container").empty();
+        $("body").css("transition","0.5s");
+        $("body").css("transform","scale(1)");
+        $("body").css("opacity","1");
+        var obj = {"page":"sale_sireInit","kitty_id":kitty_id,"kitty_type":kitty_type};
+        leftToRightArray.push(obj);
+        headerInit();
+
+        $("#all-container").append(sale_sireText);
+        $(".finish-setting-button").before(publicSireText);
+
+        $(".sale-sire-container .sire-small-title .sire-to-public").click(function(){
+            if($(this).hasClass("sale-sire-selected")){
+                return;
+            }
+            $(".my-kitties-choose").remove();
+            $(".finish-setting-button").before(publicSireText);
+            $(this).addClass('sale-sire-selected');
+            $(".sale-sire-container .setting-button").unbind("click");
+            $(".sale-sire-container .setting-button").click(function(){
+            waitModel();
+                var start_price = $(".input-starting-price").val();
+                var end_price = $(".input-end-price").val();
+                var duration = $(".input-duration").val();
+                var kittyId = kitty_id;
+                release_sire(kittyId,start_price,end_price,duration);
+            });
+            $(".sale-sire-container .sire-small-title .sire-with-ownKitties").removeClass('sale-sire-selected');
+        });
+        $(".sale-sire-container .sire-small-title .sire-with-ownKitties").click(function(){
+            if($(this).hasClass("sale-sire-selected")){
+                return;
+            }
+        waitModel();
+            $(".setting-starting-price").remove();
+            $(".setting-end-price").remove();
+            $(".setting-duration").remove();
+            $(".finish-setting-button").before(ownerSireText);
+            $(".choose-kitty-input").append(my_kittiesSelect);
+            getNotSiredKitties(kitty_id);
+            $(".sale-sire-container .setting-button").unbind("click");
+            $(".sale-sire-container .setting-button").click(function(){
+            waitModel();
+                var sId = kitty_id;
+                var mId = $(".choose-kitty-input select").val();
+                console.log(mId);
+                to_sire(sId,mId);
+            });
+            $(this).addClass('sale-sire-selected');
+            $(".sale-sire-container .sire-small-title .sire-to-public").removeClass('sale-sire-selected');
+        });
+
+        $(".sale-sire-container .setting-button").click(function(){
+            waitModel();
+            var start_price = $(".input-starting-price").val();
+            var end_price = $(".input-end-price").val();
+            var duration = $(".input-duration").val();
+            var kittyId = kitty_id;
+            release_sire(kittyId,start_price,end_price,duration);
+        });
+    },400);
+};
+
+/**
+ * 销售页面
+ */
+var sale_sellInit = function (kitty_id, kitty_type) {
+
+    $("body").css("transition","0.5s");
+    $("body").css("transform","scale(0.9)");
+    $("body").css("opacity","0.6");
+    setTimeout(function(){
+        $("#all-container").empty();
+        $("body").css("transition","0.5s");
+        $("body").css("transform","scale(1)");
+        $("body").css("opacity","1");
+        var obj = {"page":"sale_sellInit","kitty_id":kitty_id,"kitty_type":kitty_type};
+        leftToRightArray.push(obj);
+        headerInit();
+
+        $("#all-container").append(sale_sellText);
+
+        $(".sale-sell-container .setting-button").click(function(){
+         waitModel();
+            console.log(456)
+            goToShop(kitty_id)
+        });
+    },400);
+};
+/**
+ * 上架kitty
+ */
+var goToShop = function(kitty_id) {
+    var startPrice = $('.input-starting-price').val();
+    var endPrice = $('.input-end-price').val();
+    var duration = $('.input-duration').val();
+    var seller_id = userId;
+    var kitty_id = kitty_id;
+    var type = 1;
+    $.ajax({
+        url: Config.address + "sellKitties",
+        type: "POST",
+        data: {
+            start_price:  startPrice/ethRate,
+            type: type,
+            end_price: endPrice/ethRate,
+            duration: duration,
+            seller_id: seller_id,
+            kitty_id: kitty_id,
+        },
+        success: function (response) {
+            console.info(response);
+            var text = nextJson(LText.Title, titleText(response.msg.msg), 1, [LText.Cancle], [cancel]);
+            promptText(text);
+            destory();
+        },
+        error: function (error) {
+            var text = nextJson(LText.Title, titleText(LText.SystemTitle), 1, [LText.Ok], [OK]);
+            promptText(text);
+            destory();
+        }
+    });
+}
+
+
+var release_sire = function(kitty_id,start_price,end_price,duration){
+    $.ajax({
+        url: Config.address + "sire/releaseSireKitty",
+        type: "POST",
+        data: {
+            "kitty_id":  kitty_id,
+            "type": 2,
+            "start_price": start_price,
+            "end_price": end_price,
+            "duration": duration,
+        },
+        success: function(response){
+            console.info(response);
+            var text = nextJson(LText.Title, titleText(response.msg), 1, [LText.Cancle], [cancel]);
+            promptText(text);
+            destory();
+        },
+        error: function(error){
+            var text = nextJson(LText.Title, titleText(LText.SystemTitle), 1, [LText.Ok], [OK]);
+            promptText(text);
+            destory();
+        }
+    });
+}
+var cancel = function() {
+    $('.prompt-main').remove();
+    marketInit();
+}
+
+//查询我的能够交配的猫
+var getMyKitties = function (my_kitties) {
+    //我的猫数据 my_kitties
+    for (var index in my_kitties) {
+        var optionContent;
+        try {
+            optionContent = "undefined"==typeof(my_kitties[index].name)? ("Kitty #"+my_kitties[index].id):my_kitties[index].name;
+        } catch (e) {
+            console.log(e);
+        }
+        var my_kittiesText =
+            '<option value="' + my_kitties[index].id + '">'+optionContent+'</option>';
+        $(".choose-kitty-input select").append(my_kittiesText);
+    }
+};
+
+var getNotSiredKitties = function(kittyId){
+    $.ajax({
+        url: Config.address + "sire/getNotSiredKitties",
+        type: "POST",
+        data: {
+            "kittyId":  kittyId,
+            "uId": userId
+        },
+        success: function(response){
+            console.log(response.msg);
+            getMyKitties(response.msg);
+            destory();
+        },
+        error: function(error){
+            var text = nextJson(LText.Title, titleText(LText.SystemTitle), 1, [LText.Ok], [OK]);
+            // var nextJson = {
+            //     title: LText.Title,
+            //     msg: LText.SystemTitle,
+            //     bottonNum: 1,
+            //     bottonMsg: [LText.Ok],    
+            //     func: [OK],
+            // };
+            promptText(text);
+            destory();
+        }
+    });
+}
+
+var to_sire = function(sId,mId,uId){
+    $.post(Config.address + "sire/toSire", {
+        sId: sId,
+        mId: mId,
+        uId: userId,
+    }, function (data) {
+        addWaitView();
+        showWaitView();
+        createShowChildCanvas(data);
+        destory();
+        console.log(data);
+    }, "json");
+}
+
+
+/**
+ * 赠送kitty页面
+ * @param kitty_id
+ */
+var sale_giftInit = function (kitty_id, kitty_type) {
+
+    $("body").css("transition", "0.5s");
+    $("body").css("transform", "scale(0.9)");
+    $("body").css("opacity", "0.6");
+    setTimeout(function () {
+        $("#all-container").empty();
+        $("body").css("transition", "0.5s");
+        $("body").css("transform", "scale(1)");
+        $("body").css("opacity", "1");
+        var obj = {"page": "sale_giftInit", "kitty_id": kitty_id, "kitty_type": kitty_type};
+        leftToRightArray.push(obj);
+        headerInit();
+
+        $("#all-container").append(sale_giftText);
+
+
+        $(".sale-sell-container .setting-button").click(function () {
+            waitModel();
+            // console.log(456);
+            var kId = kitty_id;
+            var rId = $(".input-duration").val();
+            $.ajax({
+                url: Config.address + "giftKitty",
+                type: "POST",
+                data: {
+                    "type": 0x0011,
+                    "uId": userId,
+                    "kId": kId,
+                    "rId": rId,
+                },
+                success: function (response) {
+                    console.log(response);
+                    var text = nextJson(LText.Title, titleText(response.msg), 1, [LText.Cancle], [cancel]);
+                    promptText(text);
+                    destory();
+                },
+                error: function (error) {
+                    console.info(error);
+                    var text = nextJson(LText.Title, titleText(LText.SystemTitle), 1, [LText.Ok], [OK]);
+                    promptText(text);
+                    destory();
+                }
+            });
+        }, 400);
+    })
+}
+
+    

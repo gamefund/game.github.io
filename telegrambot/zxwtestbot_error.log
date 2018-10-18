@@ -1,0 +1,8 @@
+[2018-02-27 12:49:12] bot_log.ERROR: Longman\TelegramBot\Exception\TelegramException: Input is empty! in C:\xampp\htdocs\gamefund\telegrambot\vendor\longman\telegram-bot\src\Telegram.php:380
+Stack trace:
+#0 C:\xampp\htdocs\gamefund\telegrambot\zxwtestbot_hook.php(73): Longman\TelegramBot\Telegram->handle()
+#1 {main} [] []
+[2018-02-27 12:49:17] bot_log.ERROR: Longman\TelegramBot\Exception\TelegramException: Input is empty! in C:\xampp\htdocs\gamefund\telegrambot\vendor\longman\telegram-bot\src\Telegram.php:380
+Stack trace:
+#0 C:\xampp\htdocs\gamefund\telegrambot\zxwtestbot_hook.php(73): Longman\TelegramBot\Telegram->handle()
+#1 {main} [] []

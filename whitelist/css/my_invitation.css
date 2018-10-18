@@ -1,0 +1,122 @@
+.body-container
+{
+    background-color: rgba(243,243,243,1.0);
+}
+div#scroller {
+    color: black;
+}
+
+.invitation-title-container
+{
+    background-color: white;
+}
+
+.invitation-title-container .title{
+    height: 50px;
+    font-size: 2rem;
+    color: black;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics-container{
+    height: 100px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    background-color: white;
+    color: black;
+}
+
+
+.statistics-container .block
+{
+    flex:1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics-container .block .split-line
+{
+    height: 80%;
+    position: absolute;
+    left:0;
+    top:10%;
+    width:0px;
+    border-left: 1px solid #dbdbdb;
+}
+
+.statistics-container .statistics-title
+{
+    font-size: 1.6rem;
+}
+
+.statistics-container .statistics-content
+{
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.invitation-tab{
+    height: 30px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    background-color: white;
+}
+
+.invitation-tab .block
+{
+    flex:1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #dbdbdb;
+}
+.invitation-tab .block:first-child
+{
+    border:none;
+}
+
+.invitation-list-container{
+    position: absolute;
+    top: 183px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.invitation-list-li
+{
+    height: 48px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invitation-list-li .left
+{
+    margin-left: 10px;
+    font-size: 2rem;
+}
+.invitation-list-li .right
+{
+    margin-right: 10px;
+}
+
+#invitation-tab{
+    color: black;
+}
+
+#invitation-tab .activated
+{
+    background-color: rgb(185,4,0);
+    color: white;
+}

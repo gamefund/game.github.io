@@ -1,0 +1,21 @@
+loadModule();
+
+window.onload = function () {
+    //显示交易所
+    uName = "guest";
+    $.post(Config.address + "guestLogin", {
+        uName: uName
+}, function (data) {
+        console.log("Login Succes");
+        try {
+            if (data.error == undefined) {
+                userId = data.msg;
+                $(".kitties-sign-in").html(uName);
+            }
+        } catch (e) {
+            alert("Login Failed");
+        }
+    }, 'json');
+
+    marketInit();
+};

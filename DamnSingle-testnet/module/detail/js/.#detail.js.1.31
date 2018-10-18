@@ -1,0 +1,451 @@
+var kittyInit = function (kitty_id, kitty_type, isPraisedKitty) {
+    $("body").css("transition", "0.5s");
+    $("body").css("transform", "scale(0.9)");
+    $("body").css("opacity", "0.6");
+    setTimeout(function () {
+        $("#all-container").empty();
+
+        $("body").css("transition", "0.5s");
+        $("body").css("transform", "scale(1)");
+        $("body").css("opacity", "1");
+        var obj = {
+            "page": "kittyInit",
+            "kitty_id": kitty_id,
+            "kitty_type": kitty_type
+        };
+        leftToRightArray.push(obj);
+        headerInit();
+        $("#all-container").append(kitteDataText);
+        // 点击跳转至 销售或交配选择页面
+        $(".kitty-owner-chose div:eq(" + 0 + ")").click(function () {
+            sale_sireInit(kitty_id, kitty_type);
+        });
+        $(".kitty-owner-chose div:eq(" + 1 + ")").click(function () {
+            sale_sellInit(kitty_id, kitty_type);
+        });
+        $(".kitty-owner-chose div:eq(" + 2 + ")").click(function () {
+            sale_giftInit(kitty_id, kitty_type);
+        });
+
+        $(".kitty-owner").click(function () {
+            myKittyInit(kitty_id, kitty_type);
+        });
+
+        $(".buy-button").click(function () {
+            waitModel();
+            if (kitty_type == "sire") {
+                sireInit(kitty_id, kitty_type);
+            } else if (kitty_type == "sale") {
+                // buyInit();
+                buyKittyAjax(kitty_id, 1);
+            }
+
+        });
+        getKittyDetailAjax(kitty_id); //请求相应id的详情页面数据
+
+        // 点赞按钮的点击
+        $(".kitty-message-zan").bind("click", function () {
+            clickPraise(kitty_id, "detail");
+            praisedKitty(true); //点赞后立刻屏蔽点击事件
+        });
+        //已点击状态下点击屏蔽和显示（必须在点击事件之后执行）
+        praisedKitty(isPraisedKitty);
+    }, 400);
+
+};
+
+/**
+ * 显示冷却等级界面
+ */
+var addCoolDownView = function (data) {
+
+    if ($(".div-cooldown-detail-body").length >= 1) {
+        $(".div-cooldown-detail-content")[0].remove();
+        return;
+    }
+    var index = data.cooldown_index;
+    $("#all-container").append(cooldownText);
+    var levelList = $(".div-cooldown-level");
+    for (var i = 0; i < cooldown.length; i++) {
+        levelList.append(
+            "<div class='div-cooldown-level-list'>" +
+                "<span class='div-cooldown-level-left'>" +
+                    cooldown[i] + ":" +
+                "</span>" +
+                "<span class='div-cooldown-level-right'>" +
+                    cooldownExplain[i] +
+                "</span>" +
+            "</div>"
+        );
+    }
+    $(".div-cooldown-level-list").eq(index).css("color", "black");
+};
+
+var hideCooldown = function () {
+    var showName = "animate-show-cooldown";
+    var hideName = "animate-hide-cooldown";
+    $(".div-cooldown-detail-content").fadeOut(500);
+};
+
+var showCooldown = function () {
+    var showName = "animate-show-cooldown";
+    var hideName = "animate-hide-cooldown";
+    $(".div-cooldown-detail-content").fadeIn(500);
+};
+
+//已点击状态下点击屏蔽和显示（必须在点击事件之后执行）
+var praisedKitty = function (isPraisedKitty) {
+    if (isPraisedKitty) {
+        $(".kitty-message-zan").unbind("click");
+        $(".kitty-message-zan .zan-heart").css("background-image", "url(./module/detail/img/praised.png)");
+    }
+}
+
+/**
+ * 购买kittyAjax
+ */
+var buyKittyAjax = function (kittyId, type) {
+    $.ajax({
+        url: Config.address + "purchaseKitty",
+        data: {
+            userId: userId,
+            kittyId: kittyId,
+            type: type
+        },
+        type: "POST",
+        success: function (data) {
+            console.log(data);
+            var text = nextJson(LText.Title, data.error, 1, [LText.Cancle], [cancel]);
+            promptText(text);
+            destory();
+        },
+        error: function (xhr) {
+            var text = nextJson(LText.Title, LText.SystemTitle, 1, [LText.Ok], [OK]);
+            promptText(text);
+            destory();
+        }
+    });
+
+}
+
+/**
+ * 获取猫咪详情
+ * @param {*} kitty_id 
+ */
+var getKittyDetailAjax = function (kitty_id) {
+    $.ajax({
+        url: Config.address + "getKittyDetail",
+        data: { id: kitty_id },
+        type: "POST",
+        success: function (data) {
+            console.log(data);
+            loadKittyDetail(data.msg);
+            destory();
+        },
+        error: function (xhr) {
+            var text = nextJson(LText.Title, LText.SystemTitle, 1, [LText.Cancle], [cancel]);
+            promptText(text);
+            destory();
+        }
+    });
+}
+
+/**
+ * 判断数据是否正常，并加载
+ * @param data
+ */
+var loadKittyDetail = function (data) {
+    if (data.msg == "SUCCESS") {
+        kitty_datail(data.dataMap);
+    } else if (data == "FALSE") {
+        console.log("kitty_id is null");
+        var text = nextJson(LText.Title, data.error, 1, [LText.Cancle], [cancel]);
+        promptText(text);
+    }
+}
+
+/**
+ * 信息填充
+ * @param {*} data 
+ */
+var kitty_datail = function (data) {
+    var kittyName = null;
+    var nickName = "";
+    try {
+        if (data.name == undefined) {
+            kittyName = LText.Kitty;
+            nickName = kittyName + " #" + data.id;
+        } else {
+            kittyName = data.name;
+            nickName = kittyName;
+        }
+    } catch (e) {
+        kittyName = LText.Kitty;
+        nickName = kittyName + " #" + data.id;
+    }
+    $('.kitty-message-name').html(kittyName + " #" + data.id);
+    $('.kitty-message-name-small').html(kittyName + "&nbsp" + data.id);
+    $('.kitty-message-gen').html(LText.Generation + "&nbsp" + data.generation);
+    $('.kitty-data-img').css("backgroundImage", "url(" + data.image_url + ")");
+
+    // 此处简介信息移动到,添加属性时
+    // var introduce = null;
+    // if (data.bio == null || data.bio == "" || data.bio == undefined) {
+    //     introduce = "Hello! I am " + kittyName + " #" + data.id + ". I'm a professional Train Conductor and I love ice cream. " +
+    //         "I put pickles on everything. Like, everything: hot dogs, wet food！everything! Maybe you and I can be partners in crime. "
+    // } else {
+    //     introduce = data.bio;
+    // }
+    $('.kitty-bio-message').html(Introduce.OpenWhite + nickName + ".");
+
+    $('.kittyPage-up-part').css("background-color", data.color);
+    kitty_status(data);
+    kitty_owner(data);
+    
+    if (data.matron == null || data.sire == null) {
+        $('.kitty-parent-all').hide();
+        $('.kitty-parents').hide();
+    } else {
+        motherMessage(data);
+        fatherMessage(data);
+    }
+    if (data.children.length == 0) {
+        $('.kitty-childrens-all').hide();
+        $('.kitty-childrens').hide();
+    } else {
+        childrenMessage(data);
+    }
+    // $('.zan-num').html(data.purrs.count);
+    $('.zan-num').html(data.purr_count);
+    cattributesMessage(data);
+    addCoolDownView(data);
+    // $(".kitty-message-comment").on("click", showCooldown);
+    document.getElementsByClassName("kitty-message-comment")[0].addEventListener("touchstart", function () {
+        showCooldown();
+    });
+
+    document.getElementsByClassName("kitty-message-comment")[0].addEventListener("touchend", function () {
+        hideCooldown();
+    });
+
+}
+
+/**
+ * kitty目前状态：出售、交配、休息、冷却等级
+ * todo 是否怀孕待确认
+ * @param {*} data 
+ */
+var kitty_status = function (data) {
+
+    if (data.is_ready == false) { //正在冷却中，无法进行销售和交配
+        if(data.is_gestating == false){
+            $('.kitty-status').html(
+                '<i class="kitty-status-icon"></i>' +
+                '<span class="kitty-status-item">' + LText.Resting + "≡" + MillisecondToDate_text(data.left_cooldown) + '</span>');
+        }else{
+            $('.kitty-status').html(
+                '<i class="kitty-status-icon"></i>' +
+                '<span class="kitty-status-item">' + LText.Gestating + "≡" + MillisecondToDate_text(data.left_cooldown) + '</span>');
+        }
+        $('.kitty-status-icon').css("backgroundImage", "url()"); //交配照片
+        $('.kitty-status').show().css("display", "flex");
+        $(".kitty-owner-chose").hide(); //隐藏销售、交配、赠送
+        $('.kitty-message-cooldown').html(cooldown[data.cooldown_index] + "&nbsp" + LText.Cooldown); //data.status.cooldown_index
+
+    } else if (data.is_ready) { //data.status.is_ready == true
+        if (data.auction == undefined) {
+            if (userId == data.owner_id) {
+                $(".kitty-owner-chose").show().css("display", "flex"); //显示销售、交配、赠送
+                $('.kitty-message-cooldown').html(cooldown[data.cooldown_index] + "&nbsp" + LText.Cooldown); 
+            }
+        } else {
+            if (data.auction.type == "2") { //data.auction.type == "sire"
+
+                left_time(data);
+                $('.kitty-status').show().css("display", "flex");
+                $('.kitty-to-sale').show().css("display", "flex");
+                $('.price-change').show();
+                $('.kitty-price-change').show().css("display", "flex");
+                $('.kitty-status-icon').css("backgroundImage", "url(./module/detail/img/kitty.png)"); //交配照片
+
+                $('.kitty-status-item').html(LText.ForSale);
+                $('.kitty-now-price-name').text(LText.BreedNowPrice);
+                // $('.buy-button').html("Sign in to sire");
+                $('.buy-button').html(LText.ToSire);
+                $(".kitty-owner-chose").hide(); //隐藏销售、交配、赠送
+
+            } else if (data.auction.type == "1") { //data.auction.type == "sale"
+
+                left_time(data);
+                $('.kitty-status').show().css("display", "flex");
+                $('.kitty-to-sale').show().css("display", "flex");
+                $('.price-change').show();
+                $('.kitty-price-change').show().css("display", "flex");
+                $('.kitty-status-icon').css("backgroundImage", "url(./module/detail/img/kitty.png)"); //出售照片
+
+                $('.kitty-status-item').html(LText.ForSale);
+                $('.kitty-now-price-name').text(LText.BuyNowPrice);
+                // $('.buy-button').html("Sign in to buy");
+                $('.buy-button').html(LText.ToBuy);
+                $(".kitty-owner-chose").hide(); //隐藏销售、交配、赠送
+
+            } else if (isNaN(data.auction.type)) {
+                $('.kitty-status').hide();
+                $('.kitty-message-cooldown').html(cooldown[data.cooldown_index] + "&nbsp" + LText.Cooldown); //data.status.cooldown_index
+                $('.kitty-to-sale').hide();
+                $('.price-change').hide();
+                $('.kitty-price-change').hide();
+                return;
+            }
+
+            var currentPrice = 0;
+            var longCurrentPrice = parseInt(data.auction.current_price);
+            var longStartPrice = parseInt(data.auction.start_price);
+            var longEndPrice = parseInt(data.auction.end_price);
+
+            if (longCurrentPrice > longStartPrice) {
+                currentPrice = longStartPrice;
+            } else if (longCurrentPrice < longEndPrice) {
+                currentPrice = longEndPrice;
+            } else {
+                currentPrice = longCurrentPrice;
+            }
+            $('.kitty-status-note').html((currentPrice * ethRate).toFixed(3));
+            $('.kitty-now-price-num').text((currentPrice * ethRate).toFixed(3));
+            $('.kitty-sale-start-price').html((data.auction.start_price * ethRate).toFixed(3));
+            $('.kitty-sale-end-price').html((data.auction.end_price * ethRate).toFixed(3));
+            $('.kitty-message-cooldown').html(cooldown[data.cooldown_index] + "&nbsp" + LText.Cooldown); //data.status.cooldown_index
+        }
+    }
+}
+
+/**
+ * kitty主人信息
+ */
+var kitty_owner = function (data) {
+    $('.kitty-ownwe-name').html(decodeURIComponent(data.owner.nickname));
+    $('.kitty-owner-img-effect').css("backgroundImage", "url(" + data.owner.image + ")");
+}
+
+/**
+ * 剩余时间
+ */
+var left_time = function (data) {
+    var nowDate = (new Date()).valueOf();
+    var left_seconds = data.auction.end_time - nowDate;
+    $('.sale-left-time').html(MillisecondToDate_text(left_seconds));
+}
+
+//毫秒转时分秒==汉字显示时间
+function MillisecondToDate_text(msd) {
+    var time = parseFloat(msd) / 1000;
+    if (null != time && "" != time) {
+        if (time > 60 && time < 60 * 60) { //分
+            time = parseInt(time / 60.0) + LText.Minute;
+        } else if (time >= 60 * 60 && time < 60 * 60 * 24) { //时
+            time = parseInt(time / 3600.0) + LText.Hours;
+        } else if (time >= 60 * 60 * 24 && time < 60 * 60 * 24 * 30) { //天
+            time = parseInt(time / 86400.0) + LText.Day;
+        } else if (time >= 60 * 60 * 24 * 30 && time < 60 * 60 * 24 * 30 * 12) { //月
+            time = parseInt(time / 2592000.0) + LText.Mouth;
+        } else if (time >= 60 * 60 * 24 * 30 * 12) { //年
+            time = parseInt(time / 31104000.0) + LText.Year;
+        } else {
+            time = parseInt(time) + LText.Second;
+        }
+    } else {
+        time = 0;
+    }
+    return time;
+}
+
+/**
+ * 父母信息
+ */
+var motherMessage = function (data) {
+    $('.kitty-parent-left').css("backgroundImage", "url(" + data.matron.image_url + ")");
+    $('.kitty-parent-left').css("background-color", data.matron.color);
+    $('.kitty-parent-left').click(function () {
+        kittyInit(data.matron.id, null);
+    });
+}
+var fatherMessage = function (data) {
+    $('.kitty-parent-right').css("backgroundImage", "url(" + data.sire.image_url + ")");
+    $('.kitty-parent-right').css("background-color", data.sire.color);
+    $('.kitty-parent-right').click(function () {
+        kittyInit(data.sire.id, null);
+    });
+}
+
+/**
+ * 孩子信息
+ */
+var childrenMessage = function (data) {
+    for (var i = 0; i < data.children.length; i++) {
+        var text = '<span id=children' + i + ' onclick="jumpItsPage(event)"></span>';
+        $('.kitty-childrens').append(text);
+        $('#children' + i).css("backgroundImage", "url(" + data.children[i].image_url + ")");
+        $('#children' + i).css("background-color", data.children[i].color);
+        // $('#children' + i).click(function () {
+        //     kittyInit(data.children[i].id);
+        // });
+        $('#children' + i).data("kittyId", data.children[i].id);
+    }
+}
+
+var jumpItsPage = function (e) {
+    var chooseDataId = $(e.target).data("kittyId");
+    kittyInit(chooseDataId, null);
+}
+
+/**
+ * cattribute信息
+ */
+var cattributesMessage = function (data) {
+    if (data.is_fancy == true) {
+        displayCatrributes(LText.Fancy, 0);
+        if (data.cattributes.length != 0)
+            displayCatrributes(data.cattributes[0].description, 1);
+    } else if (data.is_exclusive == true) {
+        displayCatrributes(LText.Exclusive, 0);
+        if (data.cattributes.length != 0)
+            displayCatrributes(data.cattributes[0].description, 1);
+    } else {
+        if (data.cattributes.length != 0) {
+            for (var i = 0; i < data.cattributes.length; i++) {
+                if (data.cattributes[i].description != null)
+                    displayCatrributes(data.cattributes[i].description, i);
+            }
+        }
+    }
+}
+var displayCatrributes = function (cattributeText, i) {
+    var text = '<div id=cattribute' + i + '>' +
+        '<div id=cattribute-ione' + i + '></div>' +
+        '<div id=cattribute-item' + i + '></div>' +
+        '</div>';
+    if (cattributeText == undefined || cattributeText.length <= 0) {
+        return ;
+    }
+    $('.kitty-tributes-message').append(text);
+    $('#cattribute' + i).addClass("cattribute");
+    switch (cattributeText) {
+        case LText.Fancy:
+        case LText.Exclusive:
+            $('#cattribute-item' + i).text(cattributeText);
+        break;
+        default:
+            $('#cattribute-item' + i).text(LText[cattributeText]);
+        break;
+    }
+    $('#cattribute-ione' + i).addClass("cattribute-ione");
+    addBio(cattributeText);
+}
+
+var addBio = function (attributeText) {
+    if (Introduce[attributeText] == undefined 
+        || Introduce[attributeText] == "") {
+            return ;
+    }
+    $('.kitty-bio-message').append(Introduce[attributeText] + ".");
+};
