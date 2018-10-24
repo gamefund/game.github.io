@@ -9,24 +9,17 @@ var ETHAddress = "ETHETHETHETHETHETHETHETHETHETHETHETHETH";
 var NEOAddress = "NEONEONEONEONEONEONEONEONEONEONEONEONEO";
 var ETCAddress = "ETCETCETCETCETCETCETCETCETCETCETCETCETC";
 var CNYAddress = "CNYCNYCNYCNYCNYCNYCNYCNYCNYCNYCNYCNYCNY";
-var account_rule = /^[A-Za-z\d]+([-_.]*[A-Za-z\d]+)*@([A-Za-z\d]+[-.]){1,3}[A-Za-z\d]{2,5}$/;
 
 //邀请码有效配置
 var effectCount = 1;
 var effectDays = 3;
 
-// var url = "http://localhost:8080/whitelist";
-var url = "https://game.fund:8443/whitelist";    //whitelist服务端地址
-
+// var url = "http://localhost:8080/whitelist"
+var url = "https://game.fund:9280/whitelist"     //whitelist服务端地址
 
 var c2HubUrl = "https://game.fund:9280/c2hub";   //c2hub服务端地址
 
 var game_fund_url = "https://game.fund";        //GAME.FUND官网链接
-
-var protocolhost = window.location.protocol;
-if(protocolhost=="http:"){
-    url = "https://game.fund:9280/whitelist";  
-}
 
 function detect(ua, platform){
 var os = this.os = {}, browser = this.browser = {},
@@ -232,31 +225,6 @@ var IScroll_Options =
 }
 
 $(document).ready(function(){
-    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { //判断iPhone|iPad|iPod|iOS
-        console.log("iPhone|iPad|iPod|iOS");
-    } else if (/(Android)/i.test(navigator.userAgent)) {  //判断Android
-        $('input[type=text],input[type=password],input[type=number]').on('focus', function(e){
-            setTimeout(function(){
-                var scrollTo = ($(e.currentTarget).offset().top - $('#scroller').offset().top) - $('.scroll-container').height() / 2 + 20;
-                scrollTo = scrollTo < 0 ? 0 : scrollTo;
-                console.log(scrollTo);
-                $('.scroll-container').animate({
-                    scrollTop: scrollTo
-                }, 100);
-            }, 1000);
-        })
-    } else { //pc
-        $('input[type=text],input[type=password],input[type=number]').on('focus', function(e){
-            setTimeout(function(){
-                var scrollTo = ($(e.currentTarget).offset().top - $('#scroller').offset().top) - $('.scroll-container').height() / 2 + 20;
-                scrollTo = scrollTo < 0 ? 0 : scrollTo;
-                console.log(scrollTo);
-                $('.scroll-container').animate({
-                    scrollTop: scrollTo
-                }, 100);
-            }, 1000);
-        })
-    };
     // $('input[type=text],input[type=password],input[type=number]').on('focus', function(e){
     //     setTimeout(function(){
     //         var scrollTo = ($(e.currentTarget).offset().top - $('#scroller').offset().top) - $('.scroll-container').height() / 2 + 20;
@@ -319,4 +287,5 @@ var getURLParams = function(name)
     var r = window.location.search.substr(1).match(reg) // 匹配目标参数
     if (r != null) return unescape(r[2]); return null ; // 返回值
 }
+
 

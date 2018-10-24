@@ -416,9 +416,9 @@ $(document).ready(function() {
             // $("#sequence_item2_second_paper").html(en.sequence_item2.toUpperCase());//
             // $("#sequence_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#sequence .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#sequence .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#sequence .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#sequence .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#sequence .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#sequence .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
 
             $("#sequence_other_item1").html(cn.sequence_item1);
             $("#sequence_other_item2_fourth").html(cn.sequence_item2_fourth);
@@ -428,9 +428,9 @@ $(document).ready(function() {
             // $("#sequence_other_item2_second_paper").html(en.sequence_item2.toUpperCase());//
             // $("#sequence_other_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#top-slider .slider-content .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
             //#industry_status
             $("#industry_status_feature").html(cn.industry_status_feature);
             $("#industry_status_item1").html(cn.industry_status_item1);
@@ -634,9 +634,9 @@ $(document).ready(function() {
             // $("#sequence_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#sequence .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#sequence .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#sequence .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#sequence .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#sequence .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#sequence .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
 
             $("#sequence_other_item1").html(en.sequence_item1);
             $("#sequence_other_item2_fourth").html(en.sequence_item2_fourth);
@@ -646,9 +646,9 @@ $(document).ready(function() {
             // $("#sequence_other_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_other_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#top-slider .slider-content .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
             //#industry_status
             $("#industry_status_feature").html(en.industry_status_feature);
             $("#industry_status_item1").html(en.industry_status_item1);
@@ -852,9 +852,9 @@ $(document).ready(function() {
             // $("#sequence_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_item2_third_paper").html(en.sequence_item2.toUpperCase());//
 
-            // $("#sequence .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
-            // $("#sequence .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#sequence .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#sequence .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#sequence .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#sequence .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
 
             $("#sequence_other_item1").html(ja.sequence_item1);
             $("#sequence_other_item2_fourth").html(ja.sequence_item2_fourth);
@@ -864,9 +864,9 @@ $(document).ready(function() {
             //  $("#sequence_other_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_other_item2_third_paper").html(en.sequence_item2.toUpperCase());//
 
-            // $("#top-slider .slider-content .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
             //#industry_status
             $("#industry_status_feature").html(ja.industry_status_feature);
             $("#industry_status_item1").html(ja.industry_status_item1);
@@ -1070,9 +1070,9 @@ $(document).ready(function() {
             // $("#sequence_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#sequence .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#sequence .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#sequence .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#sequence .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#sequence .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#sequence .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
 
             $("#sequence_other_item1").html(en.sequence_item1);
             $("#sequence_other_item2_fourth").html(en.sequence_item2_fourth);
@@ -1082,9 +1082,9 @@ $(document).ready(function() {
             //  $("#sequence_other_item2_second_paper").html(cn.sequence_item2);//
             // $("#sequence_other_item2_third_paper").html(ja.sequence_item2);//
 
-            // $("#top-slider .slider-content .slider-href-item1").attr("href", "http://game.fund/GAME.FUND-en-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item2").attr("href", "http://game.fund/GAME.FUND-zh-draft.pdf");
-            // $("#top-slider .slider-content .slider-href-item3").attr("href", "http://game.fund/GAME.FUND-ja-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item1").attr("href", "https://game.fund/GAME.FUND-en-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item2").attr("href", "https://game.fund/GAME.FUND-zh-draft.pdf");
+            // $("#top-slider .slider-content .slider-href-item3").attr("href", "https://game.fund/GAME.FUND-ja-draft.pdf");
             //#industry_status
             $("#industry_status_feature").html(en.industry_status_feature);
             $("#industry_status_item1").html(en.industry_status_item1);

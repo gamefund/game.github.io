@@ -1,7 +1,7 @@
 var headerText = 
     '<nav class="navbar navbar-inverse navbar-static-top" role="navigation" id="menu">' +
           '<div class="container">' +
-              '<div class="w-col"><a href="http://game.fund/index.html" ><img class="logo" src="http://game.fund/img/logo.png" height="30px"></a></div>' +
+              '<div class="w-col"><a href="https://game.fund/index.html" ><img class="logo" src="https://game.fund/img/logo.png" height="30px"></a></div>' +
 
               '<div>' +
                 '<ul class="nav navbar-nav" id="translation">' +
@@ -12,9 +12,9 @@ var headerText =
                         '<div id="user_reset"></div>' + 
                       '</div> ' +
                   '</li>' +
-                  '<li><img src="http://game.fund/img/header/001.png" id="EN"></li>' +
-                  '<li><img src="http://game.fund/img/header/002.png" id="CN"></li>' +
-                  '<!--<li><img src="http://game.fund/img/header/003.png" id="JA"></li>-->' +
+                  '<li><img src="https://game.fund/img/header/001.png" id="EN"></li>' +
+                  '<li><img src="https://game.fund/img/header/002.png" id="CN"></li>' +
+                  '<!--<li><img src="https://game.fund/img/header/003.png" id="JA"></li>-->' +
                 '</ul>' +
                 '<!--<div id="google_translate_element"></div>-->' +
               '</div>' +
@@ -31,18 +31,18 @@ var headerText =
               '<!-- MENU LINKS -->' +
               '<div class="navbar-collapse collapse">' +
                   '<ul class="nav navbar-nav" id="navigation">' +
-                    '<li class="menu-about"><a href="http://game.fund/index.html#about" id="navigation_item1">Introduction</a></li>' +
-                    '<li class="menu-service"><a href="http://game.fund/index.html#service" id="navigation_item2">Background</a></li>' +
-                    // '<li class="menu-portfolio"><a href="http://game.fund/index.html#portfolio" id="navigation_item3">Solution</a></li>' +
-                    '<li class="menu-community"><a href="http://game.fund/index.html#community" id="navigation_item6">Ecology</a></li>' +
-                    '<li class="menu-price"><a href="http://game.fund/index.html#advance" id="navigation_item4">Advantage</a></li>' +
-                    '<li class="menu-team"><a href="http://game.fund/index.html#team" id="navigation_item5">Team</a></li>' +
-                    '<li class="menu-blog"><a href="http://game.fund/bloglist.html" id="navigation_item7">Blog</a></li>' +
-                    '<li class="menu-reward"><a href="http://game.fund/reward/reward.html" id="navigation_item8">Reward</a></li>' +
+                    '<li class="menu-about"><a href="https://game.fund/index.html#about" id="navigation_item1">Introduction</a></li>' +
+                    '<li class="menu-service"><a href="https://game.fund/index.html#service" id="navigation_item2">Background</a></li>' +
+                    // '<li class="menu-portfolio"><a href="https://game.fund/index.html#portfolio" id="navigation_item3">Solution</a></li>' +
+                    '<li class="menu-community"><a href="https://game.fund/index.html#community" id="navigation_item6">Ecology</a></li>' +
+                    '<li class="menu-price"><a href="https://game.fund/index.html#advance" id="navigation_item4">Advantage</a></li>' +
+                    '<li class="menu-team"><a href="https://game.fund/index.html#team" id="navigation_item5">Team</a></li>' +
+                    '<li class="menu-blog"><a href="https://game.fund/bloglist.html" id="navigation_item7">Blog</a></li>' +
+                    '<li class="menu-reward"><a href="https://game.fund/reward/reward.html" id="navigation_item8">Reward</a></li>' +
                   '</ul>' +
 
                   '<ul class="nav navbar-nav" id="registration">' +
-                    '<!--<li><a href="http://game.fund/whitelist" target="_blank" id="registration_item_menu">Join whitelist</a></li>-->' +
+                    '<!--<li><a href="https://game.fund/whitelist" target="_blank" id="registration_item_menu">Join whitelist</a></li>-->' +
                     '<li><span>NOW LIVE!</span></li>' +
                   '</ul>' +          
               '</div>' +
@@ -62,23 +62,23 @@ var bottomText =
           
             '<div class="col-lg-12 col-md-12 col-xs-12 total-content">' +
                 '<div class="logo">' +
-                    '<a href="#top-slider" ><img src="http://game.fund/img/contact/logo.png" alt=""></a>' +
-                    '<!--<a href="./DamnSingle-testnet/mobile.html" target="_blank"><img class="dogLogo" src="http://game.fund/img/contact/dogLogo.png" alt=""></a>-->' +
+                    '<a href="#top-slider" ><img src="https://game.fund/img/contact/logo.png" alt=""></a>' +
+                    '<!--<a href="./DamnSingle-testnet/mobile.html" target="_blank"><img class="dogLogo" src="https://game.fund/img/contact/dogLogo.png" alt=""></a>-->' +
                 '</div>' +
 
                 '<div class="content">' +
                     '<div class="content-left">' +
                         '<div class="content-left-left" style=" flex: 40%;">' +
-                            '<div> <a href="http://game.fund/index.html#about"  id="contact_href_item1">简介</a> </div>' +
-                            '<div> <a href="http://game.fund/index.html#service" id="contact_href_item2">背景及问题</a> </div>' +
-                            // '<div> <a href="http://game.fund/index.html#portfolio" id="contact_href_item3">解决方案</a> </div>' +
-                            '<div><a href="http://game.fund/index.html#community" id="contact_href_item4">社区生态</a></div>' +
-                            '<div> <a href="http://game.fund/index.html#advance" id="contact_href_item5">竞争优势</a> </div>' +                           
+                            '<div> <a href="https://game.fund/index.html#about"  id="contact_href_item1">简介</a> </div>' +
+                            '<div> <a href="https://game.fund/index.html#service" id="contact_href_item2">背景及问题</a> </div>' +
+                            // '<div> <a href="https://game.fund/index.html#portfolio" id="contact_href_item3">解决方案</a> </div>' +
+                            '<div><a href="https://game.fund/index.html#community" id="contact_href_item4">社区生态</a></div>' +
+                            '<div> <a href="https://game.fund/index.html#advance" id="contact_href_item5">竞争优势</a> </div>' +                           
                         '</div>' +
                         '<div class="content-left-right" style=" flex: 60%;">' +
-                            '<div> <a href="http://game.fund/index.html#team" id="contact_href_item6">团队介绍</a> </div>' +
-                            '<div><a href="http://game.fund/bloglist.html" id="contact_href_item7">Blog</a></div>' +
-                            '<div><a href="http://game.fund//reward/reward.html" id="contact_href_item8">Reward</a></div>' +
+                            '<div> <a href="https://game.fund/index.html#team" id="contact_href_item6">团队介绍</a> </div>' +
+                            '<div><a href="https://game.fund/bloglist.html" id="contact_href_item7">Blog</a></div>' +
+                            '<div><a href="https://game.fund//reward/reward.html" id="contact_href_item8">Reward</a></div>' +
                         '</div>' +
                     '</div>' +
                     '<div class="content-right">' +
@@ -108,11 +108,11 @@ var bottomText =
 
                 '<div class="qr-code">' +
                     '<!--<div class="broadcast">' +
-                        '<img src="http://game.fund/img/contact/broadcast.png" />' +
+                        '<img src="https://game.fund/img/contact/broadcast.png" />' +
                         '<div id="broadcast_group">Broadcast Group</div>' +
                     '</div>-->' +
                     '<div class="chat" >' +
-                        '<img src="http://game.fund/img/contact/chat.png" />' +
+                        '<img src="https://game.fund/img/contact/chat.png" />' +
                         '<div id="chat_group">Chat Group</div>' +
                     '</div>' +         
                 '</div>' +       

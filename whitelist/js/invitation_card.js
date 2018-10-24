@@ -36,7 +36,7 @@ $(function(){
 });
 
 // var qrCodeText = "http://192.168.1.131/kisspre/client/index.html?code="; 
-var qrCodeText = "http://game.fund/whitelist/index.html?code="; 
+var qrCodeText = "https://game.fund/whitelist/index.html?code="; 
 
 var deviceWidth = window.screen.width;
 var deviceHeight = window.screen.width * 1.8;

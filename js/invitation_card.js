@@ -206,7 +206,7 @@ $(function(){
     /**
      * 画图
      */
-    // var qrCodeText = "http://game.fund/whitelist/index.html?code="; 
+    // var qrCodeText = "https://game.fund/whitelist/index.html?code="; 
     var qrCodeText = window.location.href + "?code="; 
 
     var deviceWidth = window.screen.width;
