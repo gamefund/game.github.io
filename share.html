@@ -94,7 +94,8 @@ window.onload = function(){
         }
 
         document.getElementById('enterApp').onclick=function () {
-        window.location.href="https://game.fund/latest.html";
+        var currentTime= new Date().getTime();
+        window.location.href="https://game.fund/latest.html?time="+currentTime;
         if (uerId){
             addLogDownloadSource();
             }
