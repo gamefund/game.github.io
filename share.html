@@ -95,12 +95,11 @@ window.onload = function(){
 
         document.getElementById('enterApp').onclick=function () {
         var currentTime= new Date().getTime();
-        window.location.href="https://game.fund/latest.html?time="+currentTime;
         if (uerId){
             addLogDownloadSource();
-            }
         }
-
+        window.location.href="https://game.fund/latest.html?time="+currentTime;
+        }
     }
 
     //解析路径中传递过来的值
