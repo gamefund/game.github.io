@@ -155,7 +155,7 @@ $(function(){
             "<div class='container'>" +
                 "<form id='form_common_id' class='form-container'>" +
                     "<div class='form-logo'>" +
-                        "<img src='https://game.fund/img/logo2.png' width='20%' style='margin-top: -70px;' alt=''/>" +
+                        "<img src='https://game.fund/gfg/img/logo2.png' width='20%' style='margin-top: -70px;' alt=''/>" +
                     "</div>" +
                     "<h4><span style='color: #fe6501;'>G</span>AME.<span style='color: #fe6501;'>F</span>UND</h4>" +
                     //虚位以待。。。 

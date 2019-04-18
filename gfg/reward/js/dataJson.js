@@ -1,7 +1,7 @@
 /**
  * 需要变色的字体，加上<span>标签，如："翻译/审核<span>5%</span>"
  * 
- * 点击的链接加上<a>标签，如："Official website：<a href='https://GAME.FUND' target='_blank'>https://GAME.FUND</a>"
+ * 点击的链接加上<a>标签，如："Official website：<a href='https://GAME.FUND/gfg.html' target='_blank'>https://GAME.FUND/gfg.html</a>"
  * 
  */
 
@@ -85,7 +85,7 @@ var dataJson = {
                         "如果参与悬赏任务的用户作品在平台营销和推广方面没有价值，或者内容涉及其他违规、违法情况，GAME.FUND将有权利取消该用户的任务资格。",
                         "该悬赏任务为第一阶段悬赏任务计划。"],
 
-                    rule: ["Official website：<a href='https://GAME.FUND' target='_blank'>https://GAME.FUND</a>",
+                    rule: ["Official website：<a href='https://GAME.FUND/gfg.html' target='_blank'>https://GAME.FUND/gfg.html</a>",
                         "Telegram: <a href='https://t.me/gamefund' target='_blank'>https://t.me/gamefund</a>",
                         "Twitter: <a href='https://twitter.com/gamefundchain' target='_blank'>https://twitter.com/gamefundchain</a>",
                         "Github： <a href='https://github.com/gamefund' target='_blank'>https://github.com/gamefund</a>",
@@ -325,7 +325,7 @@ var dataJson = {
                         "If we think your behaviour is of no value in marketing and promotion, or your content involves violation of rules or laws,we have the right to cancel your participation qualification.",
                         "This reward task is the first stage reward task plan."],
 
-                    rule: ["Official website: <a href='https://GAME.FUND' target='_blank'>https://GAME.FUND</a>",
+                    rule: ["Official website: <a href='https://GAME.FUND/gfg.html' target='_blank'>https://GAME.FUND/gfg.html</a>",
                         "Telegram: <a href='https://t.me/gamefund' target='_blank'>https://t.me/gamefund</a>",
                         "Twitter: <a href='https://twitter.com/gamefundchain' target='_blank'>https://twitter.com/gamefundchain</a>",
                         "Github: <a href='https://github.com/gamefund' target='_blank'>https://github.com/gamefund</a>",
