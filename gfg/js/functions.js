@@ -123,19 +123,33 @@ $(document).ready(function() {
 
     //原型版本
     function showProtoVer(){
-        if(language == "cn"){
-            $("#button-version div").html("原型展示版");
-            $("#version-content-text").html("原型展示版本仅供展示预览，非正式上线版本。");
-            $("#button-version").attr("href", "http://game.fund");
-            $("#button-version").attr("target", "_blank");
-        }else{
-            $("#button-version div").html("Prototype display<br/> version");
-            $("#version-content-text").html("Prototype display version is not a formal online live version, just for display and preview.");
+        // if(language == "cn"){
+        //     $("#button-version div").html("原型展示版");
+        //     $("#version-content-text").html("原型展示版本仅供展示预览，非正式上线版本。");
+        //     $("#button-version").attr("href", "http://game.fund");
+        //     $("#button-version").attr("target", "_blank");
+        // }else{
+        //     $("#button-version div").html("Prototype display<br/> version");
+        //     $("#version-content-text").html("Prototype display version is not a formal online live version, just for display and preview.");
             
-            $(".version-container .version-content .button-version>div").addClass("en-version").css({"line-height": "120%"});
-            $(".version-container .version-content .version-content-text").addClass("en-version");
-            $("#button-version").attr("href", "http://game.fund");
-            $("#button-version").attr("target", "_blank");
+        //     $(".version-container .version-content .button-version>div").addClass("en-version").css({"line-height": "120%"});
+        //     $(".version-container .version-content .version-content-text").addClass("en-version");
+        //     $("#button-version").attr("href", "http://game.fund");
+        //     $("#button-version").attr("target", "_blank");
+        // }
+
+        if(language == "cn"){
+            $("#sequence-button-version span").html("GameFund 下载");
+            $("#sequence-button-version").attr("href", "http://game.fund");
+            $("#sequence_other-button-version span").html("GameFund 下载");
+            $("#sequence_other-button-version").attr("href", "http://game.fund");
+        }else{
+            $("#sequence-button-version span").html("GameFund Download");
+            $("#sequence-button-version").attr("href", "http://game.fund");
+            $("#sequence_other-button-version span").html("GameFund Download");
+            $("#sequence_other-button-version").attr("href", "http://game.fund");
+            $("#top-slider .slider-button .new-button-version").addClass("en-version");
+            $("#sequence .load-pdf-content .new-button-version").addClass("en-version");
         }
     }
         
