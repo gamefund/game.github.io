@@ -305,9 +305,12 @@ $(document).ready(function() {
             //#top-slider
             $("#sequence_item1").html(cn.sequence_item1);
             $("#sequence_item2_fourth").html(cn.sequence_item2_fourth);
+            $("#sequence_item2_first_paper").html(cn.sequence_item2);
+            $("#sequence_other_item2_first_paper").html(cn.sequence_item2);
 
             $("#sequence_other_item1").html(cn.sequence_item1);
             $("#sequence_other_item2_fourth").html(cn.sequence_item2_fourth);
+            
             //#industry_status
             $("#industry_status_feature").html(cn.industry_status_feature);
             $("#industry_status_item1").html(cn.industry_status_item1);
@@ -480,6 +483,8 @@ $(document).ready(function() {
             //#top-slider
             $("#sequence_item1").html(en.sequence_item1);
             $("#sequence_item2_fourth").html(en.sequence_item2_fourth);
+            $("#sequence_item2_first_paper").html(en.sequence_item2);
+            $("#sequence_other_item2_first_paper").html(en.sequence_item2);
 
             $("#sequence_other_item1").html(en.sequence_item1);
             $("#sequence_other_item2_fourth").html(en.sequence_item2_fourth);
@@ -655,6 +660,8 @@ $(document).ready(function() {
             //#top-slider
             $("#sequence_item1").html(en.sequence_item1);
             $("#sequence_item2_fourth").html(en.sequence_item2_fourth);
+            $("#sequence_item2_first_paper").html(en.sequence_item2);
+            $("#sequence_other_item2_first_paper").html(en.sequence_item2);
             
             $("#sequence_other_item1").html(en.sequence_item1);
             $("#sequence_other_item2_fourth").html(en.sequence_item2_fourth);
