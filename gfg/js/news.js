@@ -43,7 +43,7 @@ $(function(){
             $("#news_content_item5").html("GAME.FUND 创始人董浩，3月16日将在NEO meetup韩国首尔站，进行项目首次路演。欢迎加入我们！");
             $("#news_content_item6").html("GAME.FUND 创始人董浩，3月16日将在NEO meetup韩国首尔站，进行项目首次路演。欢迎加入我们！");
 
-            $("#news_content_item7").html("2018-03-27-BY GAME.FUND TEAM");
+            $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
             $("#news_content_item8").html("BCreator.io引擎的Alpha测试版本可以在我们的网站上下载。欢迎加入我们来体验！");
             $("#news_content_item9").html("BCreator.io引擎的Alpha测试版本可以在我们的网站上下载。欢迎加入我们来体验！");
 
@@ -54,11 +54,11 @@ $(function(){
             $("#news_content_item1").html("LATEST NEWS POSTS");
             $("#news_content_item2").html("READ AND GET UPDATED ON HOW WE PROGRESS");
             $("#news_content_item3").html("BLOG");
-            $("#news_content_item4").html("2018-03-15-BY GAME.FUND TEAM");
+            $("#news_content_item4").html("2019-03-15-BY GAME.FUND TEAM");
             $("#news_content_item5").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
-            $("#news_content_item7").html("2018-03-27-BY GAME.FUND TEAM");
+            $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
             $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
             $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
 
@@ -69,11 +69,11 @@ $(function(){
             $("#news_content_item1").html("LATEST NEWS POSTS");
             $("#news_content_item2").html("READ AND GET UPDATED ON HOW WE PROGRESS");
             $("#news_content_item3").html("BLOG");
-            $("#news_content_item4").html("2018-03-15-BY GAME.FUND TEAM");
+            $("#news_content_item4").html("2019-03-15-BY GAME.FUND TEAM");
             $("#news_content_item5").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
-            $("#news_content_item7").html("2018-03-27-BY GAME.FUND TEAM");
+            $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
             $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
             $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
 
@@ -84,11 +84,11 @@ $(function(){
             $("#news_content_item1").html("LATEST NEWS POSTS");
             $("#news_content_item2").html("READ AND GET UPDATED ON HOW WE PROGRESS");
             $("#news_content_item3").html("BLOG");
-            $("#news_content_item4").html("2018-03-15-BY GAME.FUND TEAM");
+            $("#news_content_item4").html("2019-03-15-BY GAME.FUND TEAM");
             $("#news_content_item5").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
-            $("#news_content_item7").html("2018-03-27-BY GAME.FUND TEAM");
+            $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
             $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
             $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
         }
