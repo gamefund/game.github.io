@@ -127,6 +127,7 @@ $(document).ready(function() {
             $("#button-version div").html("原型展示版");
             $("#version-content-text").html("原型展示版本仅供展示预览，非正式上线版本。");
             $("#button-version").attr("href", "http://game.fund");
+            $("#button-version").attr("target", "_blank");
         }else{
             $("#button-version div").html("Prototype display<br/> version");
             $("#version-content-text").html("Prototype display version is not a formal online live version, just for display and preview.");
@@ -134,6 +135,7 @@ $(document).ready(function() {
             $(".version-container .version-content .button-version>div").addClass("en-version").css({"line-height": "120%"});
             $(".version-container .version-content .version-content-text").addClass("en-version");
             $("#button-version").attr("href", "http://game.fund");
+            $("#button-version").attr("target", "_blank");
         }
     }
         
