@@ -139,14 +139,14 @@ $(document).ready(function() {
         // }
 
         if(language == "cn"){
-            $("#sequence-button-version span").html("GameFund 下载");
+            $("#sequence-button-version span").html("Game.Fund 下载");
             $("#sequence-button-version").attr("href", "http://game.fund");
-            $("#sequence_other-button-version span").html("GameFund 下载");
+            $("#sequence_other-button-version span").html("Game.Fund 下载");
             $("#sequence_other-button-version").attr("href", "http://game.fund");
         }else{
             $("#sequence-button-version span").html("GameFund Download");
             $("#sequence-button-version").attr("href", "http://game.fund");
-            $("#sequence_other-button-version span").html("GameFund Download");
+            $("#sequence_other-button-version span").html("Game.Fund Download");
             $("#sequence_other-button-version").attr("href", "http://game.fund");
             $("#top-slider .slider-button .new-button-version").addClass("en-version");
             $("#sequence .load-pdf-content .new-button-version").addClass("en-version");

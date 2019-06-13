@@ -147,24 +147,24 @@ var cn = {
     //#community
     community_title1: '社区',
     community_title2: '生态',
-    community_img_title: 'GF通证分配方案',
+    community_img_title: 'GFG通证分配方案',
     community_title_item1: '社区投放 20%',
-    community_text_item1: '20%的GF直接投放社区运作',
+    community_text_item1: '20%的GFG直接投放社区运作',
     community_title_item2: '社区内容激励 45%',
-    community_text_item2: '45%的GF用于社区内容激励，维护社区的高品质良性运作。由智能合约按社区细则客观执行激励。',
+    community_text_item2: '45%的GFG用于社区内容激励，维护社区的高品质良性运作。由智能合约按社区细则客观执行激励。',
     community_title_item3: '早期天使 5%',
-    community_text_item3: '5%的GF为早期天使持有，有了他们的支持，社区才有现在的基础，社区运行一年内锁定。',
+    community_text_item3: '5%的GFG为早期天使持有，有了他们的支持，社区才有现在的基础，社区运行一年内锁定。',
     community_title_item4: '生态基础激励 15%',
-    community_text_item4: '15%的GF用于激励GAME.FUND生态基础建设者，以及合作伙伴，用以夯实生态体系。',
+    community_text_item4: '15%的GFG用于激励GAME.FUND生态基础建设者，以及合作伙伴，用以夯实生态体系。',
     community_title_item5: '主创团队 15%',
-    community_text_item5: '15%的GF为主创团队持有，社区运行一年内锁定。',
+    community_text_item5: '15%的GFG为主创团队持有，社区运行一年内锁定。',
         
-    total_content_item1: 'GF（GAME.FUND）是本社区通证，拥有GF是社区成员的标志。GF总量50亿个，可精确到10<sup>-8</sup>，永不增发。',
+    total_content_item1: 'GFG（GAME.FUND Gold）是本社区通证，拥有GFG是社区成员的标志。GFG总量50亿个，可精确到10<sup>-8</sup>，永不增发。',
 
     community_video_title: '社区运作',
     video_tag_tip: '您的浏览器不支持video标签',
     community_video_text1: '是不是有点烧脑？没事，您看这一段就能明白',
-    community_video_text2: '简单的说，社区各角色价值流转行为都以GF为流通凭证，币天和币天担保机制鼓励用户持有GF和避免刷信誉及排名。社区按不同比例收取游戏众筹和游戏发行的分成，此分成收入用作社区建设和维护外，至少50%按GF持有比例定期分配到对应地址。随着社区的推广扩大，越来多用户加入社区，GF通证的升值是必然的',
+    community_video_text2: '简单的说，社区各角色价值流转行为都以GFG为流通凭证，币天和币天担保机制鼓励用户持有GFG和避免刷信誉及排名。社区按不同比例收取游戏众筹和游戏发行的分成，此分成收入用作社区建设和维护外，至少50%按GFG持有比例定期分配到对应地址。随着社区的推广扩大，越来多用户加入社区，GFG通证的升值是必然的',
 
     //#contact
     contact_we: '联系我们',
@@ -326,24 +326,24 @@ var en = {
     //#community
     community_title1: 'COMMUNITY',//Community Ecology
     community_title2: '&nbspECOLOGY',
-    community_img_title: 'GF Token Distribution Plan',
+    community_img_title: 'GFG Token Distribution Plan',
     community_title_item1: 'Community Launch 20%',
-    community_text_item1: '20% of GF is launched directly to the community',
+    community_text_item1: '20% of GFG is launched directly to the community',
     community_title_item2: 'Community Content Incentive 45%',
-    community_text_item2: '45% of GF is used to community content incentive, maintaining and improving the high quality of community content. The incentive will be objectively implemented by smart contract according to the community rules',
+    community_text_item2: '45% of GFG is used to community content incentive, maintaining and improving the high quality of community content. The incentive will be objectively implemented by smart contract according to the community rules',
     community_title_item3: 'Early Angel 5%',
-    community_text_item3: '5% of GF is held by early angel, with their support, the community has the foundation of the present, and it will locked within one year of community operation. ',
+    community_text_item3: '5% of GFG is held by early angel, with their support, the community has the foundation of the present, and it will locked within one year of community operation. ',
     community_title_item4: 'Ecology Basis Incentive 15%',
-    community_text_item4: '15% of GF is used to motivate GAME.FUND ecological foundation builders and partners to tamp the ecosystem.',
+    community_text_item4: '15% of GFG is used to motivate GAME.FUND ecological foundation builders and partners to tamp the ecosystem.',
     community_title_item5: 'The Main Team 15%',
-    community_text_item5: '15% of GF is held by the main team, and it will locked within one year of community operation.',
+    community_text_item5: '15% of GFG is held by the main team, and it will locked within one year of community operation.',
 
-    total_content_item1: 'GF the token of GAME.FUND is the community status symbol. Total amount of GF is 5 billion,accurate to 10<sup>-8</sup>，the circulation will never increase.',
+    total_content_item1: 'GFG the token of GAME.FUND is the community status symbol. Total amount of GFG is 5 billion,accurate to 10<sup>-8</sup>，the circulation will never increase.',
 
     community_video_title: 'Community Operation',
     video_tag_tip: 'Your browser does not support video tags',
     community_video_text1: 'Is not a bit brain burning? All right, Please read this passage',
-    community_video_text2: 'Simply put, the role of the community value of the transfer of behavior are based on GF. Mechanism of coin days and coin days guarantee to encourage users to keep GF and avoid brush credit and ranking. The community charge income of game crowdfunding and game distribution at different rates. One part of the income used for community constraction and maintenance, at least 50% regularly assigned to the corresponding address according to the GF holding ratio. With the expansion of the community by promotion, more and more users to join the community, GF\'s value will go up.',
+    community_video_text2: 'Simply put, the role of the community value of the transfer of behavior are based on GFG. Mechanism of coin days and coin days guarantee to encourage users to keep GFG and avoid brush credit and ranking. The community charge income of game crowdfunding and game distribution at different rates. One part of the income used for community constraction and maintenance, at least 50% regularly assigned to the corresponding address according to the GFG holding ratio. With the expansion of the community by promotion, more and more users to join the community, GFG\'s value will go up.',
 
     //#contact
     contact_we: 'Contact Us',
