@@ -12,7 +12,7 @@ var cn = {
     registration_item: '加入白名单',
 
     sequence_item1: '基于区块链的全球去中心化游戏内容公共社区',
-    sequence_item2: '白皮书',
+    sequence_item2: 'Dev Deck',
     sequence_item2_first: '白皮书',
     sequence_item2_second: 'ENGLISH',
     sequence_item2_third: '日語',
@@ -189,7 +189,7 @@ var en = {
     registration_item: 'Join whitelist',
 
     sequence_item1: 'Blockchain-based global decentralized game content public community.',
-    sequence_item2: 'White Papers',
+    sequence_item2: 'Dev Deck',
     sequence_item2_first: 'White Papers',
     sequence_item2_second: '中文',
     sequence_item2_third: '日語',
