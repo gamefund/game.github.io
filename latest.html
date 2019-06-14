@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN" prefix="og: http://ogp.me/ns#">
 
 <head>
@@ -120,6 +120,11 @@
             if (isWeixin) {
                 window.location.href = "http://game.fund/index.html";
             } else {
+                let language = splitUrl(window.location.href, "language");
+                if(language == 'en'){
+                    document.getElementById('container').getElementsByTagName('div')[0].innerHTML = 'Loading, Please wait...'
+                }
+
                 function addLogDownloadSource() {
                     var generalServerIp = splitUrl(window.location.href, "generalServerIp") || "http://139.217.235.88:9001";
                     var userId = splitUrl(window.location.href, "userId");
