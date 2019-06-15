@@ -143,8 +143,11 @@
                     })
                 }
                 addLogDownloadSource();
-
-                window.location.href = "https://resource-1258943997.file.myqcloud.com/apk/GF1.0.19.apk";
+                if(splitUrl(window.location.href, "isEn") == 'true'){
+                    window.location.href = 'https://github.com/gamefund/game.github.io/releases/download/GameFund/GF1.1.47-en.apk';
+                }else {
+                    window.location.href = "https://resource-1258943997.file.myqcloud.com/apk/GF1.0.19.apk";
+                }
             }
         })();
     </script>
