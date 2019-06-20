@@ -22,7 +22,7 @@ $(function(){
             account_tip1: "还没有GAME.FUND账号？",
             account_tip2: "已有GAME.FUND账号？",
             account_tip3: "找到了您的密码？",
-            address_tip: "ETH钱包地址（非必填）",
+            address_tip: "CSC钱包地址（非必填）",
             nickname_tip: "昵称支持4-20位中英文、数字、减号或下划线",
             invitation_code: "邀请码（非必填）",
 
@@ -46,6 +46,7 @@ $(function(){
             fill_email_length : '邮箱地址长度不能超过35个字符',
             password_length : '密码长度不能超过50个字符',
             fill_input_length : '不能输入超过50个字符',
+            ethaddress_get: '申请获取CSC钱包地址',
 
             //个人设置页面
             registerFail_text1 : "注册失败！",
@@ -93,7 +94,7 @@ $(function(){
             account_tip1: "No GAME.FUND account yet?",
             account_tip2: "Already have a GAME.FUND account?",
             account_tip3: "Already found your password?",
-            address_tip: "ETH wallet address(Not required)",
+            address_tip: "CSC wallet address(Not required)",
             nickname_tip: "Nickname supports 4-20 characters, including Chinese-English,numbers,minus signs or underscores",
             invitation_code: "Invitation code(Not required)",
 
@@ -116,6 +117,7 @@ $(function(){
             fill_email_length : 'E-mail address length can not exceed 35 characters',
             password_length : 'The password length can not more than 50 characters',
             fill_input_length : 'Cannot enter more than 50 characters',
+            ethaddress_get: 'Apply for CSC Wallet Address',
 
             //个人设置页面
             registerFail_text1 : "Registration failed!",
@@ -154,6 +156,7 @@ $(function(){
         "<div class='container-outer'>" +
             "<div class='container'>" +
                 "<form id='form_common_id' class='form-container'>" +
+                    "<img id='form_common_close' src='https://game.fund/gfg/img/close.png' style='position: absolute; top: 5px; right: 5px; width:3%;' alt=''/>" +
                     "<div class='form-logo'>" +
                         "<img src='https://game.fund/gfg/img/logo2.png' width='20%' style='margin-top: -70px;' alt=''/>" +
                     "</div>" +
@@ -192,9 +195,9 @@ $(function(){
             "<div></div>"+
         "</div>"+
         "<div class='lay-input'>" +
-            "<!-- <label>ETH钱包地址</label> -->" +
+            "<!-- <label>CSC钱包地址</label> -->" +
             "<input type='text' class='focus-input' name='ethaddress' placeholder='" + currentLanguage.address_tip + "'/>" +
-            "<div></div>"+
+            "<div><a href='https://casinocoin.org' style='color: #cf0202' target='_blank'>" + currentLanguage.ethaddress_get + "</a></div>"+
         "</div>"+
 
         "<button type='button' class='lay_send'>" + currentLanguage.register_account + "</button>" +
@@ -348,7 +351,12 @@ $(function(){
         $(".container-outer form").click(function(event){
             event.stopPropagation();
         });
-        $(document).click(function(){
+        // $(document).click(function(){
+        //     if($(".container-outer").length){
+        //         $(".container-outer").remove();
+        //     }
+        // });
+        $("#form_common_close").click(function(){
             if($(".container-outer").length){
                 $(".container-outer").remove();
             }
