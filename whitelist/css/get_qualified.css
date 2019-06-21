@@ -1,0 +1,142 @@
+#get-qualified-top-half{
+    position: relative;
+    background-color: rgb(32,32,32);
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    min-height: 30%;
+}
+.top-half-title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 8px 0 13px;
+}
+.top-half-text{
+    font-size: 1.3rem;
+    color: rgb(221,219,219);
+    margin: 4px 0;
+    z-index: 1;
+    position: relative;
+}
+.top-pull-down{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #202020;
+    background-position: center 71%;
+    background-size: 62%;
+    background-repeat: no-repeat;
+    color: #fff;
+    line-height: 40px;
+    font-size: 2rem;
+}
+
+#get-qualified-bottom-half{
+    /*height: 26.5rem;*/
+    background-color: rgb(48,142,206);
+    color: white;
+    white-space: nowrap;
+    padding: 0 6vw;
+    height: 380px;
+    min-height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bottom-half-title{
+	font-size: 1.7rem;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.bottom-checkbox{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2.5vw
+}
+.bottom-half-text{
+	white-space: nowrap;
+    margin-top: 1.5vh;
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+/*    height: 2vh;
+    display: flex;
+    align-items: center;*/
+}
+.square{
+    width: 0.6rem;
+    height: 0.6rem;
+    display: inline-block;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.bottom-half-text span{
+    padding-left: 4vw;
+    font-size: 1.1rem;
+
+}
+.bottom-input-title{
+    margin: 45px 0 8px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+.bottom-input{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 1rem;
+    text-indent: 1rem;
+}
+
+#confirm-activation{
+    width: 100%;
+    border: 0.2vw solid white;
+    border-radius: 20px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.4rem;
+    margin-top:15px;
+    letter-spacing: 0.2rem;
+}
+
+.bottom-half-text-ul{
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.bottom-half-text-ul li{
+    margin-bottom:10px;
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+.bottom-half-text-ul li::before{
+    content: "■";
+    float:left;
+}
+
+.bottom-half-text-ul li p {
+    text-indent: 0.5rem;
+    white-space: normal;
+}

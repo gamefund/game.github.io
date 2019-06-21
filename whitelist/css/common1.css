@@ -1,0 +1,253 @@
+
+@charset "UTF-8";
+*{
+    /*font-size: 62.5%;*/
+    /*font-family: "Microsoft YAHEI","微软雅黑","黑体","Arial","Tahoma","sans-serif";*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+}
+
+input{
+    box-shadow: none;
+}
+
+@keyframes fade-in-fade-out{
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity: 0}
+}
+
+
+@-webkit-keyframes fade-in-fade-out{
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity: 0}
+}
+
+@-moz-keyframes fade-in-fade-out{
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity: 0}
+}
+
+@-o-keyframes fade-in-fade-out{
+    0% {opacity: 0}
+    40% {opacity: 1}
+    60% {opacity: 1}
+    100% {opacity: 0}
+}
+
+
+.tips {
+    animation: fade-in-fade-out 4s linear;
+    -webkit-animation: fade-in-fade-out 4s linear;
+    -moz-animation: fade-in-fade-out 4s linear;
+    -o-animation: fade-in-fade-out 4s linear;
+    background-color: rgba(0,0,0,1.0);
+    max-width: 100vw;
+    z-index: 102;
+    padding: 4px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    top:50vh;
+    left:50vw;
+    transform: translate(-50%, -50%);
+}
+
+.tips p {
+    font-size: 1.5rem;
+    color:white;
+    white-space: nowrap;
+}
+
+.error{
+    color:rgb(230, 0, 0);
+}
+.correntness{
+    color:lawngreen;
+}
+
+.body-container
+{
+    background-size: 100% 100%;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 50px;
+}
+.scroll-container
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-tips{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 4px;
+    height: 20px;
+    line-height: 12px;
+}
+.input-tips i{
+    margin-right: 2vw;
+}
+
+.blue-dividing-line
+{
+    background-color: rgb(185,4,0);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+}
+
+
+
+#login-title-img{
+	/*background-image: url(../images/logo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+    height: 5vh;
+    width: 45vw;
+    /*margin: 0 auto;*/
+    text-align: center;
+    
+}
+#login-title-img img{
+    width: 43%;
+}
+
+.title-img-bottom{
+    text-align: center;
+	color: rgb(99,99,99);
+    font-size: 1.45rem;
+    margin-top: 2.5vh;
+    margin-bottom: 68px;
+    letter-spacing: 0.1rem;
+}
+.input-content{
+    margin: 0 auto 5vh;
+    width: 90vw;
+}
+.title-text{
+	text-align: left;
+	color: rgb(99,99,99);
+    margin-bottom: 7px;
+    margin-left: 1vw;
+    font-size: 1.45rem;
+    letter-spacing: 0.1rem;
+}
+.input-box{
+    width: 100%;
+    border-radius: 1vw;
+    border: 1px solid rgb(220,220,220);
+    outline: none;
+    text-indent: 4vw;
+}
+
+.activation-successful-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 50;
+    display: none;
+}
+
+.activation-successful-content {
+    background-color: white;
+    text-align: center;
+    /* height: 21rem; */
+    width: 100%;
+    bottom: 25%;
+    position: absolute;
+    color: rgb(60,60,60);
+}
+
+.successful-title {
+    font-size: 2rem;
+    margin: 45px 0 30px;
+}
+
+.successfull-text {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.activation-successful-confirm {
+    display: block;
+    font-size: 1.5rem;
+    background-color: rgb(185,4,0);
+    width: 60vw;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    margin: 25px auto 50px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+input[type="text"],input[type="number"],input[type="password"]{
+    height: 40px;
+    font-size: 1.4rem;
+}
+
+#modle-interface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modle-interface-center {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.jumptopage-tip{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 50;
+}

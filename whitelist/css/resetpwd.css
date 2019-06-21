@@ -1,0 +1,45 @@
+
+.reset-passsword #scroller{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.reset-passsword .body-container{
+	background-color: rgb(235,235,235);
+    bottom: 0;
+}
+
+.reset-passsword #reset-btn{
+    background-color: rgb(185,4,0);
+    margin: 10vh auto 6vh;
+    width: 90vw;
+    height: 7vh;
+    line-height: 7vh;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1rem
+}
+.reset-passsword #down-two{
+	display: flex;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+}
+.reset-passsword .forget-and-register{
+	color: rgb(241,0,0);
+    font-size: 1.45rem;
+    text-decoration: none;
+    margin: 0 6vw;
+    letter-spacing: 0.1rem;
+}
+
+.body-container {
+    background-color: rgb(235,235,235);
+    bottom: 0;
+}
+
+#scroller {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
