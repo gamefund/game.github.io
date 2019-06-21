@@ -368,7 +368,7 @@ $(function(){
                 // ctx.fillStyle = "rgb(114, 101, 101)";
                 // ctx.fillText(en.code_date, 0.5 * deviceWidth * ratio , 0.607 * deviceHeight * ratio);		
             }
-            
+            $("#imgBox").children("img").attr("crossOrigin", "Anonymous");
             $("#imgBox").children("img").attr("src", canvas[0].toDataURL());
             // $("#imgBox").children("img").load(function(){
             //     $("#imgBox").css("display","block");

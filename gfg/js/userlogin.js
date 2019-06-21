@@ -523,7 +523,7 @@ $(function(){
             var form = new FormData(document.getElementById("form_common_id"));
             // var loginurl = "http://192.168.1.199:8080/whitelist/general/login";game.fund:8443
             // var loginurl = "https://game.fund:8443/whitelist/general/login";
-            var loginurl = "https://game.fund:8443/whitelist/general/login";
+            var loginurl = "https://2014zhengmeng.com:3000/whitelist/general/login";
             submitForm(loginurl,form);
         });
 
@@ -533,7 +533,7 @@ $(function(){
             if(!checkPwd()) return;
             var form = new FormData(document.getElementById("form_common_id"));
             // var regurl = "https://game.fund:8443/whitelist/general/nocoderegister";
-            var regurl = "https://game.fund:8443/whitelist/general/registercodeornocode";
+            var regurl = "https://2014zhengmeng.com:3000/whitelist/general/registercodeornocode";
             submitForm(regurl,form);
         });
 
@@ -541,7 +541,7 @@ $(function(){
             if(!checkEmailBox()) return;
             var form = new FormData(document.getElementById("form_common_id"));
             // var regurl = "https://game.fund:8443/whitelist/general/forgetPsw";
-            var regurl = "https://game.fund:8443/whitelist/general/forgetPsw";
+            var regurl = "https://2014zhengmeng.com:3000/whitelist/general/forgetPsw";
             submitForm(regurl,form);
         });
    }
@@ -680,7 +680,8 @@ $(function(){
             $("#user-login .user-info").children("div").eq(0).bind("click", function(event){
                 console.log(userInfo)
                 //发送ajax请求获取用户个人数据
-                var url = "https://game.fund:8443/whitelist/general/personinfo?account="+ userInfo.account +"&uid="+ userInfo.id;
+                // var url = "https://game.fund:8443/whitelist/general/personinfo?account="+ userInfo.account +"&uid="+ userInfo.id;
+                var url = "https://2014zhengmeng.com:3000/whitelist/general/personinfo?account="+ userInfo.account +"&uid="+ userInfo.id;
                 var data = "";
                 sendAjax(url, data, loadMyData_callback);
                 function loadMyData_callback(result){
@@ -811,7 +812,7 @@ $(function(){
             if($(window).width() < 530){
                 $("#mySetting-container.reward-container .invitation-code-button span").css({"padding":"5px 10px"});
             }
-            $("#mySetting-container.reward-container .invitation-code-button").bind("click", function(){
+            $("#mySetting-container.reward-container .invitation-code-button").bind("click", function(event){
                 if($("#qrcode").length){
                     $(this).css("pointer", "auto");
                     return;
@@ -849,7 +850,8 @@ $(function(){
     //绑定点击生成邀请码事件
     function get_invitationCode(userInfo){
         //发送ajax请求获取用户个人数据
-        var url = "https://game.fund:8443/whitelist/general/invitenew?wkey=whitelist&uid="+ userInfo.id;
+        // var url = "https://game.fund:8443/whitelist/general/invitenew?wkey=whitelist&uid="+ userInfo.id;
+        var url = "https://2014zhengmeng.com:3000/whitelist/general/invitenew?wkey=whitelist&uid="+ userInfo.id;
         var data = "";
         sendAjax(url, data, getInvitation_callback);
         function getInvitation_callback(result){
