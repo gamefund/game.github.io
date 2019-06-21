@@ -6,13 +6,13 @@ var headerText =
 
               '<div>' +
                 '<ul class="nav navbar-nav" id="translation">' +
-                  '<li  id="user-login" >' +
-                      '<div class="user-icon"><i class="fa fa-user"></i></div>' +
-                      '<div class="user-info">' +
-                        '<div>&nbsp</div>' +
-                        '<div id="user_reset"></div>' + 
-                      '</div> ' +
-                  '</li>' +
+                //   '<li  id="user-login" >' +
+                //       '<div class="user-icon"><i class="fa fa-user"></i></div>' +
+                //       '<div class="user-info">' +
+                //         '<div>&nbsp</div>' +
+                //         '<div id="user_reset"></div>' + 
+                //       '</div> ' +
+                //   '</li>' +
                   '<li><img src="'+ fatherHref + '/img/header/001.png" id="EN"></li>' +
                   '<li><img src="'+ fatherHref + '/img/header/002.png" id="CN"></li>' +
                   '<!--<li><img src="'+ fatherHref + '/img/header/003.png" id="JA"></li>-->' +
@@ -39,7 +39,7 @@ var headerText =
                     '<li class="menu-price"><a href="'+ fatherHref + '/index.html#advance" id="navigation_item4">Advantage</a></li>' +
                     '<li class="menu-team"><a href="'+ fatherHref + '/index.html#team" id="navigation_item5">Team</a></li>' +
                     '<li class="menu-blog"><a href="'+ fatherHref + '/bloglist.html" id="navigation_item7">Blog</a></li>' +
-                    '<li class="menu-reward"><a href="'+ fatherHref + '/reward/reward.html" id="navigation_item8">Reward</a></li>' +
+                    // '<li class="menu-reward"><a href="'+ fatherHref + '/reward/reward.html" id="navigation_item8">Reward</a></li>' +
                   '</ul>' +
 
                   '<ul class="nav navbar-nav" id="registration">' +
@@ -79,7 +79,7 @@ var bottomText =
                         '<div class="content-left-right" style=" flex: 60%;">' +
                             '<div> <a href="'+ fatherHref + '/index.html#team" id="contact_href_item6">团队介绍</a> </div>' +
                             '<div><a href="'+ fatherHref + '/bloglist.html" id="contact_href_item7">Blog</a></div>' +
-                            '<div><a href="'+ fatherHref + '//reward/reward.html" id="contact_href_item8">Reward</a></div>' +
+                            // '<div><a href="'+ fatherHref + '//reward/reward.html" id="contact_href_item8">Reward</a></div>' +
                         '</div>' +
                     '</div>' +
                     '<div class="content-right">' +
