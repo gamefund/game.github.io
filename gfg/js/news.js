@@ -59,8 +59,11 @@ $(function(){
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
             $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
-            $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
-            $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            $("#news_content_item8").html("Bcreator.io Alpha version is available now! Download and join us!");
+            $("#news_content_item9").html("Bcreator.io Alpha version is available now! Download and join us!");
+
+            // $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            // $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
 
         }else if(language == "ja"){
             console.log("ja")
@@ -74,8 +77,11 @@ $(function(){
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
             $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
-            $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
-            $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            $("#news_content_item8").html("Bcreator.io Alpha version is available now! Download and join us!");
+            $("#news_content_item9").html("Bcreator.io Alpha version is available now! Download and join us!");
+
+            // $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            // $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
 
         }else{
             console.log("en2")
@@ -89,8 +95,11 @@ $(function(){
             $("#news_content_item6").html("DONG Hao, Founder of GAME.FUND presenting at Seoul NEO Meetup on Friday, Mar 16. Come and join us! Emerald Hall B, Grand Hilton Seoul, Mar 16, 18:00–21:40(KST)");
 
             $("#news_content_item7").html("2019-03-27-BY GAME.FUND TEAM");
-            $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
-            $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            $("#news_content_item8").html("Bcreator.io Alpha version is available now! Download and join us!");
+            $("#news_content_item9").html("Bcreator.io Alpha version is available now! Download and join us!");
+            
+            // $("#news_content_item8").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
+            // $("#news_content_item9").html("An alpha-test version of our engine tool BCreator.io is available to download on our website. Welcome to join us and experience it!");
         }
     }
 });

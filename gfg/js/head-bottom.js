@@ -154,23 +154,23 @@ var bottomText =
     //-----------------------------------------英文版
     var en = {
         //index.html
-        navigation_item1: 'Introduction',
-        navigation_item2: 'Background',
-        navigation_item3: 'Solution',
-        navigation_item4: 'Advantage',
-        navigation_item5: 'Team',
-        navigation_item6: 'Ecology',
-        navigation_item7: 'Blog',
-        navigation_item8: 'Reward',
-        registration_item: 'Join whitelist',
+        navigation_item1: 'Who we are?',   //'Introduction',
+        navigation_item2: 'Background',   //'Background',
+        navigation_item3: 'Solutions',  //'Solution',
+        navigation_item4: 'Advantages',  //'Advantage',
+        navigation_item5: 'Team',  //'Team',
+        navigation_item6: 'Community',  //'Ecology',
+        navigation_item7: 'Blog',  //'Blog',
+        navigation_item8: 'Mission',  //'Reward',
+        registration_item: 'Join white list',  //'Join whitelist',
 
         //#contact
-        contact_we: 'Contact Us',
-        contact_broadcast_group: 'Notice Address：',
-        contact_chat_group: 'Chat Address：',
-        contact_mail: 'E-mail：',
-        broadcast_group: 'Broadcast Group',
-        chat_group: 'Chat Group',
+        contact_we: 'Contact us',     // 'Contact Us',
+        contact_broadcast_group: 'Announcement:',        // 'Notice Address：',
+        contact_chat_group: 'Group chat ID:',     // 'Chat Address：',
+        contact_mail: 'E-mail：',       // 'E-mail：',
+        broadcast_group: 'Broadcasts',        // 'Broadcast Group',
+        chat_group: 'Groups',     // 'Chat Group',
     }
 
 

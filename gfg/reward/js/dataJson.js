@@ -296,11 +296,11 @@ var dataJson = {
             {
                 title: "Bounty Activity<br/>Introduction",//赏金行动介绍
                 content: {
-                    titleArray: ["Task description", "Bounty budget", "Rules explanation", "Contact us", "Bounty result"],
+                    titleArray: ["Mission Description", "Bounty budget", "Rules explanation", "Contact us", "Bounty result"],
                     descripation: 'GAME.FUND is an ideal-based game community and a game developing community that can cultivate dreams, a real "Oasis" which we strive to creat and belongs to you .Join our bounty programme, and you will not only get reward through task fulfilment , but also can become our venture partners.',
-                    award: ["Translation/review & verification<span>5%</span>",
+                    award: ["Translation/review<span>5%</span>",
                             "Social media<span>15%</span>",
-                            "General promotion<span>5%</span>",
+                            "Promotion<span>5%</span>",
                             "Channel promotion<span>25%</span>",
                             "<span>10%</span>Telegram group",
                             "<span>10%</span>Essay writing",
@@ -308,9 +308,9 @@ var dataJson = {
                             "<span>5%</span>KYC review",
                             "<span>15%</span>Senior promotion"],
 
-                    award_mobile: ["Translation/review & verification<span>5%</span>",
+                    award_mobile: ["Translation/review<span>5%</span>",
                                     "Social media<span>15%</span>",
-                                    "General promotion<span>5%</span>",
+                                    "Promotion<span>5%</span>",
                                     "Channel promotion<span>25%</span>",
                                     "Telegram group<span>10%</span>",
                                     "Essay writing<span>10%</span>",
@@ -319,11 +319,11 @@ var dataJson = {
                                     "Senior promotion<span>15%</span>"],
 
                     join: ["Users that participate in reward tasks must have a GAME.FUND ID. The reward tasks that each user can participate are decided by specific task rules.",
-                        "Users that participate in reward tasks must bind an effective wallet address. The wallet address can not be changed. Once you fill in wallet address, it will be locked. Each user must protect well your wallet address and private key.",
-                        "For any user that participates in reward tasks , if he violates task rules or fills in incorrect data at the moment of participation or due to any other reason, he will be terminated for the task. Pls read carefully the task rules before applying for any task. If a user is terminated for one task , he can not participate in that task again.",
-                        "No matter soft promotion article, blog article ,or video, the content must be positive to GAME.FUND image. Any false content from any user that depreciates GAME.FUND, the user will lose the qualification.",
-                        "If we think your behaviour is of no value in marketing and promotion, or your content involves violation of rules or laws,we have the right to cancel your participation qualification.",
-                        "This reward task is the first stage reward task plan."],
+                        "Users need to bind a valid e-wallet for joining the missions. Your e-wallet will be locked and unchangeable. Plase make sure and do not let others get your e-wallet and private key information.",
+                        "If any user againsts the rules of mission, platform or law and provides the incorrect information, their mission will be canceled and will never have the opportunity to join any mission. Before starting the mission, please read carefully the rules. ",
+                        "All tweets, articles and video about participaitng the missions have to be positive. If having any negative or false information, you will lose the rights to join the missions.",
+                        "If users who join the missions do not have any value for platform operation and promotion, Game Fund has the right to cancel your opportunity of join the missions.",
+                        "This reward task is the first stage plan."],
 
                     rule: ["Official website: <a href='https://GAME.FUND/gfg.html' target='_blank'>https://GAME.FUND/gfg.html</a>",
                         "Telegram: <a href='https://t.me/gamefund' target='_blank'>https://t.me/gamefund</a>",
@@ -334,26 +334,26 @@ var dataJson = {
                         // "QQ Group: 711106484"
                         ],
 
-                    result: "Bounty task result query: <a href='javascript:void(0);' target='_blank'>Statistical result form</a>",
+                    result: "Mission results: <a href='javascript:void(0);' target='_blank'>Statistical result form</a>",
                 },
             },
             {
                 title: "Join Telegram<br/>Group",   //加入电报群         
                 content: {
-                    titleArray: ["Task Description", "Reward", "How to participate?", "Rules explanation"],
-                    descripation: "We need your participation and need you to become a member of our group.",               
-                    award: ["10% of total sum of the bounty will be paid to task participants that are eligible for the task.",
-                            "You can get 5 GFG if you successfully join the group.",
-                            'Additional GFG reward can be given according to different active level of users.<br/>You can get 0 GFG if you are rated as "Not Active"<br/>You can get 10 GFG if you are rated as "General Active User".<br/>You can get 20 GFG if you are rated as "Active User".<br/>You can get 35 GFG if you are rated as "Passionate User".<br/>You can get 50 GFG if you are rated as "Avid User".'],
-                    
+                    titleArray: ["Mission Description ", "Reward", "How to participate?", "Rules explanation"],
+                    descripation: "We need your participation. Welcome to be a member of Game.Fund!",               
+                    award: ["10% mission prize will be paid for task participants who are eligible for the task.",
+                            "Join successfully! You can get 5 GFG.",
+                            'Based on the different user activity level, users can get the corresponding reward. <br/>Normal users: 10GFG; <br/>active users: 20GFG; <br/>Super users: 35GFG; <br/>crazy users: 50GFG.',],
+                            
                     join: ["Join the telegram group: <a href='https://t.me/gamefund' target='_blank'>https://t.me/gamefund</a>",
-                            "Fill in this form after joining official telegram group: <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Fill in the form</a>",],
+                            "Fill the form for joining official telegram group: <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Form</a>",],
                     
-                    rule: ["Users need to join the official telegram group . You can not get the received reward if you quit the group first and join again later.",
-                        "Each user can only have one telegram ID in the group. If it's discovered that many IDs belong to one user, the user will lose qualification for the task.",
-                        "If the user reaches a certain active grade and still stays in the group without any violation act, the reward will be sent to the user after 24 hours.",
-                        "Unproper comments or malicious release of a lot of spam is prohibited in the group. Advertisments in any form are also forbidden.",
-                        "We will give addtional reward to active users. Interpretation of active grade rating belongs to the authority. "],
+                    rule: ["Users need to join the official telegram group . You can not get the reward if you leave the group and join back again.",
+                        "Each user can only have one telegram ID. If the system notice the users cheat and use multi account. Then, that users will be canceled the opportunity to get reward.",
+                        "If the user reaches \"active\", does not do anything to against the rule and  stays in the group, the reward will be sent to the user after 24 hours.",
+                        "Improper comments, spam and posting ads are prohibited in the group.",
+                        "We will give addtional reward to active users. Game Fund reserves all the right for the final explanation."],
                 },
             },
             /*{
@@ -373,67 +373,67 @@ var dataJson = {
                 },
             }, */
             {
-                title: "Promotion Via<br/>Social Media",//社交媒体推广
+                title: "Social Media<br/>Promotions",//社交媒体推广
                 content: {
-                    titleArray: ["Task Description", "Reward", "How to join", "Rules explanation"],
-                    descripation: " When you are tweeting on Twitter , you only need spend 2 minutes connecting with us.",           
-                    award: [" 15% of total sum of the bounty will be paid to task participants that are eligible for this task . ",
-                            "Follow GAME.FUND official Twitter and you will get 5 GFG.",
-                            " If you have less than 30 followers, you can get 1 GFG by retweeting  one of our tweets.<br/>If you have 30-100 followers, you can get 10 GFG by retweeting  one of our tweets.<br/>If you have 101-500 followers, you can get 50 GFG by retweeting  one of our tweets.<br/>If you have 501-1000 followers, you can get 100 GFG by retweeting  one of our tweets.<br/>If you have 1001-3000 followers, you can get 300 GFG by retweeting  one of our tweets.<br/>If you have more than 3000 followers, you can get 500 GFG by retweeting  one of our tweets."],
+                    titleArray: ["Mission Description", "Reward", "How to join", "Rules explanation"],
+                    descripation: " Follow and re-tweet us on Twitter. You can get rewards.",           
+                    award: [" 15% mission amount will be paid to mission participants that are eligible for this mission.",
+                            "Follow GAME.FUND official Twitter to get 5 GFG.",
+                            "Less than 30 followers: 1 retweet get 1 GFG; <br/>30-100 followers, 1 retweet get 10 GFG; <br/>101-500 followers, 1 retweet get 50 GFG; <br/>501-1000 followers, 1 retweet get 100 GFG; <br/>1001-3000 followers, 1 retweet get 300 GFG. <br/>More than 3000 followers, 1 retweet get 500 GFG."],
                     //##
-                    join: ["Follow official Twitter: <a href='https://twitter.com/gamefundchain' target='_blank'>https://twitter.com/gamefundchain</a>",
-                        "Fill in the form after following the official Twitter : <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Task form</a>",
-                        "Fill in the form after completing retweet task each week: <a href='https://goo.gl/forms/2Y0mPzgJn2VWZgNC2' target='_blank'>Retweet task form</a>"],
+                    join: ["Twitter: <a href='https://twitter.com/gamefundchain' target='_blank'>https://twitter.com/gamefundchain</a>",
+                        "Fill in the form after following our Twitter: <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Mission Form</a>",
+                        "Fill in the form after retweeting each week: <a href='https://goo.gl/forms/2Y0mPzgJn2VWZgNC2' target='_blank'>Retweet Mission Form</a>"],
                     
-                    rule: ["Your Twitter ID must have been valid for at least two months.",
-                        "Your Twitter ID must be of your own. False,invalid Twitter ID can not participate this task.",
-                        "You can only retweet GAME.FUND official tweets with a #gamefund label.If not, you can not get the reward.",
-                        "You must be an active Twitter user. You must at least retweet GAME.FUND official tweets twice a week, once each day at most.",
-                        "The follower quantity in your Twitter is subject to the finally confirmed quantity by the official authority after you submit registration form.",
-                        "Your tweets or retweeted tweets must be positive to GAME.FUND image. User releasing any content that depreciates GAME.FUND will lose the qualification for the task.",
-                        "The authority reserves the right to adjust task rules and the right to change task reasonably(including payment rules and amount.)"],
+                    rule: ["You must own your Twitter ID at least two months.",
+                        "You must own Twitter ID by yourself.",
+                        "You can only retweet GAME.FUND official tweets with #gamefund. If not, you can not get the reward.",
+                        "You must be an active Twitter user. At least retweet GAME.FUND official tweets twice a week, at most once a day.",
+                        "The number of your Twitter followers is subject to the number you fill in the form.",
+                        "All tweets and retweets have to be positive. If having any negative or false information, you will lose the rights to join the missions.",
+                        "Game Fund reserves all the right for the final explanation (including payment rules and amount.)"],
                 },
             },
             {
-                title: "Essay Writing",//文章写作
+                title: "Article",//文章写作
                 content: {
-                    titleArray: ["Task Description", "Reward", "How to join", "Rules explanation"],
-                    descripation: "If you can write like an angel, we can make you earn gold by writing.",       
-                    award: ["30% of total sum of the bounty will be paid to task participants that are eligible for this task . .",
-                            'Reward quantity of GFG will be decided by the quality of the article.(The official authority will review and rate article grade .)<br/>You will get 0 GFG if your article is rated as "Rejected".<br/>You will get 1500 GFG if your article is rated as "Average".<br/>You will get 5000 GFG if your article is rated as "Good".<br/>You will get 9000 GFG if your article is rated as "Excellent".',
-                            'Additional GFG can be given if your article is forwarded by the official authority. Details is as below: <br/>You will get 1000 GFG if your article is rated as "Average".<br/>You will get 1500 GFG if your article is rated as "Good".<br/>You will get 2000 GFG if your article is rated as "Excellent".'],
+                    titleArray: ["Mission Description", "Reward", "How to join", "Rules explanation"],
+                    descripation: "If you have good writing ability. Game Fund gives you a chance to earn money!",       
+                    award: ["30% mission amount will be paid to mission participants that are eligible for this mission.",
+                            'Getting GFG will be decided by the quality of the article.(The official authority will review and rate article grade.) <br/>Get 0 GFG if your article is rated as "Rejected".<br/>Get 1500 GFG if your article is rated as "Average". <br/>Get 5000 GFG if your article is rated as "Good". <br/>Get 9000 GFG if your article is rated as "Excellent".',
+                            'Additional GFG can be given if your article is forwarded by Game Fund. <br/>Get 1000 GFG if your article is rated as "Average". <br/>Get 1500 GFG if your article is rated as "Good". <br/>Get 2000 GFG if your article is rated as "Excellent".'],
+                            
+                    join: ["Complete and submit this form(after publishing the article): <a href='https://goo.gl/forms/5gi3tRXDeD6GMiyF3' target='_blank'>Registration form</a>",
+                        "Send your article to this email (attaching the related information): <a href='mailto:info@game.fund' target='_blank'>GAME.FUND email address</a>"],
                     
-                    join: ["Fill in and submit this form(after publishing the article):<a href='https://goo.gl/forms/5gi3tRXDeD6GMiyF3' target='_blank'>Registration form</a>",
-                        "Send your article to this email (Information that needs to fill in is as attached): <a href='mailto:info@game.fund' target='_blank'>GAME.FUND email address</a>"],
-                    
-                    rule: ["Your Blog or BBS ID must have been valid for at least two months.",
-                        "The article content must be of value and related to GAME.FUND. The topics include : GFG appreciation,content included in white paper, transaction service,technical related issues, etc.",
-                        "The English article length must be no less than 300 words, while Chinese article must be no less than 500 words.",
-                        "The article content must include at least one link of GAME.FUND official website, telegram group,official Twitter .",
-                        "The article content must be original. If it is discovered that the content is copied from somewhere else,  the submitter will lose qualification for the task."],
+                    rule: ["You must own Blog or BBS ID at least two months.",
+                        "The article must be valuable and related to GAME.FUND. The topics include : white paper, transaction service,technical related issues and etc.",
+                        "The English article length must be 300 words at least; Chinese article must be 500 words at least.",
+                        "The article must contain at least one link of GAME.FUND official website, telegram group or official Twitter.",
+                        "The article must be created by yourself. If it is not, your qualifications will be cancelled."],
                 },
             },
             {
-                title: "YouTube Video<br/>Release",//YouTube视频发布
+                title: "YouTube Video",//YouTube视频发布
                 content: {
-                    titleArray: ["Task Description", "Reward", "How to participate?", "Rules explanation"],
-                    descripation: "If you are interested in GAME.FUND, and meantime you are good at video editing and content creation,  this task is perfect for you.",       
-                    award: ["10% of total sum of the bounty will be paid to task participants that are eligible for this task.",
-                            'You can get 5 GFG if you follow "GAME.FUND" official channel',
-                            'How many GFG you can get depends on content quality of the videos. Video quality rating will be decided by the authority.<br/>If your video is rated as "Rejected", you can get 0 GFG.<br/> If your video is rated as "Common",you can get 5000 GFG.<br/>If your video is rated as "Good", you can get 15000 GFG.<br/>If your video is rated as "Excellent", you can get 30000 GFG. ',
-                            'If your video is forwarded by an official authority, you can get additional GFG.Details is as below:<br/>If your video is rated as "Common" , you can get 1500 GFG.<br/>If your video is rated as "Good" , you can get 3000 GFG. <br/>If your video is rated as "Excellent" , you can get 5000 GFG.'],         
+                    titleArray: ["Mission Description ", "Reward", "How to participate?", "Rules explanation"],
+                    descripation: "If you are interested in GAME.FUND, and good at video editing and content creation, this mission is perfect for you.",       
+                    award: ["10% mission amount will be paid to mission participants that are eligible for this mission.",
+                            'Get 5 GFG if you follow "GAME.FUND" official channel',
+                            'Getting GFG will be decided by the quality of the video.(Video quality rating will be decided by the authority). <br/>Get 0 GFG if your video is rated as "Rejected". <br/>Get 5000 GFG,if your video is rated as "Common". <br/>Get 15000 GFG, if your video is rated as "Good". <br/>Get 30000 GFG, if your video is rated as "Excellent".',
+                            'Additional GFG can be given if your video is forwarded by Game Fund. <br/>Get 1500 GFG if your article is rated as "Average". <br/>Get 3000 GFG if your article is rated as "Good". <br/>Get 5000 GFG if your article is rated as "Excellent".'],         
                     
-                    join: ["Follow our channel on YouTube: <a href='https://www.youtube.com/channel/UCXSE7VV9rRfio_EmXHSHTPw' target='_blank'>Official Channel on YouTube.</a>",
-                        "After you follow the official channel on YouTube, submit this form: <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Focus on official channel form.</a>",
-                        "Submit this form after finishing video creation: <a href='https://goo.gl/forms/IZBVqYyZLcdIuDfK2' target='_blank'>Video Creation Form.</a>"],
+                    join: ["Follow us on YouTube: <a href='https://www.youtube.com/channel/UCXSE7VV9rRfio_EmXHSHTPw' target='_blank'>Game Fund official channel</a>",
+                        "Follow us and submit this form: <a href='https://goo.gl/forms/3vylpttMGyxW6KcE2' target='_blank'>Focus on official channel form</a>",
+                        "Submit this form after finishing video: <a href='https://goo.gl/forms/IZBVqYyZLcdIuDfK2' target='_blank'>Video Creation Form</a>"],
 
-                    rule: ["Your YouTube channel should have been online for over 2 months.",
-                        "The video content must be of value and related to GAME.FUND, or related to official content released in GAME.FUND social media channels.",
-                        "The video must present at least one GAME.FUND Internet link or telegram group link for no less than 5 seconds. It must be clearly presented through no-limited methods.",
-                        "The video time length should be no less than 90 seconds.",
-                        "The video must be dubbed by human voices.",
-                        "During the task period, at least one video should be released.  Within one week, at most one video can be released.",
-                        "The video must be original. If the video is  copied from somewhere else, the user who uploads the video will lose qualification for the task."],
+                    rule: ["You must own your YouTube channel for over 2 months.",
+                        "The video must valuable and related to GAME,FUND, or official content released from GAME.FUND social media channels.",
+                        "The video must present at least one GAME.FUND Internet link or telegram group link for 5 seconds at least. It must be clearly presented. No limit to video present methods.",
+                        "The video time length should be 90 seconds at least.",
+                        "This video must be dubbed.",
+                        "During the mission period, at least releases one video. At most release one video per week.",
+                        "The video must be original. If the video is copied from others, the user who uploads the video will lose qualification of this mission."],
                 },
             },
             /*{

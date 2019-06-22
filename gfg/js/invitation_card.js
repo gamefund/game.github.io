@@ -20,21 +20,25 @@ $(function(){
     }
     //-----------------------------------------英文版
     var en = {
-        share_tips : 'Share tips：long press pictures to save or share',
+        share_tips : 'Hints: Press long to save or share pictures.',
         //邀请函
-        invitation_page_title1 : 'The community based on global ',
-        invitation_page_title3 : 'decentralization blockchain that ',
-        invitation_page_title2 : 'of the people, by the people, for ',
-        invitation_page_title4 : 'the people invites you to join it',
+        invitation_page_title1 : 'GAME FUND based on the blockchain to ',
+        invitation_page_title3 : 'realize the global decentralized community ',
+        invitation_page_title2 : 'of the people, by the people, for the people.',
+        invitation_page_title4 : 'Welcome to join us!',
+        // GAME FUND based on the blockchain to realize the global decentralized community of the people, by the people, for the people. Welcome to join us!
+
         invitation_page_code : 'Invitation code',
-        invitation_page_codetip : 'Enter the invition code on the page of get qualifications',
-        invitation_page_codetip1 : 'to get the chance to participate the community',
-        press_code_tip : 'Scanning invitation code',
+        invitation_page_codetip : 'Enter the invition code for getting the chance',
+        invitation_page_codetip1 : 'to participate the GAME FUND community',
+        // Enter the invition code for getting the chance to participate the GAME FUND community
 
-        share_tips_pc  : 'Share tips: right-click, save as image and share',
-        press_code_tip_pc  : 'Use a mobile phone to scan the QR code for details',
+        press_code_tip : 'Long press to scan QR code for getting more details.',
 
-        code_date : 'Note: Valid for 3 days, and once',
+        share_tips_pc  : 'Hints: Right click to save images and share.',
+        press_code_tip_pc  : 'Scan the QR code for more details.',
+
+        code_date : 'Note: Valid for 3 days, and only can use once.',
     }
     //-----------------------------------------日文版
     var ja = {

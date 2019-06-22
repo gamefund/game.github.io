@@ -18,6 +18,7 @@ var cn = {
     sequence_item2_third: '日語',
     sequence_item2_fourth: '加入聊天群',
 
+
     //#industry_status
     industry_status_feature: '特点',
     industry_status_item1: '由玩家自治及<span>智能合约</span>执行的游戏和评论内容排行榜与推荐策略，真正做到透明公正，杜绝资本和权势染指。',
@@ -31,6 +32,7 @@ var cn = {
     industry_status_feature4: '多节点共识机制',
     industry_status_feature5: '分布式记账',
 
+
     //#service
     service_title1: '行业',
     service_title2: '背景及问题',
@@ -41,6 +43,7 @@ var cn = {
     service_title_item3: '区块链+游戏崭露头角',
     service_text_item3: '区块链领域一直缺少能实际落地项目，<span>假大空</span>横行。优秀新技术又一次从游戏领域率先落地实用，更多玩家关注区块链，而币圈投资人更接受游戏类项目。全球通过区块链数字货币方式的融资额已是<span>传统VC的两倍</span>，更是我们众筹模式的<span>N<sub>2</sub>O暴强加速剂</span>。',
     
+
     //#portfolio
     portfolio_title1: '解决方案',
     portfolio_title2: '与实现',
@@ -75,6 +78,7 @@ var cn = {
     Grid_title_item12: '信誉数据宝库',
     Grid_text_item12: '通过币天消耗来控制刷信誉行为，每位开发者在社区中的历史成绩和行为、及作品发展的历史轨迹、评论家的评价行为等，都会被智能合约烙印在区块链之中，成为一个<span>可追溯的不可篡改</span>的信誉大数据库。',
 
+
     //#competitive
     competitive_title1: '竞争',
     competitive_title2: '优势',
@@ -90,6 +94,7 @@ var cn = {
     competitive_text_item5: '社区内建游戏直播，极大提高社区活跃度和黏着度。',
     competitive_title_item6: '智能合约的图形化免编程编制工具',
     competitive_text_item6: '图形NLP化的<span>免编程</span>智能合约编制工具AISC，摆脱只能由程序员编写智能合约的桎梏，回归传统文字合同编制的便利性。',
+
 
     //#price
     price_title1: '产品',
@@ -107,6 +112,7 @@ var cn = {
     price_item10: '《梦幻3D》',
     price_item11: 'H5《直播秀场百人德州》',
     price_item12: '月流水千万《幻想学园》',
+
 
     //#team
     team_title: '团队',
@@ -144,6 +150,7 @@ var cn = {
     team_name_item12: 'Lee Hills',
     team_text_item12: '电子游戏业务的企业家和资深顾问，擅长新兴行业，专注于区块链和金融科技领域。曾是SolutionsHub Limited创始人，Oliver Charles Sports Management联合创始人。',
 
+
     //#community
     community_title1: '社区',
     community_title2: '生态',
@@ -173,183 +180,188 @@ var cn = {
     contact_mail: '邮箱地址：',
     broadcast_group: '广播群',
     chat_group: '聊天群',
+
+
+
 }
 
 //-----------------------------------------英文版
 var en = {
     //index.html
-    navigation_item1: 'Introduction',
+    navigation_item1: 'Description',
     navigation_item2: 'Background',
-    navigation_item3: 'Solution',
-    navigation_item4: 'Advantage',
+    navigation_item3: 'Solutions',
+    navigation_item4: 'Advantages',
     navigation_item5: 'Team',
-    navigation_item6: 'Ecology',
+    navigation_item6: 'Community',
     navigation_item7: 'Blog',
-    navigation_item8: 'Reward',
-    registration_item: 'Join whitelist',
+    navigation_item8: 'Missions',
+    registration_item: 'Join white list',
 
-    sequence_item1: 'Blockchain-based global decentralized game content public community.',
+    sequence_item1: 'Blockchain-based global decentralized public gaming community',
     sequence_item2: 'Dev Deck',
     sequence_item2_first: 'White Papers',
-    sequence_item2_second: '中文',
-    sequence_item2_third: '日語',
+    sequence_item2_second: 'EN',
+    sequence_item2_third: 'JP',
     sequence_item2_fourth: 'JOIN OUR TELEGRAM',
 
     //#industry_status
-    industry_status_feature: 'FEATURE',
-    industry_status_item1: "By carrying out gamer's self-governance and <span>smart contract</span>, ranking list of game and comment content, and recommendation strategy, are truly transparent and impartial, eliminating the affection of capital and power.",
-    industry_status_item2: "Grasp the <span>original source</span>. We are the world's first hard core technology team that can develop our own Blockchain game engine professional software. BCreator.io supports developers to start their dreams; This is a place where a huge number of developers gather.",
-    industry_status_item3: 'In 5G era, <span>click and play</span>, no need to download and install; This is new form of entrance for large-scale games. “HQ HTML5”, in the era of <span>mobile internet broadband</span>, because of unlimited traffic and the major advantage of 5G, will surely become the new standard of the industry.',
-    industry_status_item4: '<span>Big data base</span> of valuable reputation. The historical behaviors of developers and reviewers are all branded by smart contract into the Blockchain, which can be traced and cannot be tampered with, forming big data which various decision-making is based on.',
-    
+    industry_status_feature: 'Features',
+    industry_status_item1: 'The gaming ranking and recommended strategy which is truly player self-governemt and with <span>smart contract</span>. Never be affected by any factors. A real fair ranking.',
+    industry_status_item2: 'We care <span>original creation</span>. The first self-developed blockchain gaming development software. BCreator.io makes developers dream come true, and also the friendly IT community.',
+    industry_status_item3: 'Free-installed biggest games in the latest trend and. In the 5G era, it brings various advantages for players : "HQ HTML5", Unlimited data and etc. 5G could be considered the future standard in this industry.',
+    industry_status_item4: '<span>High reputation database</span>. What developers and critics did will all be <span>saved</span> blockchain with smart contracts, which can be searched but cannot be changed. All data will help to every important decision in the future.',
+
     industry_status_feature1: 'Virtual distributed structure',
-    industry_status_feature2: 'High efficiency and low cost operation mode',
+    industry_status_feature2: 'A high efficiency and low cost operations',
     industry_status_feature3: 'Decentralized structure',
     industry_status_feature4: 'Multi-node consensus mechanism',
     industry_status_feature5: 'Distributed ledger',
 
     //#service
-    service_title1: 'INDUSTRY',//Industry background and problems
-    service_title2: '&nbspBACKGROUND AND PROBLEMS',
-    service_title_item1: 'The window period of seize the renaissance strategic high ground',
-    service_text_item1: 'Chinese game is no longer an incremental market, but the era of retaining the user, the key is quality and playability, game <span>is returning to the beginning of heart</span>. The <span>genuine paid</span> consciousness of Chinese players is full of <span>rejuvenation</span>. The sun of game renaissance golden time is rising up. this is a window period to attract developer and fans, and snatch strategic high ground.',
-    service_title_item2: 'The mode of game crowdfunding is ripe',
-    service_text_item2: 'As of September 2017, the number of global game crowdfunding has reached 40000, raising a total of 900 million dollars, and 15 million users participate it. However, the <span>potential energy contradiction</span> of Chinese game industry is prominent: On the one hand, the <span>user number of pay</span> for outstanding game works have been very large. But on the other hand, potential team is <span>difficult to finance</span>, this potential energy contradiction urgently needs to be broken to <span>flood discharge</span> by a mode.',
-    service_title_item3: 'Blockchain + Game Emerge',
-    service_text_item3: 'There has been a lack of real projects in the area of blockchain, a lot of <span>empty words</span>. Excellent technology took the lead in the field of game once again. It focuses more players on the blockchain, and the investors of coin circle more accept the game projects. Global financing through digital currency is twice as the <span>traditional VC</span>, it is a strong <span>N<sub>2</sub>O accelerator</span> for crowdfunding.',
+    service_title1: 'INDUSTRY',
+    service_title2: 'Background',
+    service_title_item1: 'The window period of rising market share',
+    service_text_item1: 'What Chinese game market no longer cares the number. Instead, it focuses on the quality and playability. Bacl to the <span>original intention</span>, chinese players are <span>more willing</span> to <span>pay for the official games</span>. The sun of game renaissance golden time is rising up. This is <span>a window period</span> to attract developer and players.',
+    service_title_item2: 'The mature of gaming crowdfunding',
+    service_text_item2: 'As of September 2017, the number of global game crowdfunding has reached above 40,000, raising a total of 900 million dollars, and 15 million users participate it. However, <span>the potential energy contradiction</span> of Chinese game industry is prominent: the group which is willing to <span>pay for outstanding game works</span> have been very large. On the other hand, potential team <span>is difficult to handle their financial issues</span> , this situation <span>needs a solution to solve</span> it quickly and efficiently.',
+    service_title_item3: 'Blockchain + Games',
+    service_text_item3: 'Few projects coule be realized in the area of blockchain. Excellent technology took the lead in the field of game once again. More players fpcus on the blockchain, and more investors could accept the game projects. The amount of financing through blockchain digital currency has <span>doubled that of traditional VC</span>, and it is <span>the N<sub>2</sub> accelerator</span> of the crowdfunding model.',
     
     //#portfolio
-    portfolio_title1: 'SOLUTION',//Solution and implementation
+    portfolio_title1: 'Solutions',
     portfolio_title2: '&nbspAND IMPLEMENTING',
-    portfolio_title_item1: 'Overall Solution',
+    portfolio_title_item1: 'General solution',
     portfolio_title_item2: 'Make Game',
     portfolio_title_item3: 'Play Game',
     portfolio_title_item4: 'Communication',
     portfolio_title_item5: 'The Application of Blockchain',
 
     Grid_title_item1: 'Game Crowdfunding Community',
-    Grid_text_item1: 'Community members invest in outstanding creative projects, obtain the return such as the work and the pre purchase right of related resources, even appreciation and so on, the success of crowdfunding is to reach or exceed the target amount, otherwise it will be returned to the sponsor.',
-    Grid_title_item2: 'Tailored Create Tool',
-    Grid_text_item2: 'Provides the only <span>international</span> high quality game engine in <span>Chinese</span> BCreator.io(The English version and japanese version will also be published.), it include graphical NLP of <span>programming-free</span> interactive logic module Director, greatly reduce the technical threshold, supply to developers to choose to create game.',
+    Grid_text_item1: 'Through the crowdfunding to invest the high quality games, investors could get the games, pre-order rights, appreciation and other advantages. The crowdfunding project has to reach the gaol or the total fundraising amount must return bacl to investors.',
+    Grid_title_item2: 'Customzied gaming development software',
+    Grid_text_item2: 'Provides the <span>international</span> high-quality <span>chinese game engine</span> BCreator.io (English and Japanese version are avaliable.), it contains <span>NLP Director</span>, which greatly makes developers easier to develop games.',
     Grid_title_item3: 'High Quality Game Distribution Platform',
-    Grid_text_item3: 'Community attract excellent works and developers, growing popularity, and attract players through events, live broadcast, advertisement. After gathering a large number of players, they can further attract more works and excellent developers, form a <span>benign cycle</span>.',
-    Grid_title_item4: 'Click It to Play HTML5 2.0',
-    Grid_text_item4: 'realized convert the existing large and high quality <span>native</span> games to be <span>Click it toplay without download and install</span> H5(Instant APP) mode. Welcome unlimited traffic, Gigabit 4G、5G <span>mobile broadband</span> Internet new era, establishment of an epoch-making new form of game entry mode.',
-    Grid_title_item5: 'High Level Comment',
+    Grid_text_item3: 'Our community attracts excellent works and developers, growing popularity, and players through events, live broadcast, advertisement. After gathering a large number of players, the community further attracts more high-quality works and excellent developers.',
+    Grid_title_item4: 'Click and Play HTML5 2.0',
+    Grid_text_item4: 'Realizes HTML5 <span>free-installation</span> of big games. The new generation of unlimited data, high-speed 4G and 5G, we build the new trend of game platform.',
+    Grid_title_item5: 'High Level Reviews',
     Grid_text_item5: 'Implementing <span>competition</span> and <span>incentive</span> mechanisms, and promoting content selecting review groups.',
-    Grid_title_item6: 'Face the Opinion of Fans',
-    Grid_text_item6: 'The player and the developer <span>communicate directly</span>, grind the work.',
+    Grid_title_item6: 'Accept Fans Opinions',
+    Grid_text_item6: 'Players and developers <span>communicate game works directly</span>.',
     Grid_title_item7: 'IM System',
-    Grid_text_item7: 'IM system, providing <span>instant messaging</span> services for users',
-    Grid_title_item8: 'Live Broadcast System',
-    Grid_text_item8: 'Effectively improve community <span>activity</span> and improve the <span>revenue</span> of game products.',
+    Grid_text_item7: 'IM system, providing <span>instant messaging</span> services.',
+    Grid_title_item8: 'Live System',
+    Grid_text_item8: 'Improves <span>community activity</span> and <span>the revenue of game products</span> efficiently.',
     Grid_title_item9: 'Interactive Community',
-    Grid_text_item9: '<span>A fair and transparent</span> incentive mechanism based on blockchain. Players, developers, investors, critics and promoters interact within the community, their interaction is performed <span>by smart contracts</span>, and it will branded in the blockchain. Every member of the community will takes the initiative as a host to promote and build their own community.',
+    Grid_text_item9: 'A <span>fair and transparent</span> incentive mechanism based on blockchain. Players, developers, investors, critics and promoters interact in the community, their interaction is performed by <span>smart contracts</span> , and it will <span>branded</span> in the blockchain. Every member of the community will takes the initiative as a host to promote and build their own community.',   
     Grid_title_item10: 'The SDK of Blockchain Access',
-    Grid_text_item10: 'SDK based on blockchain, realize decentralization game account and the <span>right</span> of digital assets, and the <span>perforation</span> of cross-game <span>trade</span>, achieve one-click login of game, token settlement of platform, access of digital assets right verification and the perforation of trade.',
+    Grid_text_item10: 'The blockchain-based SDK realizes decentralization game account and <span>the right of digital assets</span>, and <span>the perforation of cross-game trade</span> to achieve one-click login, token settlement of platform, access of digital assets right verification and the perforation of trade.',
     Grid_title_item11: 'Conscientious Competition Incentive Mechanism',
-    Grid_text_item11: 'The two quality competitive incentive mechanisms supported by blockchain. The excellence of the works and work comments UGC is entirely <span>determined by the player</span>, ensure the high quality of the community. The blockchain will guarantee <span>no one</span> including the founding team of the blockchain can <span>control and tamper with</span> the two competitive incentive mechanisms.',
-    Grid_title_item12: 'Reputation Database Treasure',
-    Grid_text_item12: 'Control click farming behavior through coindays consumption, the history score, behavior, develop historical track of works, and the commenting behavior of critics will branded in the blockchain by smart contract, become a reputation database that <span>traceability but can not be tampered with</span>. ',
+    Grid_text_item11: 'The two healthy competitive incentive mechanisms supported by blockchain. The high-level gameworks and UGC comments are entirely <span>determined by the players</span> which ensures the high quality of the community. The blockchain guarantees that <span>no one can control and change</span> these mechanisms.' , 
+    Grid_title_item12: 'Trustable Database ',
+    Grid_text_item12: 'Control click farming behavior through coindays consumption, the history score, behavior, develop historical track of works, and the commenting behavior of critics will branded in the blockchain by smart contract, become a reputation database that <span>traceability but can not be tampered with</span>.',
+
 
     //#competitive
-    competitive_title1: 'COMPETITIVE',//Competitive advantage
-    competitive_title2: '&nbspADVANTAGE',
-    competitive_title_item1: 'Sign with Billion Revenue Product',
-    competitive_text_item1: 'Sign with product that has <span>billion</span> revenue, on the beginning of the community came online, it has <span>more than ten</span> commercial profits mature masterpiece.',
-    competitive_title_item2: 'Deep Industry Resources',
-    competitive_text_item2: '<span>More than ten years</span> of game development and operation experience, has deep game industry resource, experience and internet contacts.',
-    competitive_title_item3: 'Click it to play HTML5 2.0',
-    competitive_text_item3: '<span>Convert existing</span> high quality <span>native</span> game to achieve "Click it to play without download and install" mode. New entrance standard of <span>mobile broadband</span> internet era!',
-    competitive_title_item4: 'Mature Game Production Tool Software Engine',//'Mature game production tool software engine'
-    competitive_text_item4: 'Mature and available game make tool Bcreator.io',//
+    competitive_title1: 'Competitive',
+    competitive_title2: 'Advantages',
+    competitive_title_item1: 'Sign the High Revenue Products',
+    competitive_text_item1: 'Sign the product with <span>billion revenue</span>. In the beginning, the community has <span>more than ten</span> commercial mature game work with highly commercial profits.',
+    competitive_title_item2: 'Industry Resources',
+    competitive_text_item2: 'Richly cultivating gaming industry and owning professional experience <span>more than ten years</span>, we have game industry resource, experience and internet contacts.',
+    competitive_title_item3: 'Click to play HTML5 2.0',
+    competitive_text_item3: '<span>Converts existing</span> high quality games to achieve "free-installation, free-download". The <span>new generation</span> of unlimited data, high-speed 4G and 5G, we build the <span>new trend</span> of game platform.',
+    competitive_title_item4: 'High-class gaming development engine',
+    competitive_text_item4: 'High-class gaming development engine: BCreator.io',
     competitive_title_item5: 'Mature Live Broadcast Software System',
-    competitive_text_item5: 'Live games in the community, greatly improving the community activity and adhesion.',
-
-    competitive_title_item6: 'Smart Contracts Graphical Programming-free Programming Tool',//??
-    competitive_text_item6: 'programming-free smart contracts programming tool AISC, return the convenience of tradition that write contract by words.',
+    competitive_text_item5: 'Live games, greatly improving the community activity and user stickiness.',
+    competitive_title_item6: 'Smart Contracts Graphical Free-programming Tool',
+    competitive_text_item6: '<span>programming-free</span> smart contracts programming tool AISC, return the convenience of tradition that write contract by words.',
 
     //#price
-    price_title1: 'PRODUCT',//Product display
-    price_title2: '&nbspDISPLAY',
+    price_title1: 'Products',
+    price_title2: 'Games',
 
-    price_item1: 'The monthly revenue of 《三国志2017》 reached 100 million yuan',
-    price_item2: 'The monthly revenue of 《全民乐舞》 reached ten million yuan',
-    price_item3: '《真三国战纪》 tribute to the classic works',
-    price_item4: 'Cash flow game 《来啊捕鱼》',
+    price_item1: '《Romance of the Three Kingdoms 2017》 reached ¥ 100 million /month.',
+    price_item2: '《全民乐舞》 reached ¥ ten million/month.',
+    price_item3: '《Knights of Valour》 pays tribute to the classics.',
+    price_item4: '《来啊捕鱼》earn money inmediately.',
     price_item5: 'Saudi Arabia Edu-game 《عالم أريب》',
-    price_item6: '《初代吸血鬼》‘s  monthly revenue reached 50000 dollars of each server',
+    price_item6: '《The Originals》reached USD 50,000/month.',
     price_item7: '《Beauty and the beast》',
-    price_item8: 'Pixel IO game 《我的坦克》',
-    price_item9: 'H5 《クリプトアイランド》',
+    price_item8: 'Pixel IO game 《My Tank》',
+    price_item9: 'H5《クリプトアイランド 》',
     price_item10: '《梦幻3D》',
-    price_item11: 'H5 《直播秀场百人德州》',
-    price_item12: '《幻想学院》 monthly revenue reached ten million yuan',
+    price_item11: 'H5 《Live Multiplayer Texas hold\'em》',
+    price_item12: '《幻想学院》 reached ¥ 100 million /month.',
 
+    
     //#team
-    team_title: 'TEAM',//Team introduction
-    team_title_intro: '&nbspINTRODUCTION',
+    team_title: 'Team',
+    team_title_intro: 'Introduce',
     team_title1: 'The Main Team',
-    team_title2: 'Consultant Team',
+    team_title2: 'Consultants',
     team_title3: 'Sponsors',
 
     team_name_item1: 'Ali Dagli',
-    team_text_item1: 'Ph.D. in Finance, Berkeley, California, Senior investor and financial strategist in the Digital Media area. Vice President of GCA Savvian, he operate the Japanese social giant Gree, and he has use 2.1 billion acquisition Funzio, Saban Brands acquisition The Playforge and other famous case. Since 2013, he conducted in-depth studies and practices on blockchain finance.',
+    team_text_item1: 'Graduated from UC Berkeley with Finance Ph.D. The senior investor and financial consultant in the Digital Media area. During his career at GCA Savvian as Vice President, he held the Japanese social company,Gree, and he mergered Funzio, Saban Brands, The Playforge and more with 2.1 billion. Since 2013, he has cultivated in blockchain area deeply.',
     team_name_item2: 'Thomas Lindgren',
-    team_text_item2: 'Western University MBA. senior personage on game industry, he used to be CEO of the Swedish game company Stardoll, the productor of Fatshark AB.',
+    team_text_item2: 'Graduated from Western University MBA. The experts in the gaming industry. Mr. Lindgren held the positions of CEO in the Swedish game company Stardoll, and the producer of Fatshark AB.',
     team_name_item3: 'Oliver Wu',
-    team_text_item3: 'Ph.D., University of Pennsylvania, the productor of famous classic text MUD “Three Kindgoms wizard”, MMO game "Warhammer: end times ". he used to be responsible person in Singapore Interactive Media Center, responsible for the development and operation of the virtual reality world of the Youth Olympic  Games. As a former overseas president of Zhongqingbao.',
+    team_text_item3: 'Graduated from University of Pennsylvania Ph.D. The producer of Classic  MUD “Three Kindgoms wizard”, MMO game "Warhammer: end times ". Mr. Wu used to the person in charge of Singapore Interactive Media Center, also the development and operation of the virtual reality world of the Youth Olympic Games. The ex-overseas president of Zhongqingbao.',
     team_name_item4: 'Abdullah Konash',
-    team_text_item4: 'Harvard University, music art theory researcher. He has 9 years experience in the game industry, and  longs to lead the development of the Saudi Arabia’s game industry. He was the producer of Hako Games, Ranam.',
+    team_text_item4: 'Graduated from Harvard University, the music art theory researcher. Mr.Konash has 9 years experience in the gaming industry, and eagers to push forward the development of the Saudi Arabia’s game industry. Also, He was the producer of Hako Games, Ranam.',
     
     team_name_item0: 'Dong Hao',
-    team_text_item0: 'Master of software of Shanghai Jiao tong University, engineer of Perfect World research center, the former CTO of VRSTANDARD which be called VR Huangpu Military Academy, the founder of C²engine. He has 15 years of experience in the game industry, producing a number of profitable commercial masterpiece Division. From 2014, he started to study the application of blockchain in the game industry.',
+    team_text_item0: 'Owns the master degree  of software from Shanghai Jiao tong University. The engineer of Perfect World research center, the former CTO of VRSTANDARD which be called VR Huangpu Military Academy, the founder of C²engine. Mr.Dong has 15-years experience in the gaming industry, producing a number of profitable commercial games. Since 2014, he has researched the application of blockchain in the gaming industry.',
     
     team_name_item5: 'Feng Tao',
-    team_text_item5: 'The chairman of New Margin. The creator of Sina and many other famous business legend, he was selected  to Forbes China 2017 best venture capital Top three with Shen Nanpeng and others. In the early period of Blockchain field he had supported INB, OK, NEO, BigONE, Beechat and other projects.',
+    team_text_item5: 'The chairman of New Margin. The creator of Sina and built many success cases. Mr.Tao was selected as the top 3 Forbes China 2017 best venture capital with Shen Nanpeng and others. In the early period of Blockchain field he had aleardy supported INB, OK, NEO, BigONE, Beechat and other projects.',
     team_name_item6: 'Frank Liu',
-    team_text_item6: 'The postdoctoral researcher of Singapore Nanyang Technological University, he has a number of patents Intellectual property and very deep mathematics foundation. He also has deep research on 3D graphics, crytography, peer-to-peer communications, blockchain consensus mechanism.',
+    team_text_item6: 'The postdoctoral researcher of Singapore Nanyang Technological University. Mr.Liu has a number of IP rights and deep mathematics understands, deeply researches on 3D graphics, crytography, peer-to-peer communications, blockchain consensus mechanism.',
     team_name_item7: 'Yi Lihua',
-    team_text_item7: 'Founding Partner of Youling Capital and INBlockchain (Coin Capital). Had invested in quantum chain, VeChain, RadarWin, BigONE more than 30 blockchain projects, covering quantitative funds, blockchain matrix Gold, code audit, exchange and other fields.',
+    team_text_item7: 'Founding Partner of Youling Capital and INBlockchain (Coin Capital). Mr.Yi has invested in quantum chain, VeChain, RadarWin, BigONE ... more than 30 blockchain projects, covering quantitative funds, blockchain matrix Gold, code audit, exchange and other fields.',
     team_name_item8: 'Tan Qunzhao',
-    team_text_item8: 'The EMBA of East China University of Science and Technology, Peking University. The founder of Fenghou investment management company and co-founder of Shanda, he used to be the chairman and chief executive official of Shanda, made a huge contribution for the Shanda game and the Chinese game industry.',
+    team_text_item8: 'Graduated from East China University of Science and Technology, Peking University EMBA. The founder of Fenghou investment management company and co-founder of Shanda, Mr.Tan used to be the chairman and chief executive official of Shanda, made a huge contribution for the Shanda game and the Chinese gaming industry.',
     team_name_item9: 'Li Chong',
-    team_text_item9: 'Angel Investor, the sponsor of DL Capital, Co-Founder of PPTV. Focus on the mobile Internet, blockchain and other fields, emerge Bubi blockchain, SandiJianke, Boqi, P2 joint office and a large number of outstanding project.',
+    team_text_item9: 'Angel Investor, the sponsor of DL Capital, Co-Founder of PPTV. Focus on the mobile Internet, blockchain and other fields, emerges Bubi blockchain, SandiJianke, Boqi, P2 joint office and a large number of outstanding projects.',
     team_name_item10: 'Liu Jialing（Cancer）',
-    team_text_item10: 'Evangelist and investor in early national blockchain project, founding members of Bit participants and  early participants of Ethereum Project, member of Bitshares council, member of YOYOW team、the investor of ATMatrix Smart matrix.',
+    team_text_item10: 'Evangelist and investor in early national blockchain projects, founding members of Bit participants and early participants of Ethereum Project, member of Bitshares council, member of YOYOW team, the investor of ATMatrix Smart matrix.',
     team_name_item11: 'Jin Peng',
-    team_text_item11: 'Ph.D. of Fudan University, his mentor is Political Bureau of the CPC Central Committee Standing Committee Professor Wang Huning. Former Senior Vice President of Shanda Network, the partner of Shanghai Lianchuang Management company, Founder of Wuqiongchuangtou, he invested in a large number of emerging industries in games, entertainment, digital Finance and marketing.',   
+    team_text_item11: 'Ph.D. of Fudan University. Mr.Peng\'s mentor is Political Bureau of the CPC Central Committee Standing Committee Professor Wang Huning. Former Senior Vice President of Shanda Network, the partner of Shanghai Lianchuang Management company, Founder of Wuqiongchuangtou, he invested in a large number of emerging industries in games, entertainment, digital Finance and marketing.',
     team_name_item12: 'Lee Hills',
-    team_text_item12: 'The entrepreneurs and senior adviser of the computer game, he is good at emerging industry, focus on the field of blockchain and financial technology. He is the founder of SolutionsHub Limited and the co-dounder of Oliver Charles Sports Management.',
+    team_text_item12: 'The entrepreneur and senior adviser of the video game industry, Hill is good at emerging industry, focus on the field of blockchain and financial technology. He is also the founder of SolutionsHub Limited and the co-dounder of Oliver Charles Sports Management.',
 
-  
+
     //#community
-    community_title1: 'COMMUNITY',//Community Ecology
-    community_title2: '&nbspECOLOGY',
+    community_title1: 'Community',
+    community_title2: 'Ecosystem',
     community_img_title: 'GFG Token Distribution Plan',
     community_title_item1: 'Community Launch 20%',
-    community_text_item1: '20% of GFG is launched directly to the community',
-    community_title_item2: 'Community Content Incentive 45%',
-    community_text_item2: '45% of GFG is used to community content incentive, maintaining and improving the high quality of community content. The incentive will be objectively implemented by smart contract according to the community rules',
+    community_text_item1: '20% of GFG launches directly to the community',
+    community_title_item2: 'Community Content Reward 45%',
+    community_text_item2: '45% of GFG is used to community content reward, maintaining and improving the healthy community operations. According to the community rules, The reward will be objectively implemented by smart contract.',
     community_title_item3: 'Early Angel 5%',
-    community_text_item3: '5% of GFG is held by early angel, with their support, the community has the foundation of the present, and it will locked within one year of community operation. ',
-    community_title_item4: 'Ecology Basis Incentive 15%',
-    community_text_item4: '15% of GFG is used to motivate GAME.FUND ecological foundation builders and partners to tamp the ecosystem.',
+    community_text_item3: '5% of GFG is held by early angel investors. Because of their support, the community has the foundation, and it will locked within one year of community operation. ',
+    community_title_item4: 'Basis Business Ecosystem Reward 15%',
+    community_text_item4: '15% of GFG is used to cheer GAME.FUND ecological foundation builders and partners up.',
     community_title_item5: 'The Main Team 15%',
     community_text_item5: '15% of GFG is held by the main team, and it will locked within one year of community operation.',
+        
+    total_content_item1: 'GFG the token of GAME.FUND community. Total amount of GFG is 5 billion,accurate to 10<sup>-8</sup>, the amount will never increase.',
 
-    total_content_item1: 'GFG the token of GAME.FUND is the community status symbol. Total amount of GFG is 5 billion,accurate to 10<sup>-8</sup>，the circulation will never increase.',
 
     community_video_title: 'Community Operation',
     video_tag_tip: 'Your browser does not support video tags',
-    community_video_text1: 'Is not a bit brain burning? All right, Please read this passage',
-    community_video_text2: 'Simply put, the role of the community value of the transfer of behavior are based on GFG. Mechanism of coin days and coin days guarantee to encourage users to keep GFG and avoid brush credit and ranking. The community charge income of game crowdfunding and game distribution at different rates. One part of the income used for community constraction and maintenance, at least 50% regularly assigned to the corresponding address according to the GFG holding ratio. With the expansion of the community by promotion, more and more users to join the community, GFG\'s value will go up.',
+    community_video_text1: 'Is it hard to understand? Read the below to get more details.',
+    community_video_text2: 'The value of roles in thie community will turn into GFG token. The mechanism of coin days and coin days take the role of encouraging users to hold GFG and avoid any negative issues happening.  The community collects the game crowdfunding amount and game revenue by different proportions. It will be used for development and maintance of community. As the community being larger, more users join, higher value the GFG has.',
 
     //#contact
     contact_we: 'Contact Us',
     contact_broadcast_group: 'Notice Address：',
-    contact_chat_group: 'Chat Address：',
+    contact_chat_group: 'Group Chat：',
     contact_mail: 'E-mail：',
-    broadcast_group: 'Broadcast Group',
-    chat_group: 'Chat Group',
+    broadcast_group: 'Broadcast Group:',
+    chat_group: 'Group Chat',
 }
