@@ -154,7 +154,7 @@ var cn = {
     team_name_item18: 'Duncan Cameron',
     team_text_item18: 'Duncan领导了一些在线赌博领域最雄心勃勃的技术项目。在PokerStars期间，Duncan负责管理PokerStars移动应用程序 - PS Mobile的建设和发布 - 获得eGaming Review的“年度移动运营商”奖。直到今天，PS Mobile被认为是在线扑克移动应用程序的黄金标准。Duncan还从概念管理并执行了赌博业务中领先的商业智能后端信息报告系统之一，称为“BORIS”。',
     team_name_item19: 'Gareth George McIntosh',
-    team_text_item19: 'CEO（欧洲区）。经验丰富的营销主管，在赌博和赌场行业有丰富的工作经验。擅长数字策略、在线游戏、在线赌博的强大营销专业人士。曾创造被评为全球第二大最受欢迎的扑克网站PokerStars.pt。',
+    team_text_item19: 'CEO（欧洲区）。经验丰富的营销主管，在电子游戏行业有丰富的工作经验。擅长数字策略、在线游戏、在线赌博的强大营销专业人士。曾创造被评为全球第二大最受欢迎的扑克网站PokerStars.pt。',
 
     //#community
     community_title1: '社区',
