@@ -343,7 +343,7 @@ var en = {
     team_text_item18: 'Duncan has lead some of the most ambitious technical projects in the online gambling world. While at PokerStars, Duncan managed the building and launch of the PokerStars Mobile App – PS Mobile – which was responsible for the company receiving eGaming Review’s ‘Mobile Operator of the Year’ award. To this day, PS Mobile is considered the gold standard of online poker mobile apps. Duncan also managed from concept and executed one of the leading Business Intelligence back-end information reporting systems in the gambling business, known as ‘BORIS’.',
 
     team_name_item19: 'Gareth George McIntosh',
-    team_text_item19:'CEO（Europe). Experienced Marketing Executive with a demonstrated history of working in the gambling & casinos industry. Strong marketing professional skilled in Digital Strategy, Online Gaming, Gaming Industry, Copywriting, and Online Gambling. It has created PokerStars.pt, the world\'s second most popular poker site.',
+    team_text_item19:'As CEO(Europe) of Game.Fund. Mr.McIntosh was an experienced marketing manager in the gaming industry. Strong understanding in marketing field of digital strategy, online gaming, copywriting, and etc. Also he is the legend who established PokerStars.pt, one of the most popular online poker company.',
 
     //#community
     community_title1: 'Community',
