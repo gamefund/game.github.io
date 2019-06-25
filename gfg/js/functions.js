@@ -816,8 +816,8 @@ $(document).ready(function() {
             $("#team_text_item17").html(en.team_text_item17);
             $("#team_name_item18").html(en.team_name_item18);
             $("#team_text_item18").html(en.team_text_item18);
-            $("#team_name_item18").html(en.team_name_item19);
-            $("#team_text_item18").html(en.team_text_item19);
+            $("#team_name_item19").html(en.team_name_item19);
+            $("#team_text_item19").html(en.team_text_item19);
 
             $("#team_support_item1").html(en.team_support_item1);
             $("#team_support_item2").html(en.team_support_item2);
