@@ -126,27 +126,11 @@
                     document.title = 'ACGN Gaming Platform_Download_GameFand_Official Website';
                 }
 
-                function addLogDownloadSource() {
-                    var generalServerIp = splitUrl(window.location.href, "generalServerIp") || "http://139.217.235.88:9001";
-                    var userId = splitUrl(window.location.href, "userId");
-                    var logUrl = generalServerIp + "/insertLogDownloadSource";
-                    ajax({
-                        async: false,
-                        type: "post",
-                        url: logUrl,
-                        contentType: "application/json",
-                        dateType: "json",
-                        data: { userId: userId },
-                        success: function (data) {
-                            console.log("add log success")
-                        }
-                    })
-                }
-                addLogDownloadSource();
+
                 if(splitUrl(window.location.href, "isEn") == 'true'){
-                    window.location.href = 'https://github.com/gamefund/game.github.io/releases/download/GameFund/GF1.0.27.apk';
+                    window.location.href = 'https://github.com/gamefund/game.github.io/releases/download/GameFund/GF1.0.28.apk';
                 }else {
-                    window.location.href = "https://resource-1258943997.file.myqcloud.com/apk/GF1.0.27.apk";
+                    window.location.href = "https://resource-1258943997.file.myqcloud.com/apk/GF1.0.28.apk";
                 }
             }
         })();
